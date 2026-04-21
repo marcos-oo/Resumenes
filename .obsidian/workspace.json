@@ -11,14 +11,14 @@
             "id": "c40388c4a9cb2d08",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "SSL/Clase 3 - SSL.md",
-                "mode": "source",
-                "source": false
+                "aFile": ".obsidian/workspace.json",
+                "bFile": ".obsidian/workspace.json",
+                "aRef": ""
               },
-              "icon": "lucide-file",
-              "title": "Clase 3 - SSL"
+              "icon": "diff",
+              "title": "Diff: workspace.json  (Working Tree)"
             }
           }
         ]
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "f7f31304b84317c7",
@@ -156,13 +157,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SSL/Clase 3 - SSL.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Clase 3 - SSL"
+              "title": "Outline"
             }
           },
           {
@@ -198,11 +198,11 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "3fe17be1d41274ea",
+  "active": "c40388c4a9cb2d08",
   "lastOpenFiles": [
+    "SSL/Clase 3 - SSL.md",
     "SSL/Clase 1 - SSL.md",
     "Untitled Kanban.md",
-    "SSL/Clase 3 - SSL.md",
     "Jerarquia-De-Chomsky.png",
     "Jerarquia-De-Chomsky_VENN.png",
     "Pasted image 20260421174123.png",
