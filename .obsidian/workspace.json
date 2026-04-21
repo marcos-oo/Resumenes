@@ -1,0 +1,220 @@
+{
+  "main": {
+    "id": "a6c7037e58d624d5",
+    "type": "split",
+    "children": [
+      {
+        "id": "80ca2395a9f83fe4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c40388c4a9cb2d08",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SSL/Clase 3 - SSL.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Clase 3 - SSL"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "9730cfa84e41b53f",
+    "type": "split",
+    "children": [
+      {
+        "id": "62743745a1d520a3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3fe17be1d41274ea",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "e9bf5add8bd912a1",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "b47d7df6ff7a993e",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "right": {
+    "id": "f7f31304b84317c7",
+    "type": "split",
+    "children": [
+      {
+        "id": "fc74d7884f37285f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "32e0dc56cbfe1b9c",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Clase 2 - SSOO.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Clase 2 - SSOO"
+            }
+          },
+          {
+            "id": "cff0634245c4b5bb",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Clase 2 - SSOO.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Clase 2 - SSOO"
+            }
+          },
+          {
+            "id": "e0b4382095239c4b",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "c990c2b406c0a8b8",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "28c97fe8de0aeef3",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "SSL/Clase 3 - SSL.md",
+                "followCursor": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Clase 3 - SSL"
+            }
+          },
+          {
+            "id": "d04cc702eec2c430",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "audio-recorder:Start/stop recording": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "obsidian-git:Open Git source control": false,
+      "obsidian-kanban:Create new board": false
+    }
+  },
+  "active": "c40388c4a9cb2d08",
+  "lastOpenFiles": [
+    "SSL/Clase 1 - SSL.md",
+    "Untitled Kanban.md",
+    "SSL/Clase 3 - SSL.md",
+    "Jerarquia-De-Chomsky.png",
+    "Jerarquia-De-Chomsky_VENN.png",
+    "Pasted image 20260421174123.png",
+    "Excalidraw/Drawing 2026-04-21 17.35.33.excalidraw.md",
+    "Excalidraw",
+    "SSL/Clase 2 - SSL.md",
+    "Untitled.base",
+    "2026-04-21.md",
+    "SSOO/Clase 2 - SSOO.md",
+    "SSOO/Clase 3 - SSOO.md",
+    "SSL",
+    "SSOO"
+  ]
+}
