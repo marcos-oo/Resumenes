@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "f7f31304b84317c7",
@@ -199,7 +198,7 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "c40388c4a9cb2d08",
+  "active": "3fe17be1d41274ea",
   "lastOpenFiles": [
     "SSL/Clase 1 - SSL.md",
     "Untitled Kanban.md",
