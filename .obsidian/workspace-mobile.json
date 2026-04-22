@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "H.md",
+                "file": "Hola.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "H"
+              "title": "Hola"
             }
           }
         ],
@@ -186,6 +186,6 @@
   "active": "1032eefe9dda48b8",
   "lastOpenFiles": [
     "SSOO/Clase 2 - SSOO.md",
-    "H.md"
+    "Hola.md"
   ]
 }
