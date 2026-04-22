@@ -68,14 +68,22 @@ Permite crear una función que se adapte a mi situación, sin tener que crear un
 #### Parametrizando con funciones
 También podríamos pasar como parámetro **otra función**, haciendo que se vea así:
 ```Haskell
-t: Critero
-a -> Bool
-t: Filter
-[a] -> (a->Bool) -> [a]
+> t: Critero
+> a -> Bool
+> t: Filter
+> [a] -> (a->Bool) -> [a]
 ```
 Esto va a hacer que nunca tengamos que tocar la función `Filter`, pudiendo elegir el `Criterio` que yo quisiese,y si no anduviese el problema es del criterio mismo.
-### Funciones especiales:
-- `Filter`
-- `Map`
-- `Any`
-- `All`
+### Operaciones de listas:
+- `Succ`: Retorna el sucesor del elemento de una lista.
+- `Map`: Aplica una función a todos los elementos de una lista.
+- `Sum`: Suma todos los elementos de una lista.
+- `All`: Si todos los elementos de una lista cumple con una condición.
+- `Any`; Si alguno de los elementos de una lista cumple con una condición.
+- `Fold`: Se aplica una función sobre una lista en serie.`
+<p align="center">fold(r / l)&emsp;(func.)&emsp;(start)&emsp;[list]</p>
+
+**r / l** : indica si la operación se hará desde la izquierda (l) o desde la derecha (r).
+**func.**: Indica cual es la función que se aplicara en serie sobre la lista,
+**start.**: Un numero inicial, desde el cual se realizara el `fold`.
+**list.**: Es la lista sobre la que se aplicará el `fold`. 
