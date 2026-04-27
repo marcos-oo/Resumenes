@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Hola.md",
+                "file": "PdP/Clase 4 - PdP.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Hola"
+              "title": "Clase 4 - PdP"
             }
           }
         ],
@@ -185,6 +185,9 @@
   },
   "active": "1032eefe9dda48b8",
   "lastOpenFiles": [
+    "ASI/Clase 4 - ASI.md",
+    "SSL/Clase 3 - SSL.md",
+    "PdP/Clase 4 - PdP.md",
     "SSOO/Clase 2 - SSOO.md",
     "Hola.md"
   ]
