@@ -15,7 +15,7 @@
               "state": {
                 "file": "F-II/Transformaciones y Ciclos.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
               "title": "Transformaciones y Ciclos"
@@ -196,7 +196,7 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "3fe17be1d41274ea",
+  "active": "9fb563ced738dc7d",
   "lastOpenFiles": [
     "F-II/P(v).png",
     "F-II/Transformaciones y Ciclos.md",

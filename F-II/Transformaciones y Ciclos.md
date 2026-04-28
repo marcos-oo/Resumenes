@@ -11,19 +11,19 @@
 ### Transformación Isocora:
 Se traba el embolo, volumen constante, $W=0$.
 $$Q=\Delta U+W\qquad\wedge\qquad W=0\qquad\implies\qquad Q=\Delta U$$
-###### Calculo de $Q$:
+##### Calculo de $Q$:
 Dado que:
 $$\mathbb{C}=C.M=n.C_M$$
 $$Q=\mathbb{C}.\Delta T$$
 Entonces:
 $$Q=n.C_M.\Delta T=n.C_V.\Delta T$$
 (Le llamamos $C_V$ para aclarar que el volumen es constante, es lo que va a la temperatura del sistema).
-###### Calculo de $\Delta U$:
+##### Calculo de $\Delta U$:
 Dado que:
 $$U=\dfrac{3}{2}\cdot n\cdot R\cdot T$$
 Entonces:
 $$\Delta U\quad=\quad\Delta(\dfrac{3}{2}\cdot n\cdot R\cdot T)\quad=\quad\dfrac{3}{2}\cdot n\cdot R\cdot\Delta T$$
-###### Despeje:
+##### Despeje:
 Igualando:
 $$n.C_V.\Delta T\quad=\quad\dfrac{3}{2}\cdot n\cdot R\cdot\Delta T$$
 Entonces:
@@ -40,7 +40,7 @@ Siendo $C_W$ la capacitancia térmica asociada al trabajo mecánico, $n\cdot C_V
 
 > $\mathbb{C}_W$ es algo que me costo entender conceptualmente, pero se puede explicar como la energía que el sistema invierte en expandirse (en vez de calentarse) por un grado de temperatura. Multiplicarlo por $\Delta T$ nos daría el total de la energía gastada en trabajo. 
 
-###### Cálculo de $\mathbb{C}_W$:
+##### Cálculo de $\mathbb{C}_W$:
 Sabiendo que:
 $$\mathbb{C}_W\cdot\Delta T = W$$
 Que para presiones constantes:
@@ -51,7 +51,7 @@ Entonces:
 $$\mathbb{C}_W=\dfrac{W}{\Delta T}=\dfrac{P\cdot\Delta V}{\Delta T}=\dfrac{n\cdot R\cdot\Delta T}{\Delta T}$$
 Y:
 $$\LARGE \mathbb{C}_W=n\cdot R$$
-###### Cálculo de $C_p$:
+##### Cálculo de $C_p$:
 Sabiendo que:
 $$\mathbb{C}_{in}=n\cdot C_V+\mathbb{C}_W=n\cdot\dfrac{3}{2}R+n\cdot R=n\cdot\dfrac{5}{2}\cdot R$$
 Entonces:
@@ -72,7 +72,7 @@ $$P\cdot V=n\cdot R\cdot T$$
 Si la variación de temperatura es 0 (**iso** del griego "igual", **térmica** de la temperatura), la variación del lado derecho de la formula es 0, y así debe ser el lado izquierdo. Pero si hay una transformación, **ni $P$ ni $V$ pueden ser constantes por si mismas**. Es por esto que podemos concluir que:
 $$n\cdot R\cdot\Delta T =0=\Delta(P\cdot V) \implies$$
 $$\large P_{inicial}\cdot V_{inicial}=P_{final}\cdot V_{final}\qquad[1]$$
-###### Cálculo de $W$:
+##### Cálculo de $W$:
 No podemos obtener el trabajo tan fácil, ya que $P\cdot\Delta V = W$ no aplica por no ser constante la presión.
 Sabemos que el trabajo mecánico que realiza el gas es el espacio bajo la curva de $P(V)$. Ese espacio puede obtenerse, como no, con una integral. 
 $$\large \int_{V_A}^{V_B} P_{final} \cdot dV_{final}$$
@@ -84,7 +84,7 @@ Y esto es una integral fácil de resolver.
 $$\large P_{inicial}\cdot V_{inicial}\cdot ln(V)\Bigg|_{V_A}^{V_B}$$
 Resultando en:
 $$\large P_{inicial}\cdot V_{inicial}\cdot ln\left(\dfrac{V_B}{V_A}\right)$$
-###### Cálculo de $Q$:
+##### Cálculo de $Q$:
 Como bien indica el titulo, la transformación es **isotérmica**, por lo que se da que:
 $$\large \Delta T=0\implies \Delta U=0$$
 Entonces:
