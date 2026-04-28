@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "F-II/Transformaciones y Ciclos.md",
+                "file": "F-II/Maquina de Carnot.md",
                 "mode": "source",
-                "source": true
+                "source": false
               },
               "icon": "lucide-file",
-              "title": "Transformaciones y Ciclos"
+              "title": "Maquina de Carnot"
             }
           }
         ]
@@ -198,14 +198,17 @@
   },
   "active": "9fb563ced738dc7d",
   "lastOpenFiles": [
-    "F-II/P(v).png",
     "F-II/Transformaciones y Ciclos.md",
+    "F-II/P(v).png",
+    "IySc/Clase 4 - IySc.md",
+    "F-II/Maquina de Carnot.md",
+    "Pasted image 20260428104558.png",
+    "IySc/Clase 5 - IySc.md",
     "Pasted image 20260425090316.png",
     "Pasted image 20260427185508.png",
     "ASI/Clase 4 - ASI.md",
     "SSOO/Clase 4 - SSOO.md",
     "SSOO/Clase 3 - SSOO.md",
-    "IySc/Clase 5 - IySc.md",
     "PdP/Clase 4 - PdP.md",
     "SSL/Clase 3 - SSL.md",
     "FII/Untitled",
@@ -216,7 +219,6 @@
     "PERSONAL/projperspective.gif",
     "Untitled.canvas",
     "PERSONAL",
-    "IySc/Clase 4 - IySc.md",
     "ASI/Clase 3 - ASI.md",
     "Jerarquia-De-Chomsky.png",
     "SSOO/Clase 2 - SSOO.md",
