@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ASI/Clase 5 - ASI.md",
+                "file": "F-II/Maquina de Carnot.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Clase 5 - ASI"
+              "title": "Maquina de Carnot"
             }
           }
         ]
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 241.5
+    "width": 241.5,
+    "collapsed": true
   },
   "right": {
     "id": "f7f31304b84317c7",
@@ -198,24 +199,25 @@
   },
   "active": "b6c7d96f1bd9e601",
   "lastOpenFiles": [
+    "F-II/Transformaciones y Ciclos.md",
+    "PdP/Clase 4 - PdP.md",
+    "F-II/P(v).png",
+    "F-II/Pasted image 20260428104558.png",
+    "ASI/Clase 5 - ASI.md",
+    "SSL/Clase 1 - SSL.md",
+    "PERSONAL/Ray-Tracing Project.md",
     "ASI/Clase 4 - ASI.md",
     "SSL/Clase 3 - SSL.md",
-    "ASI/Clase 5 - ASI.md",
     "SSOO/Pasted image 20260425090316.png",
-    "F-II/Pasted image 20260428104558.png",
-    "F-II/Transformaciones y Ciclos.md",
     "SSL/Jerarquia-De-Chomsky.png",
     "F-II/Maquina de Carnot.md",
-    "F-II/P(v).png",
     "IySc/Clase 4 - IySc.md",
     "IySc/Clase 5 - IySc.md",
     "Pasted image 20260427185508.png",
     "SSOO/Clase 4 - SSOO.md",
     "SSOO/Clase 3 - SSOO.md",
-    "PdP/Clase 4 - PdP.md",
     "FII/Untitled",
     "F-II",
-    "PERSONAL/Ray-Tracing Project.md",
     "PERSONAL/ProjPerspective.png",
     "Pasted image 20260424212859.png",
     "PERSONAL/projperspective.gif",
@@ -226,7 +228,6 @@
     "IySc",
     "PdP",
     "Hola.md",
-    "SSL/Clase 1 - SSL.md",
     "Untitled Kanban.md",
     "Jerarquia-De-Chomsky_VENN.png",
     "Pasted image 20260421174123.png",

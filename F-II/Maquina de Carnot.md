@@ -46,4 +46,6 @@ Los gráficos (Figura 1. Figura 2, Figura 3) y las explicaciones anteriores expr
 2. El intercambio entre el eje y el motor es cíclico, expresado como un "bombeo" de energía $Motor\to Eje$ y $Eje\to Motor$ de forma alternante.
 3. El ciclo térmico $A\to B\to C\to D$ coincide con un giro completo del eje (360º sexagesimales) dividido en dos giros de 180º cada uno.
 $$(0º\implies A\to C\implies180º\implies C\to A\implies 360º)$$
-4. Se puede ver que en la Expansión $(A\to C)$ el motor le entrega el trabajo $W_{AC}$ al eje, mientras que en la Compresión $(C\to A)$ el motor le recibe el trabajo $W_{CA}$ del eje. Es por esto que $W_{AC}>0$ y $W_{CA}<0$, ya que todo se ve desde dentro del sistema, el motor. En la creación de motores se busca siempre que 
+4. Se puede ver que en la Expansión $(A\to C)$ el motor le entrega el trabajo $W_{AC}$ al eje, mientras que en la Compresión $(C\to A)$ el motor le recibe el trabajo $W_{CA}$ del eje. Es por esto que $W_{AC}>0$ y $W_{CA}<0$, ya que todo se ve desde dentro del sistema, el motor.
+	En la creación de motores se busca siempre que el trabajo entregado al eje ($W_{A\to C}$)
+5. .
