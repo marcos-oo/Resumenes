@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "75faaa765a132dce",
+        "id": "090dee0834e63e46",
         "type": "tabs",
         "children": [
           {
-            "id": "b6c7d96f1bd9e601",
+            "id": "cc8e935bd4c32ed6",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "F-II/Maquina de Carnot.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Maquina de Carnot"
+              "title": "New tab"
             }
           }
         ]
@@ -197,9 +193,20 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "b6c7d96f1bd9e601",
+  "active": "cc8e935bd4c32ed6",
   "lastOpenFiles": [
+    "F-II/Maquina de Carnot.md",
     "F-II/Transformaciones y Ciclos.md",
+    "F-II/FORMULARIO.md",
+    "2026-05-01.md",
+    "Untitled.md",
+    "logseq/custom.css",
+    "pages/contents.md",
+    "pages",
+    "logseq/config.edn",
+    "journals",
+    "logseq",
+    "Pasted image 20260430171915.png",
     "PdP/Clase 4 - PdP.md",
     "F-II/P(v).png",
     "F-II/Pasted image 20260428104558.png",
@@ -210,7 +217,6 @@
     "SSL/Clase 3 - SSL.md",
     "SSOO/Pasted image 20260425090316.png",
     "SSL/Jerarquia-De-Chomsky.png",
-    "F-II/Maquina de Carnot.md",
     "IySc/Clase 4 - IySc.md",
     "IySc/Clase 5 - IySc.md",
     "Pasted image 20260427185508.png",
@@ -230,13 +236,8 @@
     "Hola.md",
     "Untitled Kanban.md",
     "Jerarquia-De-Chomsky_VENN.png",
-    "Pasted image 20260421174123.png",
     "Excalidraw/Drawing 2026-04-21 17.35.33.excalidraw.md",
-    "Excalidraw",
     "SSL/Clase 2 - SSL.md",
-    "Untitled.base",
-    "2026-04-21.md",
-    "SSL",
-    "SSOO"
+    "2026-04-21.md"
   ]
 }

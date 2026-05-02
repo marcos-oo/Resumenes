@@ -39,13 +39,77 @@ Un agente externo empuja el piston realizando un trabajo $W$, aumentando la ener
 $$\Delta U<0$$
 Y el resto se comporta como la fase 2:
 $$Q=0\implies W_{D\to A}+\Delta U = 0 \implies$$$$\large W_{D\to A}=-\Delta U$$
-<div style="page-break-after: always;"></div>
-## Conclusiones:
+### Conclusiones:
 Los gráficos (Figura 1. Figura 2, Figura 3) y las explicaciones anteriores expresan algunas ideas que vale la pena aclarar:
 1. Hay un intercambio entre la maquina y el eje. Sin embargo, como lo que se busca es ganar fuerza motriz, el intercambio termina siendo favorable para el eje.
 2. El intercambio entre el eje y el motor es cíclico, expresado como un "bombeo" de energía $Motor\to Eje$ y $Eje\to Motor$ de forma alternante.
 3. El ciclo térmico $A\to B\to C\to D$ coincide con un giro completo del eje (360º sexagesimales) dividido en dos giros de 180º cada uno.
 $$(0º\implies A\to C\implies180º\implies C\to A\implies 360º)$$
 4. Se puede ver que en la Expansión $(A\to C)$ el motor le entrega el trabajo $W_{AC}$ al eje, mientras que en la Compresión $(C\to A)$ el motor le recibe el trabajo $W_{CA}$ del eje. Es por esto que $W_{AC}>0$ y $W_{CA}<0$, ya que todo se ve desde dentro del sistema, el motor.
-	En la creación de motores se busca siempre que el trabajo entregado al eje ($W_{A\to C}$)
-5. .
+	En la creación de motores se busca siempre que el trabajo entregado al eje ($W_{A\to C}$) sea mayor al entregado al motor ($W_{C\to A}$). Esto se debe a que el calculo final del rendimiento se hace de la siguiente forma:
+	$$\eta=\dfrac{W}{Q_1}=\dfrac{W_{A\to C}-W_{C\to A}}{Q_1}$$
+5. El trabajo del motor sobre el eje es una suma de dos, $W_{A\to B}+W_{B\to C}$. 
+	$W_{A\to B}$: Trabajo del motor sobre el eje realizado con energía extraída de la fuente caliente. El gas no aporta energía en este tramo, por lo que su energía interna permanece constante y así su temperatura.
+$$Q_{AB}=W_{A\to B}>0\quad\wedge\quad\Delta U=0\quad\land\quad\Delta T=0$$
+	$W_{B\to C}$: Trabajo del motor sobre el eje realizado con la energía interna del gas. Como el gas aporta energía en este tramo, su energía interna baja y así su temperatura.
+$$-\Delta U_{BC}=W_{B\to C}>0\quad\wedge\quad\Delta U<0\quad\land\quad\Delta T<0$$
+6. El trabajo del eje sobre el motor es una suma de dos, $W_{C\to D}+W_{D\to A}$. 
+	$W_{C\to D}$: Trabajo del eje sobre el motor realizado con energía dirigida a la fuente ahora fría. El gas no acumula energía en este tramo, por lo que su energía interna permanece constante y así su temperatura.
+$$Q_{CD}=W_{C\to D}<0\quad\wedge\quad\Delta U=0\quad\land\quad\Delta T=0$$
+	Ademas, como el eje entrega energía a la compresión del gas del motor, tiende a frenarse, perdiendo energía. Luego veremos que aquí se da el motivo de $\eta<1$.
+	
+	$W_{D\to A}$: Trabajo del eje sobre el motor realizado con energía dirigida al gas. El gas retiene energía en este tramo, por lo que su energía interna aumenta y así su temperatura.
+$$-\Delta U_{DA}=W_{D\to A}<0\quad\wedge\quad\Delta U>0\quad\land\quad\Delta T>0$$
+	Es luego de esta etapa que se llega a la etapa $A$, en la que la temperatura es caliente.
+1. El saldo de ambas transformaciones **adiabáticas** es nulo. $\left|W_{BC}\right|=\left|W_{DA}\right|$ , ya que $\left|T_2-T_1\right|$ es idéntico para ambos procesos $\quad\implies\quad \left|\Delta U_{BC}\right|=\left|\Delta U_{DA}\right|$ . Al ser $Q_{BC}=Q_{DA}=0$, el intercambio de energía en el ciclo es nulo$\quad\implies\quad W_{BC}-W_{DA}=0$. 
+2. El saldo de ambas transformaciones **isotérmicas** NO es nulo. El balance energético en el ciclo completo será $W_{AB}-W_{CD}$ ya que como vimos antes, $W_{BC}-W_{DA}=0$, así que en la ecuación final "se cancelan".
+3. Rendimiento $\equiv\eta$
+$$\eta=\dfrac{Trabajo\ neto\ sobre\ el\ eje}{Energía\ aportada\ por\ la\ fuente\ caliente}=\dfrac{W_{AB}-W_{CD}}{W_{AB}}$$
+$$\large \eta=1-\dfrac{W_{CD}}{W_{AB}}$$
+4. Es lograble el $\eta=1$?
+	Para que así fuese $W_{CD}$ debería ser $0$ en la expresión anterior. $W_{CD}=0$ significa, físicamente, que el embolo comprime el gas sin que el gas oponga resistencia alguna. $W_{CD}=0$ también significa que el eje gira sin oposición alguna (no se frena) durante la transformación isotérmica fría.
+	**Caso ideal ($\eta=1$):**
+	Para que el embolo se desplace libremente en el cilindro, sin la oposición del gas, deberá suceder que la presión del gas sea 0.
+	$$W_{CD}=\int_{V_C}^{V_D}P\cdot dV=\int_{V_C}^{V_D}0\cdot dV=0$$
+	Un gas confinado en un sistema no ejerce presión sobre las paredes de su recipiente de volumen $V$ siempre que su $T=0$, ya que:
+$$P\cdot V=n\cdot R\cdot T\ \wedge \ T=0\implies P=0$$
+	Es decir, sus partículas están des-energizadas, por lo que no golpean las paredes del recipiente que lo contiene. Visto de forma gráfica, en el gráfico P(V), el area bajo la curva es 0, al igual que $W_{CD}$.
+	**Impedimentos para que suceda $\eta=1$**
+	1. El cero absoluto (0ºK) no ha sido alcanzado ni en los mas completos laboratorios, en un motor no se va a dar.
+	2. Incluso aunque el cero absoluto fuese posible, en la realidad no habría energía cero a 0ºK, ya que la idea de que las moléculas tienen velocidad 0 a e 0ºK no es estrictamente correcta. La energía molecular (y por lo tanto la presión) no pasa de un valor mínimo llamado **energía de punto cero**, cuyo valor no es cero. Al existir un mínimo de presión jamás lograremos un $W_{CD}=0$, y por lo tanto, tampoco lograremos un $\eta=0$.
+### Rendimiento en función de la temperatura de las fuentes
+Partimos de:
+$$\eta=\dfrac{Q_1-Q_2}{Q_1}=1-\dfrac{Q_2}{Q_1}$$
+Calculamos $Q_1$/$Q_2$:
+$$A\to B\quad:\quad Q_1=W_{AB}=n\cdot R\cdot T_1\cdot ln\left(\dfrac{V_2}{V_1}\right)$$
+$$C\to D\quad:\quad Q_2=W_{CD}=n\cdot R\cdot T_2\cdot ln\left(\dfrac{V_4}{V_3}\right)$$
+Hacemos el cociente $Q_2$/$Q_1$, usando el modulo de $Q_2$ porque el rendimiento nos quedaría negativo siendo $V_4<V_3$.
+$$\dfrac{\left|Q_2\right|}{Q_1}\ =\ \dfrac{T_1}{T_2}\cdot \dfrac{ln\left(\dfrac{V_3}{V_4}\right)}{ln\left(\dfrac{V_2}{V_1}\right)}\qquad[1]$$
+También sabemos que para evoluciones isotérmicas:
+$$P_1\cdot V_1=P_2\cdot V_2$$
+$$P_3\cdot V_3=P_4\cdot V_4$$
+Y para las adiabáticas:
+$$P_2\cdot V_2^\gamma=P_3\cdot V_3^\gamma$$
+$$P_4\cdot V_4^\gamma=P_1\cdot V_1^\gamma$$
+Haciendo el producto miembro a miembro:
+$$P_1\cdot P_2\cdot P_3\cdot P_4\cdot V_1\cdot V_3\cdot V_2^\gamma\cdot V_4^\gamma\quad=\quad P_1\cdot P_2\cdot P_3\cdot P_4\cdot V_2\cdot V_4\cdot V_1^\gamma\cdot V_3^\gamma$$
+Simplificando:
+$$\left(V_2\cdot V_4\right)^\gamma=\left(V_3\cdot V_1\right)^\gamma\implies\dfrac{V_2}{V_1}=\dfrac{V_3}{V_4}$$
+Esa última fórmula se parece bastante a $[1]$. Si reemplazamos la fracción de limites se hace 1, el neutro de la multiplicación.
+$$\dfrac{Q_2}{Q_1}=\dfrac{T_2}{T_1}$$
+Por lo que podemos expresar el rendimiento como:
+$$\large\eta=1-\dfrac{T_2}{T_1}$$
+
+## El Refrigerador
+El refrigerador que se analizará es en realidad un calentador que como efecto secundario enfría. Si recorremos el Ciclo de Carnot en el sentido contrario, se producirá una reversion de todos los flujos de energía que vimos antes, $|Q|=Q_1-Q_2$. EL eje hará trabajo sobre la maquina, tal que las fuentes cambian su temperatura.
+- La fuente caliente se calienta cada vez más.
+- La fuente fría se enfría cada vez más.
+La capacitancia térmica de las fuentes debe ser alta (en comparación a la del gas), ya que queremos que sus temperaturas sigan aumentando (o decreciendo), sin que vuelvan a temperatura ambiente siempre que no están activamente siendo afectados por el proceso del motor.
+#### Eficiencia Frigorífica ($\Large\varepsilon\normalsize$):
+$$\Large\varepsilon\normalsize=\dfrac{Q_2}{W}=\dfrac{Q_1-W}{W}=\dfrac{Q_1}{W}-1\implies$$
+$$\Large\varepsilon\normalsize=\dfrac{1}{\dfrac{W}{Q_1}}-1=\dfrac{1}{\eta}-1\qquad[1]$$
+$$\eta=1-\dfrac{T_2}{T_1}=\dfrac{T_1-T_2}{T_1}\qquad[2]$$
+Usando $[1]$ y $[2]$:
+$$\Large\varepsilon\normalsize\quad=\quad\dfrac{T_2}{T_1-T_2}\quad=\quad\dfrac{1}{\eta}-1$$
+Y además:
+$$\eta=\dfrac{1}{\Large\varepsilon\normalsize+1}$$
