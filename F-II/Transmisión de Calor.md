@@ -11,7 +11,7 @@ Siendo:
 - $T_2$: Temperatura del objeto 2 (usualmente el más frío).
 
 Con las siguientes unidades:
-$$\dfrac{\Delta Q}{\Delta t}\qquad \left[\dfrac{cal}{seg}\right]\equiv\left[\dfrac{Joules}{seg}\right]\equiv Watts$$
+$$\dfrac{\Delta Q}{\Delta t}\qquad \left[(a\ veces)\ \dfrac{cal}{seg}\right]\equiv\left[\dfrac{Joules}{seg}\right]\equiv Watts$$
 $$1\ cal=4,186\ Joules$$
 $$1\ Joules=0,239\ cals$$
 $$\sigma\qquad\left[\dfrac{Watt}{m\cdotºC}\right]\equiv\left[\dfrac{cal}{seg\cdot m\cdotºC}\right]$$
@@ -21,7 +21,7 @@ $$T\qquad\left[ºC\right]$$
 De un objeto conductor se conoce la **resistividad térmica** de su material:
 $$\rho =\dfrac{1}{\sigma}\quad\left [\rho\right]\equiv\left[\dfrac{m\cdot ºC}{Watts}\right]\equiv\left[\dfrac{seg\cdot m\cdot ºC}{cal}\right]$$
 También se conoce la **resistencia térmica** del objeto en sí:
-$$R_T=\rho\dfrac{L}{A}=\dfrac{1}{\sigma}\cdot\dfrac{L}{A}$$
+$$R_T=\rho\dfrac{L}{A}=\dfrac{1}{\sigma}\cdot\dfrac{L}{A}=\dfrac{\Delta T}{P}$$
 La resistividad es una propiedad intensiva, del material en sí. Para poder usarla en un problema se debe multiplicar por las dimensiones del objeto conductor, para poder ver como se comporta ese material en el sistema.
 ## Convección
 En la transmisión por **conducción** la potencia calórica se propaga capa por el material conductor, sin que estas capas se trasladen, y perdiendo potencia a mayor cantidad de capas atravesadas.
