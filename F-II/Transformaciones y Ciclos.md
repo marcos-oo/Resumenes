@@ -89,3 +89,5 @@ Como bien indica el titulo, la transformación es **isotérmica**, por lo que se
 $$\large \Delta T=0\implies \Delta U=0$$
 Entonces:
 $$\large Q=W$$
+### Transformación Adiabática
+Está en el apunte y se entiende.

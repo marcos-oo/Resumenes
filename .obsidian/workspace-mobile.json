@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PdP/Clase 4 - PdP.md",
+                "file": "F-II/Transformaciones y Ciclos.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Clase 4 - PdP"
+              "title": "Transformaciones y Ciclos"
             }
           }
         ],
@@ -185,9 +185,14 @@
   },
   "active": "1032eefe9dda48b8",
   "lastOpenFiles": [
+    "F-II/Transmisión de Calor.md",
+    "ASI/Clase 5 - ASI.md",
+    "PdP/Clase 4 - PdP.md",
+    "SSOO/Pasted image 20260425090316.png",
+    "SSL/Jerarquia-De-Chomsky.png",
+    "F-II/Pasted image 20260428104558.png",
     "ASI/Clase 4 - ASI.md",
     "SSL/Clase 3 - SSL.md",
-    "PdP/Clase 4 - PdP.md",
     "SSOO/Clase 2 - SSOO.md",
     "Hola.md"
   ]
