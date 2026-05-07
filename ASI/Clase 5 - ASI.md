@@ -110,4 +110,9 @@ flowchart LR
 	E-->|^^includes^^|F
 	G-->|^^includes^^|F
 ```
-___
+Clasificaciones de requerimientos:
+Tipo:
+- Fx
+- No Fx
+- Restricciones
+- ![[Pasted image 20260506093707.png]]
