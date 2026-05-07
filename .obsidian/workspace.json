@@ -93,8 +93,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 241.5,
-    "collapsed": true
+    "width": 241.5
   },
   "right": {
     "id": "f7f31304b84317c7",
@@ -216,8 +215,12 @@
   "lastOpenFiles": [
     "Untitled.md",
     "SSOO/Resumen 1er Parcial.md",
-    "SSOO/Clase 4 - SSOO.md",
+    "Pasted image 20260430171915.png",
     "SSOO/Pasted image 20260425090316.png",
+    "SSOO/Clase 4 - SSOO.md",
+    "F-II/FORMULARIO.md",
+    "Pasted image 20260506093707.png",
+    "Pasted image 20260506085114.png",
     "F-II/Transmisión de Calor.md",
     "F-II/Transformaciones y Ciclos.md",
     "F-II/Maquina de Carnot.md",
@@ -225,15 +228,11 @@
     "Clase 6.md",
     "PdP/Clase 4 - PdP.md",
     "ASI/Clase 5 - ASI.md",
-    "Pasted image 20260506093707.png",
-    "Pasted image 20260506085114.png",
     "SSOO/Ciclo-Interrupciones.png",
-    "Pasted image 20260430171915.png",
     "Pasted image 20260505183143.png",
     "SSL/Clase 4 - SSL.md",
     "SSL/Clase 5 - SSL.md",
     "SSL/Clase 3 - SSL.md",
-    "F-II/FORMULARIO.md",
     "Untitled.base",
     "2026-05-01.md",
     "logseq/custom.css",
@@ -259,7 +258,6 @@
     "ASI/Clase 3 - ASI.md",
     "SSOO/Clase 2 - SSOO.md",
     "IySc",
-    "Hola.md",
-    "Untitled Kanban.md"
+    "Hola.md"
   ]
 }
