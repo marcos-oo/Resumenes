@@ -179,10 +179,62 @@ Los SOs usan un sistema de "anillos de protección" (suele ir del 0 al 3) el cua
 Un cambio de modo es, como su nombre indica, un cambio del modo de ejecución del sistema. Estos suceden constantemente ya que, por ejemplo:
 - Si termina un proceso, se debe cambiar el modo a **kernel** para que el SO pueda decidir que otro proceso le sigue y, una vez elegido, darle el control (limitado) del sistema.
 - Si se recibe una interrupción a la que se decide atender, el SO es el que se encarga de llamar su respectiva rutina.
-> - Puedo conocer en que modo estoy revisando el PSW de el/los registro/s de estado.
+> - Puedo conocer en que modo estoy revisando los bits que lo indican del PSW.
 > - Si un programa intenta ejecutar una instrucción privilegiada, el SO le envía una señal para que finalice o realiza una acción similar. Se produce, como el nombre indica, una interrupción.
 # 3. Procesos
 ### 3.1 Definiciones (repaso)
 - **Programa:** Secuencia de instrucciones compiladas a código de máquina. Son estáticos, no dinámicos como los **procesos**.
-- **Ejecución concurrente**: Múltiples programas siendo ejecutados en simultaneo, pero no en el mismo instante, sino tomándose turnos para ir ejecutando sus partes.
-- **Sistemas Monoprogramados**: SOs en los que la CPU solo puede 
+- **Ejecución concurrente**: Múltiples programas siendo ejecutados en simultaneo, pero no en el mismo instante (una CPU no puede ejecutar dos instrucciones en el mismo instante), sino tomándose turnos para ir ejecutando sus partes.
+- **Sistemas Monoprogramados**: SOs en los que la CPU solo puede ejecutar un programa por vez.
+- **Multiprogramación**: Múltiples programas cargados en memoria siendo ejecutados simultáneamente en un solo procesador.
+- **Multiprocesamiento**: Dos o más procesadores físicos trabajando en paralelo ejecutando tareas simultáneamente.
+### 3.2 Proceso
+Un programa siendo ejecutado en un instante determinado, con memoria y recursos asignados a su funcionamiento. Se puede entender como una instancia en acción de un programa. Son la unidad de trabajo del SO y se componen de los siguientes elementos:
+- Una secuencia de instrucciones que debe ejecutar el procesador.
+- Un conjunto de datos.
+- Estado.
+- Atributos.
+- Recursos asignados a ellos previamente.
+Es la estructura que permite que un conjunto de instrucciones se pueda ejecutar. Todo proceso debe estar representado en la memoria RAM.
+**Entorno de un proceso**: Conjunto de variables que utiliza el proceso durante su ejecución.
+##### 3.2.1 Estructuras que lo componen:
+- **Código**: Espacio asignado a almacenar la secuencia de instrucciones del programa. Las instrucciones (ya en lenguaje de maquina) se cargan a la memoria. El proceso no puede modificar su propio código ni el de otro proceso.
+- **Datos**: Espacio asignado para almacenar variables globales, las que no se definen durante el proceso. El proceso no puede modificar sus propios datos ni los de otro proceso.
+- **Stack**: Espacio asignado para almacenar:
+	- Variables locales, definidas dentro de una función.
+	- En llamadas a funciones, se almacena en el stack la dirección a la que volver una vez terminada la ejecución de la función.
+	- Parámetros.
+	- Retornos de funciones.
+	Se gestiona automáticamente y se borra al terminar la función. Los procesos pueden modificar el stack.
+- **Heap**: Memoria que el programador se encarga de reservar y liberar en tiempo de ejecución en base a su necesidad. Demás está decir que el proceso puede modificarlo.
+Ejemplo aclaración:
+```C
+int valor_inicial = 1;
+// DATA
+
+int main(){
+	int total = sumar(valor_inicial, 2);
+	// STACK
+	char * mensaje = malloc(30);
+	// STACK           HEAP
+	
+	sprintf(mensaje, "Total: %d", total);
+	//       HEAP
+	return 0;
+}
+```
+- **PCB (Process Control Block)**: Espacio asignado para almacenar el contexto de ejecución de un proceso, especialmente usado en la multiprogramación. Existe uno por proceso y son creados y gestionados por el SO. Contiene la información para que el SO lo administre y pueda guardar su contexto en caso de un cambio de contexto. El PCB, siempre cargado en la RAM y solo en la CPU cuando se está ejecutando su respectivo proceso se compone de:
+	- El PSW del proceso.
+	- Identificadores:
+		- PID: Identificador del proceso.
+		- PPID: Identificador del padre del proceso.
+		- UID: Identificador del usuario que inició el proceso. 
+	- IP
+	- Registros
+	- Información para la planificación (usada por la CPU).
+	- Información de manejo de memoria.
+	- Información de E/S.
+	- Información contable, como tiempo en CPU.
+	El proceso no puede modificar su propio PCB ni el de otro proceso.
+> Si declaro un puntero y no hago `free()` se guardará en el stack el la dirección del heap en la que se encuentra su contenido. Una vez finalizado el proceso, se borra el puntero, pero no el dato en el heap, por lo que ahora hay algo en el heap al que no puedo acceder para borrarlo. Esto se conoce como fuga de memoria (memory leak).
+##### EXTRA 1: Tiempo de vida de datos:
