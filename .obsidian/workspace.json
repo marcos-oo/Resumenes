@@ -192,15 +192,14 @@
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
       "audio-recorder:Start/stop recording": false,
-      "obsidian-git:Open Git source control": false,
-      "obsidian-kanban:Create new board": false
+      "obsidian-git:Open Git source control": false
     }
   },
   "active": "40f3bed1cd9f5a14",
   "lastOpenFiles": [
-    "^1^.md",
-    "SSOO/Resumen 1er Parcial.md",
     "Untitled.md",
+    "SSOO/Resumen 1er Parcial.md",
+    "^1^.md",
     "Pasted image 20260430171915.png",
     "Pasted image 20260506085114.png",
     "Pasted image 20260506093707.png",
