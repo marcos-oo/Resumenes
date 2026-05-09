@@ -4,7 +4,7 @@
 - **Registros**: Memoria interna de la CPU. Se dividen en:
 	- *Registros de uso general*: Son visibles por el usuario, pueden ser escritos y leídos. Se usan, por ejemplo, para guardar resultados o números intermedios de una cuenta (AX, BC, etc.).
 	- *Registros de control y estado*: Usualmente no pueden ser escritos por el programador, sí leídos. Los utiliza el HW o el SO para tener idea de su situación actual. Entre ellos se encuentran:
-		- IP: La dirección en memoria de la siguiente instrucción a ejecutarse.
+		- PC (IP en x86): La dirección en memoria de la siguiente instrucción a ejecutarse.
 		- IR: El op-code de la instrucción en que se está ejecutando en ese instante.
 		- MAR: La dirección de lo que se buscará en la RAM, sea operando o instrucción.
 		- MBR: Lo buscado en la RAM, sea operando o instrucción.
@@ -46,10 +46,10 @@ flowchart LR
 	D-->F
 ```
 Las tres etapas contempladas en la cursada de SO son:
-- **Fetch**: La CPU busca en memoria la siguiente instrucción a ejecutar, cuya dirección está almacenada en el IP.
+- **Fetch**: La CPU busca en memoria la siguiente instrucción a ejecutar, cuya dirección está almacenada en el PC.
 - **Decode**: La CPU decodifica la instrucción, traduciéndola para conocer que operación es y que operandos debe buscar. Se almacena el el IR.
 - **Execute**: La CPU ejecuta la instrucción.
-Una vez completado el ciclo se reinicia, habiendo hecho IP+=1 si se siguió con el flujo normal o PC=pos. si se realizó un `JMP`.
+Una vez completado el ciclo se reinicia, habiendo hecho PC+=1 si se siguió con el flujo normal o PC=pos. si se realizó un `JMP`.
 > Solo pueden ejecutarse los programas que se encuentren en la RAM.
 ### 1.3 Interrupciones
 ##### 1.3.1 Definición
@@ -85,14 +85,14 @@ Pasos que se dan en el proceso de interrupción:
 	1. Se genera la interrupción.
 	2. Se espera a finalizar la instrucción actual.
 	3. Se determina si ha ocurrido una interrupción y su proveniencia.
-	4. Se almacenan el IP y el registro FLAGS en la pila.
-	5. Se carga en el IP la dirección de la rutina (localizada en el manejador de interrupciones) y comienza a ejecutarla el SO.
+	4. Se almacenan el PC y el registro FLAGS en la pila.
+	5. Se carga en el PC la dirección de la rutina (localizada en el manejador de interrupciones) y comienza a ejecutarla el SO.
 - **SO**:
 	6. Se almacena el resto del contexto de ejecución en la pila (registros auxiliares).
 	7. Se inhabilitan las interrupciones (no siempre).
 	8. Se procesa la rutina de la interrupción en su totalidad.
 	9. Se recuperan los registros auxiliares y el FLAGS.
-	10. Se recupera el IP.
+	10. Se recupera el PC.
 	11. Se rehabilitan las instrucciones (si se inhabilitaron previamente).
 ##### 1.3.5 Múltiples interrupciones en simultaneo
 Suele ocurrir que surja una interrupción mientras se está atendiendo otra. Se puede resolver
@@ -188,7 +188,7 @@ Un cambio de modo es, como su nombre indica, un cambio del modo de ejecución de
 - **Sistemas Monoprogramados**: SOs en los que la CPU solo puede ejecutar un programa por vez.
 - **Multiprogramación**: Múltiples programas cargados en memoria siendo ejecutados simultáneamente en un solo procesador.
 - **Multiprocesamiento**: Dos o más procesadores físicos trabajando en paralelo ejecutando tareas simultáneamente.
-### 3.2 Proceso
+### 3.2 Anatomía de un proceso
 Un programa siendo ejecutado en un instante determinado, con memoria y recursos asignados a su funcionamiento. Se puede entender como una instancia en acción de un programa. Son la unidad de trabajo del SO y se componen de los siguientes elementos:
 - Una secuencia de instrucciones que debe ejecutar el procesador.
 - Un conjunto de datos.
@@ -229,12 +229,129 @@ int main(){
 		- PID: Identificador del proceso.
 		- PPID: Identificador del padre del proceso.
 		- UID: Identificador del usuario que inició el proceso. 
-	- IP
+	- PC
 	- Registros
 	- Información para la planificación (usada por la CPU).
 	- Información de manejo de memoria.
 	- Información de E/S.
 	- Información contable, como tiempo en CPU.
-	El proceso no puede modificar su propio PCB ni el de otro proceso.
-> Si declaro un puntero y no hago `free()` se guardará en el stack el la dirección del heap en la que se encuentra su contenido. Una vez finalizado el proceso, se borra el puntero, pero no el dato en el heap, por lo que ahora hay algo en el heap al que no puedo acceder para borrarlo. Esto se conoce como fuga de memoria (memory leak).
+El proceso no puede modificar su propio PCB ni el de otro proceso.
+> Si declaro un puntero se guardará en el stack la dirección del heap en la que se encuentra su contenido. Una vez finalizado el proceso, si no hago `free()` , se borra el puntero, pero no el dato en el heap, por lo que ahora hay algo en el heap al que no puedo acceder para borrarlo. Esto se conoce como fuga de memoria (*memory leak*).
 ##### EXTRA 1: Tiempo de vida de datos:
+Todos los datos que son almacenados tienen un tiempo de vida. En C existen:
+- Estáticas: Variables que se crean en la creación del proceso y se destruyen con la destrucción del mismo. Para crearlas se pueden crear afuera del `main()` o con el calificador `static`.
+- Automáticas: Aquellas variables no declaradas con `static`. Se crean al entrar a su función y se destruyen al salir de ella.
+- Asignadas: Aquellas variables almacenadas en la memoria que se reserva de forma dinámica, el heap.
+### 3.3 Estados de un proceso
+##### 3.3.1 Definiciones
+- *Ciclo de vida de un proceso*: Tiempo que transcurre entre la inicialización y finalización de un proceso.
+- *Estado de un proceso*: Indica en que condición se encuentra un proceso, su comportamiento en un dado instante.
+##### 3.3.2 Diagrama de estados:
+![[DiagramaDeEstados.png]]
+- **Nuevo**: El proceso ya ha sido recibido por el SO y debe crear sus estructuras o inicializar su PCB para luego enviarlo a la memoria.
+- **Listo**: El proceso se encuentra en una cola, listo para ser ejecutado. A mayor cantidad de programas en **listo**, mayor grado de multiprogramación. ^47ab0f
+- **En ejecución**: La CPU está ejecutando / siendo usada por el proceso.
+	- El proceso puede volver a **listo** sin pasar por **en espera** cuando, por ejemplo, se le termina el tiempo que tenía designado para su ejecución.
+- **En espera**: El proceso ya comenzó su ejecución pero no puede continuarla porque realizó una *llamada bloqueante* y se encuentra a espera de un evento.
+	- El proceso puede volver a **listo** solo si le indica al SO que el evento que esperaba finalizó, mediante una interrupción.
+- **Suspendido en espera**: Al proceso que ocupa mucho espacio le envían todas sus estructuras (menos el PCB) al disco para liberar la RAM.
+	- El proceso puede pasar a **suspendido listo** si el evento que estaba esperando se completó mientras este seguía en el disco.
+- **Suspendido listo**: Al proceso que estuvo mucho tiempo **listo** y que ocupa mucho espacio le envían todas sus estructuras (menos el PCB) al disco para liberar la RAM. A mayor cantidad de programas en **suspendido listo**, menor grado de multiprogramación.
+- **Finalizado**: El proceso finalizó su ejecución, se libera la memoria de todas sus estructuras menos el PCB.
+	- Se puede pasar de cualquier estado a **finalizado** si así lo desea el SO.
+	- Siempre que un proceso es **finalizado** se debe guardar su valor de retorno, además de su PCB para fines estadísticos/contables.
+##### 3.3.3 Syscalls bloqueantes y no bloqueantes:
+| **Situación**                                  | **Bloqueante**                                                          | **No bloqueante**                                                                    |
+| ---------------------------------------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| **Operación se puede realizar inmediatamente** | Realiza la operación y retorna el resultado.                            | Realiza la operación y retorna el resultado.                                         |
+| **Operación no está lista (requiere espera)**  | La ejecución de ese programa se detiene hasta que la operación termine. | La ejecución del programa no se detiene y continúa con su siguiente línea de código. |
+| **Valores de retorno**                         | Ok / Error                                                              | Ok / Error / Reintentar                                                              |
+##### EXTRA 2: Estados en Linux:
+- **R (runnable/running):** Es la conjunción de los estados **en ejecución** y **listo**.
+- **S (sleep):** El equivalente de **en espera**.
+- **D (uninterruptable sleep):** Estado "super en espera". No se puede interrumpir, generalmente asociado a operaciones de Entrada/Salida (I/O) críticas.
+- **T (stopped):** El proceso ha sido detenido (por ejemplo, mediante una señal de control de trabajos).
+- **Z (zombie):** Estado *exit*. El proceso terminó su ejecución, pero su PCB (Process Control Block) sigue en memoria hasta que el proceso padre lo reclama (recolecta su código de salida).
+- **X (dead):** El proceso está completamente finalizado y eliminado.
+- **+ (plus):** Indica que el proceso se encuentra ejecutándose en el primer plano.
+### 3.4 Creación de un proceso
+##### 3.4.1 Formas de crear un proceso:
+- Lo crea el SO para proveer algún servicio.
+- Lo crea otro proceso, siendo el nuevo el hijo del que lo creó. Padre e hijo/s pueden o ejecutarse en simultaneo o el padre esperar a que el/los hijo/s termine/n. Padre e hijo no tienen porqué ser similares.
+##### 3.4.2 Pasos para crear un proceso:
+1. Asignarle un PID.
+2. Reservar espacio en memoria para sus estructuras.
+3. Inicializar su PCB.
+4. Ubicar su PCB en las listas de planificación.
+##### 3.4.3 Tabla de procesos:
+Cuando un proceso es creado se agrega a la tabla de procesos del sistema (TDP), la cual maneja el SO. A mayor cantidad de procesos de la TDP activos, mayor nivel de multiprogramación
+##### EXTRA 3: Crear procesos en Linux:
+- Para crear un hijo se realiza la syscall `fork()`, a lo que el SO duplica el proceso padre, le da un nuevo PID, le agrega el PPID, y el resto de datos (registros, pila, heap, PC) se mantienen.
+- Cuando proceso crea un hijo, el padre puede esperar a que termine, operar concurrentemente o incluso ejecutar distintas partes de un mismo programa.
+- Puede ocurrir que el proceso sea la copia exacta del padre o que se le de una nueva imagen que reemplace la anterior (`execv`).
+- Los recursos del hijo pueden ser directo del SO o estar restringidos a una parte de los procesos del padre.
+### 3.5 Finalización de un proceso
+##### 3.5.1 Formas de finalizar un proceso:
+- Lo finaliza el SO con `kill()`.
+- Lo finaliza otro proceso con `kill()`.
+- El proceso se finaliza a si mismo, sea una salida *normal* o *anormal*.
+##### EXTRA 4: Finalizar procesos en Linux:
+- Para finalizar un proceso se realiza la syscall `exit()`.
+- Si el proceso es hijo puede usar `wait()` para finalizar e indicar su resultado a su padre.
+- Si el proceso es padre puede usar `abort()` para finalizar a su hijo, sea porque consumió recursos demás, porque su tarea es ya innecesaria, porque el padre debe terminar o porque el padre fue finalizado por el abuelo.
+### 3.6 Cambio de proceso
+Un cambio de proceso sucede cuando la CPU deja de ejecutar un proceso y comienza a ejecutar otro. Puede deberse a la necesidad de ejecutar otro proceso más urgente o a la llegada de una interrupción o una syscall.
+Siempre se debe almacenar el *contexto de ejecución* del proceso original para poder reanudarlo una vez finalizado el nuevo. Esto causa overhead y se debe minimizar.
+# 4. Planificación
+### 4.1 Introducción
+##### 4.1.1 Problemas de la multiprogramación
+Cuando hay muchos procesos buscando ser ejecutados en simultaneo pueden surgir problemas como:
+- Disparidad de tiempo de uso de la CPU entre procesos.
+- Procesos que no llegan a ejecutarse nunca (*starvation*).
+- Decrecimiento en el tiempo de respuesta del sistema.
+- CPU en espera activa.
+- RAM llena.
+Esto resuelve con una correcta distribución de procesos, algo que se conoce como **planificación**. Esta permite asignar recursos de CPU a los distintos procesos existentes aumentando así el rendimiento y productividad de la maquina.
+##### 4.1.2 Tipos de procesos por limitación
+- **CPU bound**: Son aquellos procesos que requieren más tiempo de procesamiento en CPU que de espera de dispositivos de E/S.
+- IO bound: Son aquellos procesos que requieren más tiempo de espera de dispositivos de E/S que tiempo de procesamiento en CPU.
+### 4.2 Tipos de planificación.
+Los nombres de los tipos de planificación que veremos a continuación (corto, mediano y largo plazo) hacen referencia a la frecuencia con la que intervienen en el comportamiento normal del sistema.
+##### 4.2.1 Planificación de Largo Plazo
+En la **planificación a largo plazo** se determinan que procesos pueden o no ser siquiera admitidos a la cola de **listo**. Además, puede enviar procesos al estado **finalizado** si es que el sistema está muy saturado de procesos.
+Es por esto que esta es la planificación que agencia el grado de multiprogramación del sistema.
+##### 4.2.2 Planificación de Mediano Plazo
+En la **planificación a mediano plazo** se determinan los cambios de estado entre los de la RAM (listo, en ejecución, en espera, etc,) y los del disco (suspendido en espera y suspendido listo). Esta acción de enviar procesos del disco a la RAM y viceversa se conoce como **swapping**.
+- Swap in: Cargar (nuevamente) en la RAM un proceso suspendido.
+- Swap out: Pasar un proceso de la RAM al disco.
+Es importante aclarar que esta planificación no maneja los cambios entre. por ejemplo, suspendido en espera y suspendido listo, si no que solo se encarga de los cambios que se cruzan de almacenamiento.
+##### 4.2.3 Planificación de Corto Plazo
+En la **planificación a corto plazo** se determina que proceso debe estar **en ejecución**. Esta planificación se lleva a cabo cada vez que un evento libera la CPU o llega un proceso de mayor importancia, por lo que está en efecto casi constantemente.
+Para manejar los procesos bloqueados el SO posee listas/colas de bloqueados. Los algoritmos con los que las procesa se clasifican en:
+- Sin desalojo: Una vez asignados a la CPU, los procesos se ejecutan hasta que decidan devolverle el control al SO.
+- Con desalojo: El SO tiene la autoridad de interrumpir los procesos en plena ejecución, quitarles los recursos de CPU y dárselos a otro proceso. Esto pude suceder porque un proceso excedió su tiempo máximo permitido (*quantum*) o porque llegó un proceso con mayor prioridad.
+### 4.3 Criterios de planificación
+Para la planificación el SO debe basarse en ciertas métricas que reflejan el estado del funcionamiento del sistema. Se dividen en dos clases:
+##### 4.3.1 Cuantitativos
+- Tiempo de ejecución: Tiempo entre la solicitud de creación de un proceso hasta su finalización.
+- Tiempo de espera: Tiempo obtenido al sumar todos los intervalos en los que el proceso estuvo en **ready**.
+- Tiempo de respuesta: Tiempo entre la inicialización de un proceso y su primera respuesta, para nosotros eso es una llamada a E/S.
+- Tasa de procesamiento: La cantidad de procesos finalizados en un intervalo específico de tiempo.
+- Utilización de la CPU: El porcentaje de tiempo en el cual una CPU estuvo ocupada en un intervalo específico de tiempo. Mientras mas alto y menos ociosa la CPU, mejor.
+##### 4.3.2 Cualitativos
+- Previsibilidad: Criterio que hace referencia comportamiento que espera el usuario del sistema.
+- Equidad/Imposición de recursos/Equilibrado de recursos: Criterio que hace referencia a que tan parejo se distribuyen los recursos entre los procesos.
+### 4.4 Algoritmos de planificación
+Cuando se ejecutan los procesos es algo que se decide mediante un algoritmo. Es importante aclarar que esto no incluye las llamadas a E/S, las cuales se atienden únicamente por **FIFO**. Para el resto de los procesos se usa:
+##### 4.4.1 FIFO
+Los procesos entran a una cola en orden FIFO. La CPU procesa el primero, hasta que este termina o se bloquea. Una vez que una de estas dos situaciones se da, se realiza el siguiente proceso en la fila, y se aplica el mismo sistema. Cuando un proceso termina una operación bloqueante no se sigue realizando inmediatamente, sino que se envía al final de la cola, donde espera su turno hasta que le llegue.
+Este algoritmo tiene el problema los procesos muy largos hacen que los procesos cortos que les siguen tarden mucho también.
+##### 4.4.3 SJF sin desalojo 
+Se ejecuta primero el proceso cuya próxima ráfaga de CPU sea la más corta, a menos que haya dos procesos con la misma duración de próxima ráfaga, en cuyo caso se decide por FIFO.
+Este algoritmo tiene dos problemas principales:
+- **Starvation**: Si hay un proceso con una ráfaga muy larga es posible que nunca se ejecute si siguen llegando procesos más cortos.
+- **Estimación**: En la realidad es imposible saber cuanto tiempo va a tardar un proceso, por lo que debe estimarlo.
+Este ultimo problema se soluciona, como ya dijimos, estimando el tiempo que tardará la primera ráfaga del siguiente proceso. Para realizar esta estimación nosotros usaremos la siguiente fórmula:
+$$EST_{N+1}=\alpha\cdot TE_n+\left(1-\alpha\right)\cdot EST_n$$
+Siendo:
+- $TE_n=$ Tiempo de ejecución de la ráfaga actual
