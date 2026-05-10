@@ -379,9 +379,9 @@ Cuando se ejecutan los procesos es algo que se decide mediante un algoritmo. Es 
 ##### 4.4.1 First In First Out (FIFO)
 Los procesos entran a una cola en orden FIFO. La CPU procesa el primero, hasta que este termina o se bloquea. Una vez que una de estas dos situaciones se da, se realiza el siguiente proceso en la fila, y se aplica el mismo sistema. Cuando un proceso termina una operación bloqueante no se sigue realizando inmediatamente, sino que se envía al final de la cola, donde espera su turno hasta que le llegue.
 Este algoritmo tiene el problema los procesos muy largos hacen que los procesos cortos que les siguen tarden mucho también.
-##### 4.4.2 FIFO con prioridad
-En este caso, además de tener un orden de llegada, los procesos tienen su nivel de prioridad. Este es un número entero, que en la práctica divide la cola **FIFO** en "niveles", los cuales se comportan cada uno como su propia cola. Si un proceso tiene un número de prioridad menor que otro entonces se ejecuta primero (0 es máxima prioridad). Si dos procesos tienen la misma prioridad, se hace por **FIFO**.
-Este algoritmo tiene dos problemas principales:
+##### 4.4.2 Algoritmo por prioridades
+En este caso, además de tener un orden de llegada, los procesos tienen su nivel de prioridad. Este es un número entero, que en la práctica divide la cola **FIFO** en "niveles" que funcionan similar a colas, una por cada nivel de prioridad. Si un proceso tiene un número de prioridad menor que otro entonces se ejecuta primero (0 es máxima prioridad). Si dos procesos tienen la misma prioridad, se hace por **FIFO**.
+Este algoritmo tiene un problema principal:
 - **Starvation**: Si hay un proceso con una prioridad muy baja (número de prioridad alto) es posible que nunca se ejecute si siguen llegando procesos con mayor prioridad.
 Es importante aclarar que no existen realmente varias colas, el algoritmo simplemente se comporta como si ese fuera el caso.
 ##### 4.4.3 Shortest Job First (SJF) sin desalojo 
@@ -409,11 +409,43 @@ Siendo:
 - $W=$ Tiempo de espera en **listo** del proceso.
 - $S=\alpha\cdot TE_n+\left(1-\alpha\right)\cdot EST_n=$ Duración estimada de la próxima ráfaga.
 
-Lo que hace este nuevo algoritmo es eliminar el problema de *starvation*, ya que un proceso que lleva mucho tiempo sin ser procesado va a tener una jerarquía altísima. Suele realizarse sin desalojo porque el *overhead* sería altísimo.
+Lo que hace este nuevo algoritmo es eliminar el problema de *starvation*, ya que un proceso que lleva mucho tiempo sin ser procesado va a tener una jerarquía altísima. Suele realizarse sin desalojo porque el *overhead* sería incluso más alto de lo que ya es.
 ##### 4.4.6 Round Robin (RR)
 Es un **FIFO** con el agregado de que se dispara una interrupción cuando un proceso excede su *quantum* (ver 4.2.3). Esta interrupción envía el proceso actual al final de la cola de **listo**. Es importante aclarar que si un proceso se bloquea sin haber usado todo su *quantum*, este resto no se guarda para más tarde, se descarta.
 - Un *quantum* muy pequeño puede permitir que procesos mas pequeños se ejecuten más rápido independientemente de los procesos que les precedan, pero conlleva mucho más procesamiento extra (*overhead*).
 - Un *quantum* muy grande tiene menos *overhead*, pero si es muy grande los procesos pueden no llegar nunca a completarlo, transformando el algoritmo en un **FIFO** con un contador innecesario.
+El problema que surge es que los procesos *IO bound* suelen no usar la totalidad de su *quantum* y sin embargo compiten en igualdad de condiciones con aquellos que lo usan todo o incluso lo exceden. Termina favoreciendo a los procesos *CPU bound*, por lo menos más que el:
 ##### 4.4.7 Virtual Round Robin (VRR)
-A diferencia del todos los algoritmos anteriores
-En comparación al **VRR**, el **RR** favorece a los procesos *CPU bound* (ver 4.1.2)
+El **VRR** busca resolver el problema de equidad del **RR**. Esto lo hace mediante el uso de dos colas, una normal y la otra prioritaria.
+Cuando un proceso se bloquea sin haber completado o excedido su *quantum*, el SO lo marca como prioritario. Esto hace que una vez que se desbloquee, este proceso sea enviado a una cola prioritaria. La próxima vez que se libere la CPU y entre a trabajar SO, lo primero que revisará será la cola prioritaria, de la cual sacará procesos si los hay y de la cual solo irá una vez que esté vacía.
+Un proceso que sale de la prioritaria puede seguir uno de las tres siguientes pasos:
+- Completar sus instrucciones.
+- Volver a bloquearse sin completar/exceder su *quantum*, lo que lo mantiene como prioritario,
+- Volver a bloquearse completando su *quantum* o excederse de él, lo cual lo envía directo a la cola normal y le revoca el atributo de prioritario.
+
+##### 4.4.8 Algoritmo de colas multinivel
+Este algoritmo puede parecerse al **algoritmo por prioridades**, pero a diferencia de este, el **algoritmo de colas multinivel** sí posee multiples colas reales, las cuales se dividen por el nivel de prioridad de los procesos que entran en ellas. Cada cola puede tener su propio algoritmo y solo pueden ejecutarse los procesos de una cola si no hay ningún proceso de prioridad mayor esperando a ser ejecutado.
+##### 4.4.9 Algoritmo de colas multinivel retroalimentadas
+Se asemeja al **algoritmo de colas multinivel**. Existen varias colas cada una con su propio algoritmo, además de en este caso con su propio *quantum*. La diferencia es que todos los procesos llegan a una cola en especifico y van subiendo o bajando dependiendo de como se comporten. Nosotros veremos colas de la que se desciende cuando se excede el del *quantum* de la cola en la que se encuentra. Puede existir algún tipo de *aging* que haga que los procesos suban. Para poder definirlas correctamente necesitamos:
+- El número de colas
+- El algoritmo de planificación de cada cola
+- A qué cola llegarán los procesos nuevos
+- Criterio para pasar de una cola a la otra (cambio de prioridad)
+- El algoritmo entre colas (es con desalojo?)
+
+##### EXTRA 5: Desalojo y el SO
+Cuando no hay desalojo, el SO solo entra en acción cuando se realiza una syscall bloqueante o finaliza un proceso, ya que debe decidir que proceso debe ser el siguiente en ejecutarse.
+Por otro lado, cuando hay desalojo, el SO se involucra cuando hay syscalls bloqueantes, finalizaciones de procesos y cuando tiene que retirar a un proceso, sea porque excedió su *quantum* o porque legó uno de mayor prioridad.
+### 4.5 Desempate
+Supongamos que suceden las siguientes eventos en "simultaneo":
+- Un proceso creado mediante una syscall.
+- Un proceso se desbloquea tras usan un dispositivo IO, el cual realiza una interrupción.
+- Un proceso finaliza su *quantum*.
+En que orden se encontrarían en la cola de **listo**? Quedarían así:
+1. El proceso del *quantum*, ya que las interrupciones de *clock* son de las más prioritarias.
+2. El proceso desbloqueado, ya que una interrupción de IO es mas lenta que una de *clock*.
+3. El proceso creado, ya que las syscalls se atienden siempre luego de las interrupciones.
+
+Esto es relevante para algoritmos como **FIFO** y **RR**, ya que dependen del orden de llegada de los procesos.
+# 5. Hilos
+### 5.1 Introducción

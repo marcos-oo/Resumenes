@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 241.5
+    "width": 241.5,
+    "collapsed": true
   },
   "right": {
     "id": "f7f31304b84317c7",
@@ -197,8 +198,9 @@
   },
   "active": "40f3bed1cd9f5a14",
   "lastOpenFiles": [
-    "Untitled.md",
+    "SSOO/Checkpoint 2.md",
     "SSOO/Resumen 1er Parcial.md",
+    "Untitled.md",
     "^1^.md",
     "Pasted image 20260430171915.png",
     "Pasted image 20260506085114.png",
@@ -242,7 +244,6 @@
     "F-II",
     "Untitled.canvas",
     "PERSONAL",
-    "ASI/Clase 3 - ASI.md",
     "IySc"
   ]
 }
