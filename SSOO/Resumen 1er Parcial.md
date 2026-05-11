@@ -497,4 +497,37 @@ Los **KLTs** tienen su propia planificación agenciada por su biblioteca, lo cua
 ##### 5.4.3 Jacketing
 En el **jacketing**, las syscalls *bloqueantes* se convierten en *no bloqueantes*, permitiendo que los otros hilos del proceso puedan seguir trabajando sin tener que esperar a que el hilo que hizo la llamada reciba el evento que tiene que recibir.
 Al recibir la syscall, la biblioteca se la hace al SO de forma no bloqueante (para que no se bloqueen todos sus hilos). Además, dentro del proceso, la biblioteca bloquea únicamente el hilo que hizo la syscall, y cada tanto le pregunta al SO si la llamada ya tuvo su retorno. Una vez que lo tiene, la biblioteca se lo notifica al hilo, le da el recurso si es lo que pidió y lo desbloquea.
-# 6. Arquitectura de kernel
+# 6. Arquitecturas de kernel
+### 6.1 Kernel monolítico
+En las arquitecturas de **kernel monolítico** todo el código del SO (gestión de memoria, planificación de procesos, sistemas de archivos y controladores de dispositivos) se ejecuta en un único bloque dentro del mismo espacio de memoria (espacio del kernel).
+**Ventajas**:
+- Gran fluidez entre la información $\implies$ mayor eficiencia.
+- *Overhead* prácticamente nulo.
+
+**Desventajas**:
+- Poca tolerancia a fallos, ya que si un solo componente falla colapsa todo el sistema.
+- A medida que crece se hace más difícil de mantener.
+- Es difícil localizar errores cuando suceden.
+
+### 6.2 Kernel multicapas
+En las arquitecturas de **kernel multicapas** el SO se divide en capas, las cuales representan cada una un módulo. Una capa capa solo puede acceder a los servicios y funciones suyos y de las capas de abajo. Las peticiones bajan y las respuestas suben.
+**Ventajas**:
+- Los cambios (y por lo tanto fallos) afectan solo a las capas en las que suceden y las de más arriba (a menos que los fallos sean críticos).
+- Más fácil de mantener que las arquitecturas de **kernel monolítico**.
+- Los errores son fáciles de localizar: si ya funcionan la capa 1 y 2, agrego la 3 y falla, el error está en la 3.
+
+**Desventajas**:
+- Poca fluidez de información, necesita ser pedida y pasar por múltiples capas.
+- Muy alto *overhead*.
+
+### 6.3 Microkernel
+En las arquitecturas de **microkernel** se reduce el código de máximo privilegio al mínimo indispensable, dejando solo las funciones críticas (como la gestión básica de memoria, la planificación y la comunicación entre procesos) en el kernel. El resto de las funciones (como los controladores, el filesystem, los protocolos de red, etc.) se ejecutan como programas normales en el espacio de usuario, como servidores independientes.
+**Ventajas**:
+- Estabilidad máxima, un fallo de un módulo simplemente llama al reinicio de ese módulo, pero no afecta al resto de los módulos ni al kernel.
+- Es muy fácil agregarle módulos nuevos.
+
+**Desventajas**:
+- Menor rendimiento que en las arquitecturas de **kernel monolítico**, ya que la mayoría de los procesos requieren un intercambio entre el espacio de usuario y el kernel.
+- *Overhead* medio alto.
+
+# 7. Sincronización
