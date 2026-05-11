@@ -240,7 +240,7 @@ int main(){
 	return 0;
 }
 ```
-- **PCB (Process Control Block)**: Espacio asignado para almacenar el contexto de ejecución de un proceso, especialmente usado en la multiprogramación. Existe uno por proceso y son creados y gestionados por el SO. Contiene la información para que el SO lo administre y pueda guardar su contexto en caso de un cambio de contexto. El PCB, siempre cargado en la RAM y solo en la CPU cuando se está ejecutando su respectivo proceso se compone de:
+- **PCB (Process Control Block)**: Espacio asignado para almacenar toda la información sobre el proceso, especialmente usado en la multiprogramación. Existe uno por proceso y son creados y gestionados por el SO. Contiene la información para que el SO lo administre y pueda guardar su contexto en caso de un cambio de contexto. El PCB, siempre cargado en la RAM y solo cargado en la CPU cuando se está ejecutando su respectivo proceso se compone de:
 	- El PSW del proceso.
 	- Identificadores:
 		- PID: Identificador del proceso.
@@ -248,6 +248,7 @@ int main(){
 		- UID: Identificador del usuario que inició el proceso. 
 	- PC
 	- Registros
+	- Estado
 	- Información para la planificación (usada por la CPU).
 	- Información de manejo de memoria.
 	- Información de E/S.
@@ -448,4 +449,9 @@ En que orden se encontrarían en la cola de **listo**? Quedarían así:
 
 Esto es relevante para algoritmos como **FIFO** y **RR**, ya que dependen del orden de llegada de los procesos.
 # 5. Hilos
-### 5.1 Introducción
+### 5.1 El hilo
+Un hilo, también conocido como proceso ligero, es la unidad básica de utilización de la CPU. Es por esto que un proceso se compone de uno o más hilos.
+Cada hilo posee es administrado por su propio **TCB**, el cual contiene su **stack**, su PC y un juego de registros. Además, comparte con sus hilos pares (con los que comparte proceso) el **code**, el **data**, el **heap** y recursos del SO como archivos abiertos o conexiones de red.
+Los hilos permiten paralelismo dentro de un proceso o aplicación, ya que son distintas lineas de ejecución dentro del mismo proceso y pueden comunicarse sin usar ningún mecanismo de comunicación inter-proceso del SO.
+Esta simpleza no viene sin sus problemas, como la falta de protección entre hilos, llevando a que estos puedan escribir sobre el **stack** de los otros por ejemplo.
+### 5.1 Hilos vs. Procesos
