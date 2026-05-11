@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#a",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,8 +74,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -197,10 +196,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2fcdc482e67037af",
+  "active": "40f3bed1cd9f5a14",
   "lastOpenFiles": [
-    "SSOO/Checkpoint 2.md",
+    "SSOO/Clase 2 - SSOO.md",
+    "SSOO/Clase 3 - SSOO.md",
+    "SSOO/Clase 4 - SSOO.md",
     "SSOO/Resumen 1er Parcial.md",
+    "SSOO/DiagramaDeEstados.png",
+    "SSOO/Checkpoint 2.md",
     "Untitled.md",
     "^1^.md",
     "Pasted image 20260430171915.png",
@@ -209,14 +212,12 @@
     "Pasted image 20260508091335.png",
     "Pasted image 20260508153856.png",
     "SSOO/Pasted image 20260425090316.png",
-    "SSOO/DiagramaDeEstados.png",
     "IySc/Guía de estudio - Primer Parcial - IySc.md",
     "IySc/Clase 4 - IySc.md",
     "IySc/Clase 5 - IySc.md",
     "IySc/Clase 6.md",
     "PdP/Clase 4 - PdP.md",
     "F-II/Transformaciones y Ciclos.md",
-    "SSOO/Clase 4 - SSOO.md",
     "F-II/FORMULARIO.md",
     "F-II/Transmisión de Calor.md",
     "F-II/Maquina de Carnot.md",
@@ -238,9 +239,6 @@
     "logseq",
     "F-II/P(v).png",
     "SSL/Clase 1 - SSL.md",
-    "PERSONAL/Ray-Tracing Project.md",
-    "ASI/Clase 4 - ASI.md",
-    "SSOO/Clase 3 - SSOO.md",
     "FII/Untitled",
     "F-II",
     "Untitled.canvas",

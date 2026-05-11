@@ -450,8 +450,51 @@ En que orden se encontrarían en la cola de **listo**? Quedarían así:
 Esto es relevante para algoritmos como **FIFO** y **RR**, ya que dependen del orden de llegada de los procesos.
 # 5. Hilos
 ### 5.1 El hilo
-Un hilo, también conocido como proceso ligero, es la unidad básica de utilización de la CPU. Es por esto que un proceso se compone de uno o más hilos.
+Un hilo, también conocido como proceso ligero, es la unidad básica de utilización de la CPU. Es por esto que un proceso se compone de uno (monohilo) o más hilos (multihilo).
 Cada hilo posee es administrado por su propio **TCB**, el cual contiene su **stack**, su PC y un juego de registros. Además, comparte con sus hilos pares (con los que comparte proceso) el **code**, el **data**, el **heap** y recursos del SO como archivos abiertos o conexiones de red.
 Los hilos permiten paralelismo dentro de un proceso o aplicación, ya que son distintas lineas de ejecución dentro del mismo proceso y pueden comunicarse sin usar ningún mecanismo de comunicación inter-proceso del SO.
 Esta simpleza no viene sin sus problemas, como la falta de protección entre hilos, llevando a que estos puedan escribir sobre el **stack** de los otros por ejemplo.
-### 5.1 Hilos vs. Procesos
+> De ahora en más si hablamos de 
+### 5.2 Hilos vs. Procesos
+A pesar de que los hilos se asemejan a los procesos, existen entre ellos un par de diferencias clave:
+- Los hilos pueden comunicarse entre sí sin la intervención del SO.
+- Hay una mayor eficiencia en el cambio de contexto de hilos que de procesos.
+- Hay una mayor eficiencia en la creación de hilos que en la de un proceso hijo.
+- Cuando se finaliza un proceso, se finalizan todos sus hilos.
+- Cuando se finaliza un hilo, un proceso puede recuperarse, ya que conoce el espacio de memoria que dejó el hilo y puede reasignarlo.
+- Si finaliza un hilo, puede afectar a sus hilos pares ya que comparte con ellos recursos.
+- Si finaliza un proceso, no afecta a sus procesos "pares", ya que comparten poco y nada.
+
+### 5.3 Dinámica de estados
+El estado de un proceso es la combinación de los estados de sus hilos:
+- Si algún hilo del proceso está **en ejecución**, entonces también lo está el proceso.
+- Si ningún hilo está **en ejecución** y alguno está **listo** entonces también lo está el proceso.
+- Si todos los hilos están **en espera** entonces el proceso también lo está.
+
+### 5.4 KLTs y ULTs
+Existen dos tipos de hilo, cada uno con sus características únicas:
+##### 5.4.1 Kernel Level Threads (KLTs)
+Los **KLTs**, también conocidos como **nativos**, son creados, destruídos y administrados por el SO, el cual los tiene identificados y sabe que están ejecutando. Estos son los hilos a los que tenemos acceso con la biblioteca `pthread`.
+Los **KLT** usan la planificación que les provee el SO. Este último deja de tratar a los procesos como entidades indivisibles y permite procesar varios hilos en paralelo, sin importar si comparten o no proceso.
+**Ventajas:**
+- Las syscalls bloqueantes solo bloquean el hilo en cuestión.
+- Los hilos de un mismo proceso pueden procesarse en unidades de ejecución distintas.
+
+**Desventajas:**
+- Mayor overhead que los ULTs, ya que las tareas de administración implican un cambio de modo, la creación de un hilo una syscall, etc.
+##### 5.4.2 User Level Threads (ULTs)
+Los **ULTs**, también conocidos como "Green Threads" no son conocidos por el SO, por lo que su administración se realiza con una biblioteca a nivel usuario.
+Los **KLTs** tienen su propia planificación agenciada por su biblioteca, lo cual sucede por encima de la planificación preexistente de procesos del SO.
+**Ventajas:**
+- La ausencia de syscalls y cambios de modo lleva a bajo *overhead*.
+- Hay mayor portabilidad, ya que su planificación es independiente del SO en el que se estén ejecutando.
+- Las conmutaciones de contexto y creaciones de hilo son más veloces y con menos *overhead* que en los **KLTs**.
+
+**Desventajas:**
+- No permite paralelismo entre hilos pares, ya que el SO no puede asignarle recursos a hilos cuya existencia desconoce.
+- Cuando ocurre una syscall bloqueante, se bloquea todo el proceso y, por lo tanto, todos los hilos. Este problema puede resolverse con *jacketing*.
+
+##### 5.4.3 Jacketing
+En el **jacketing**, las syscalls *bloqueantes* se convierten en *no bloqueantes*, permitiendo que los otros hilos del proceso puedan seguir trabajando sin tener que esperar a que el hilo que hizo la llamada reciba el evento que tiene que recibir.
+Al recibir la syscall, la biblioteca se la hace al SO de forma no bloqueante (para que no se bloqueen todos sus hilos). Además, dentro del proceso, la biblioteca bloquea únicamente el hilo que hizo la syscall, y cada tanto le pregunta al SO si la llamada ya tuvo su retorno. Una vez que lo tiene, la biblioteca se lo notifica al hilo, le da el recurso si es lo que pidió y lo desbloquea.
+# 6. Arquitectura de kernel
