@@ -530,4 +530,121 @@ En las arquitecturas de **microkernel** se reduce el código de máximo privileg
 - Menor rendimiento que en las arquitecturas de **kernel monolítico**, ya que la mayoría de los procesos requieren un intercambio entre el espacio de usuario y el kernel.
 - *Overhead* medio alto.
 
-# 7. Sincronización
+# 7. Sincronización 
+### 7.1 Condiciones de carrera
+Una condición de carrera se da cuando varios actores (sean hilos o procesos) deben modificar o acceder a datos compartidos, de los cuales obtendrían resultados distintos en base al orden en el que lo hagan.
+##### 7.1.1 Condiciones de Bernstein
+Para ser más exactos, una condición de carrera se da cuando se cumplen las tres siguientes condiciones en un recurso:
+1. El recurso está siendo accedido por más de un proceso/hilo.
+2. El recurso está siendo modificado por al menos un proceso/hilo.
+3. El recurso está siendo accedido por los procesos/hilos en simultaneo.
+
+##### 7.1.2 Sección crítica ideal
+Una **sección crítica** (también conocida como **región crítica**) es la sección del código que causa este conflicto entre procesos. Idealmente, en un script esta debe:
+- Contener alguna operación de recurso compartido (si no no hay condición de carrera).
+- Ser lo más pequeña posible (para minimizar el código que no se puede ejecutar concurrentemente).
+- Ejecutarse de forma atómica (lo que significa que sus instrucciones se procesan como una unidad indivisible, con nada en el medio).
+
+##### 7.1.3 Protocolo de acceso a la sección crítica
+Creamos lo que se conocen como **sección de entrada** y **sección de salida**. En la entrada, se le pide permiso para poder acceder a la **sección crítica** al SO, el cual solo permitirá entrar a un proceso/hilo por vez
+##### 7.1.4 Requerimientos de la sección crítica
+ - **Mutua exclusión**: Solo un proceso/hilo debe poder acceder a ella a la vez.
+ - **Progreso**: Un proceso/hilo puede ser tenido en cuenta durante la decisión de quién es el próximo en ingresar a la sección crítica solo si se encuentra en la sección de entrada o en la de salida. Además, si la sección crítica está libre y hay hilos intentando entrar, la decisión de quién entra no puede postergarse indefinidamente.
+ - **Espera limitada**: Una vez que un proceso/hilo pide acceder a a la sección crítica, debe establecerse un límite en la cantidad de procesos/hilos que ingresen antes que él para evitar *starvation*.
+ - **Velocidad**: La solución debe funcionar independientemente de que es lo que hagan los procesos/hilos dentro de de las secciones críticas, sea una secuencia larga o corta, o se use una o varias veces.
+### 7.2 Soluciones
+En respuesta al problema de las **condiciones de carrera** se idearon múltiples soluciones, algunas de *hardware*, algunas de *software* y algunas en las que actúa el SO.
+##### 7.2.1 Software: `while`
+Proceso/hilo 0:
+```C
+while(true)
+{
+	while (turno!=0);
+	SECCIÓN CRÍTICA
+	turno = 1;
+	SECCIÓN RESTANTE
+}
+```
+Proceso/hilo 1:
+```C
+while(true)
+{
+	while (turno!=1);
+	SECCIÓN CRÍTICA
+	turno = 0;
+	SECCIÓN RESTANTE
+}
+```
+
+Esta solución cumple con **mutua exclusión**, ya que un proceso/hilo solo puede acceder a la sección crítica si no es el turno de otro.
+Sin embargo, no cumple progreso, ya que si el hilo 0 hiciese dos "peticiones" antes de que el hilo 1 siquiera hiciese una, tendría que esperar hasta que el 1 la haga para siquiera poder volver a entrar. Solo funciona si se turnan de forma alternada.
+Además usa espera activa 🤮.
+##### 7.2.2 Software: `while`y array 
+Proceso/hilo 0:
+```C
+while(true)
+{
+	interesado[0]=TRUE;
+	while (interesado[1]);
+	SECCIÓN CRÍTICA
+	turno = 1;
+	SECCIÓN RESTANTE
+}
+```
+Proceso/hilo 1:
+```C
+while(true)
+{
+	interesado[1]=TRUE;
+	while (interesado[0]);
+	SECCIÓN CRÍTICA
+	turno = 0;
+	SECCIÓN RESTANTE
+}
+```
+
+Esta solución cumple con **mutua exclusión**, ya que un proceso/hilo solo puede acceder a la sección crítica si el otro no está accediendo a ella.
+Sin embargo, no cumple progreso, ya que si se ejecutasen `interesado[0]=TRUE;` y `interesado[1]=TRUE;` uno inmediatamente después del otro, independientemente del orden en el que eso sucediese resultaría en un *deadlock* (ya lo veremos adelante), con ambos procesos sin poder acceder porque el otro indica que está interesado.
+Además usa espera activa también 🤮.
+##### 7.2.3 Software: Solución de Peterson
+Proceso/hilo 0:
+```C
+while(true)
+{
+	interesado[0]=TRUE;
+	turno=1;
+	while (interesado[1] && turno==1);
+	SECCIÓN CRÍTICA
+	interesado[0]=FALSE;
+	SECCIÓN RESTANTE
+}
+```
+Proceso/hilo 1:
+```C
+while(true)
+{
+	interesado[1]=TRUE;
+	turno=0;
+	while (interesado[0] && turno==0);
+	SECCIÓN CRÍTICA
+	interesado[1]=FALSE;
+	SECCIÓN RESTANTE
+}
+```
+Esta solución cumple con **mutua exclusión**, con **progreso** y con espera limitada.
+Sin embargo, asume que las instrucciones son atómicas y solo funciona con dos procesos/hilos.
+Y también usa espera activa que haces Peterson 🤮.
+##### 7.2.4 Hardware: Deshabilitar interrupciones
+```C
+deshabilitarInterrupciones();
+SECCIÓN CRÍTICA;
+habilitarInterrupciones();
+SECCIÓN RESTANTE
+```
+Esta solución funciona evitando que las instrucciones de la sección crítica sean interrumpidas por cualquiera de otro proceso.
+Sin embargo, en sistemas multiprocesador no conviene, ya que:
+- Hay un gran costo en enviar mensajes a cada CPU.
+- Mayor *overhead*.
+- El proceso tarda más en salir y entrar de la **sección crítica**.
+
+##### 7.2.4 Hardware: Deshabilitar interrupciones
