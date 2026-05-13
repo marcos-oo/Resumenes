@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SSOO/Resumen 1er Parcial.md",
+                "file": "ASI/Clase 6 - ASI.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Resumen 1er Parcial"
+              "title": "Clase 6 - ASI"
             }
           }
         ]
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 241.5
+    "width": 241.5,
+    "collapsed": true
   },
   "right": {
     "id": "f7f31304b84317c7",
@@ -197,11 +198,16 @@
   },
   "active": "4edebbc99d5197b1",
   "lastOpenFiles": [
-    "SSOO/Clase 4 - SSOO.md",
+    "Untitled 2.md",
     "ASI/Clase 6 - ASI.md",
-    "SSOO/Resumen 1er Parcial.md",
-    "ASI/Clase 5 - ASI.md",
+    "Untitled 1.md",
+    "Untitled.md",
     "SSL/Clase [2026-05-12].md",
+    "SSOO/Resumen 1er Parcial.md",
+    "SSOO/DiagramaDeEstados.png",
+    "SSOO/Pasted image 20260425090316.png",
+    "SSOO/Clase 4 - SSOO.md",
+    "ASI/Clase 5 - ASI.md",
     "SSL/Unidad 2 - SSL.md",
     "SSL/Unidad 3 - SSL.md",
     "SSL/Unidad 1 - SSL.md",
@@ -209,16 +215,13 @@
     "SSL/Unidad 4 - SSL.md",
     "SSOO/Clase 2 - SSOO.md",
     "SSOO/Clase 3 - SSOO.md",
-    "SSOO/DiagramaDeEstados.png",
     "SSOO/Checkpoint 2.md",
-    "Untitled.md",
     "^1^.md",
     "Pasted image 20260430171915.png",
     "Pasted image 20260506085114.png",
     "Pasted image 20260506093707.png",
     "Pasted image 20260508091335.png",
     "Pasted image 20260508153856.png",
-    "SSOO/Pasted image 20260425090316.png",
     "IySc/Guía de estudio - Primer Parcial - IySc.md",
     "IySc/Clase 4 - IySc.md",
     "IySc/Clase 5 - IySc.md",
@@ -228,8 +231,6 @@
     "F-II/FORMULARIO.md",
     "F-II/Transmisión de Calor.md",
     "F-II/Maquina de Carnot.md",
-    "PdP/Clase 6 - PdP.md",
-    "Clase 6.md",
     "SSOO/Ciclo-Interrupciones.png",
     "Pasted image 20260505183143.png",
     "Untitled.base",
