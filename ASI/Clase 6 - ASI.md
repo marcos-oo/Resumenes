@@ -54,6 +54,4 @@ $$Exposicion\ al\ riesgo=Probabilidad\ de\ Ocurrencia\ \cdot \ Impacto$$
 	- En respuesta al riesgo puedo actuar, no hacer nada o transferirlo a alguien afuera del equipo.
 - **Punto trigger**: El punto en el tiempo en el que un riesgo se hace realidad. Depende del problema si puede o no resolverse luego del *punto trigger*.
 - **Plan de mitigación**: Los planes que se ejecutan antes del punto trigger, buscan disminuir la *exposición* a un riesgo.
-- **Plan de contingencia**: Los planes que se ejecutan luego del punto trigger, buscan disminuir el *impacto* del problema
-
-## Práctica
+- **Plan de contingencia**: Los planes que se ejecutan luego del punto trigger, buscan disminuir el *impacto* del problema.
