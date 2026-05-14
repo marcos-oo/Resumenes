@@ -40,10 +40,8 @@ flowchart LR
 	D[Execute]
 	B[Fetch]
 	C[Decode]
-	E(HALT)
-	F[Fetch]
-	A-->B-->C-->D-->E
-	D-->F
+	A-->B-->C-->D
+	D-->B
 ```
 Las tres etapas contempladas en la cursada de SO son:
 - **Fetch**: La CPU busca en memoria la siguiente instrucción a ejecutar, cuya dirección está almacenada en el PC.
@@ -52,6 +50,7 @@ Las tres etapas contempladas en la cursada de SO son:
 
 Una vez completado el ciclo se reinicia, habiendo hecho PC+=1 si se siguió con el flujo normal o PC=pos. si se realizó un `JMP`.
 > Solo pueden ejecutarse los programas que se encuentren en la RAM.
+> Luego del execute también se puede ir a HALT, osea finalizado.
 ### 1.3 Interrupciones
 ##### 1.3.1 Definición
 Mecanismo de HW mediante el cual se le indica a la CPU que ha ocurrido un evento. Suelen provenir de algún módulo I/O, de la MP o de la misma CPU.
