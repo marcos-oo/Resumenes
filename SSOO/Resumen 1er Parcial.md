@@ -578,7 +578,7 @@ while(true)
 
 Esta solución cumple con **mutua exclusión**, ya que un proceso/hilo solo puede acceder a la sección crítica si no es el turno de otro.
 Sin embargo, no cumple progreso, ya que si el hilo 0 hiciese dos "peticiones" antes de que el hilo 1 siquiera hiciese una, tendría que esperar hasta que el 1 la haga para siquiera poder volver a entrar. Solo funciona si se turnan de forma alternada.
-Además usa espera activa 🤮.
+Además usa espera activa.
 ##### 7.2.2 Software: `while`y array 
 Proceso/hilo 0:
 ```C
@@ -605,7 +605,7 @@ while(true)
 
 Esta solución cumple con **mutua exclusión**, ya que un proceso/hilo solo puede acceder a la sección crítica si el otro no está accediendo a ella.
 Sin embargo, no cumple progreso, ya que si se ejecutasen `interesado[0]=TRUE;` y `interesado[1]=TRUE;` uno inmediatamente después del otro, independientemente del orden en el que eso sucediese resultaría en un *deadlock* (ya lo veremos adelante), con ambos procesos sin poder acceder porque el otro indica que está interesado.
-Además usa espera activa también 🤮.
+Esta también usa espera activa.
 ##### 7.2.3 Software: Solución de Peterson
 Proceso/hilo 0:
 ```C
@@ -633,7 +633,7 @@ while(true)
 ```
 Esta solución cumple con **mutua exclusión**, con **progreso** y con espera limitada.
 Sin embargo, asume que las instrucciones son atómicas y solo funciona con dos procesos/hilos.
-Y también usa espera activa que haces Peterson 🤮.
+Y también usa espera activa.
 ##### 7.2.4 Hardware: Deshabilitar interrupciones
 ```C
 deshabilitarInterrupciones();
@@ -647,4 +647,292 @@ Sin embargo, en sistemas multiprocesador no conviene, ya que:
 - Mayor *overhead*.
 - El proceso tarda más en salir y entrar de la **sección crítica**.
 
-##### 7.2.4 Hardware: Deshabilitar interrupciones
+##### 7.2.5 Hardware: Instrucciones atómicas
+```C
+while(TestAndSet(&lock));
+SECCIÓN CRÍTICA
+lock = false;
+SECCIÓN RESTANTE
+```
+```C
+boolean TestAndSet(boolean *target)
+{
+	boolean rv = *target;                        // ESTA SECCIÓN
+	*target = TRUE;                              // SE EJECUTA
+	return rv;                                   // ATÓMICAMENTE
+}
+```
+Esta solución funciona de la siguiente manera:
+- Si el candado se bloquea (`TRUE`): La función mantiene el candado en `TRUE` y retorna también `TRUE`. Esto mantiene el `while` activo y el programa en espera, un estado del cual solo se moverá...
+- Si el candado está desbloqueado (`FALSE`): La función pone el candado en `TRUE` (lo que lo bloquea para el resto de procesos) y devuelve `FALSE`. Eso permite abandonar el ´while´, ejecutar la sección crítica y luego devolver el candado a `FALSE`, para que otro proceso pueda entrar.
+
+Esta solución solo funciona si la función `TestAndSet()` se ejecuta atómica, lo que es decir, sin otras instrucciones ejecutándose en su transcurso. Algunos sistemas proveen funciones de este tipo, y además de ser un sistema que funciona incluso en sistemas multiprocesador, es fácil de usar.
+El problema principal, que vuelve a la solución totalmente inviable, es el uso de espera activa (de nuevo).
+#### 7.2.5 SO: Semáforos
+Un semáforo es una variable a la cual solo se puede acceder mediante dos funciones atómicas (*syscalls*): `wait()` y `signal()`.
+```C
+SEM=1
+...
+WAIT(SEM);
+SECCIÓN CRÍTICA;
+SIGNAL(SEM);
+SECCIÓN RESTANTE;
+```
+
+A diferencia de casi todas las estrategias anteriores, se puede implementar con o sin espera activa.
+##### 7.2.5.1 Con espera activa (spinlocks):
+```C
+wait(sem)
+{
+	while (sem==0);      //ESTO SE EJECUTA
+	sem--;               //ATÓMICAMENTE
+}
+
+signal(sem)
+{
+	sem++;
+}
+```
+Funciona de esta forma:
+- Si el semáforo está en 0 y el proceso usa `wait`, espera.
+- Si el semáforo no está en 0 y el proceso usa `wait`, le resta 1 al semáforo para "tomar" la sección crítica y continua a ejecutarla.
+- Si se usa `signal`, se le suma 1 al semáforo, indicando que se liberó.
+
+##### 7.2.5.2 Sin espera activa:
+```C
+wait(sem)
+{
+	valor --;
+	
+	if(valor<0)
+	{
+		block();
+	}
+}
+
+signal(sem)
+{
+	valor ++;
+	
+	if(valor<=0)
+	{
+		wakeup(pid);
+	}
+}
+```
+Funciona de esta forma:
+- Al hacer `wait`, se le resta 1 a la variable `valor` de forma local. Luego se chequea si, tras la resta, `valor` es menor que 0.
+	- Si `valor<0`, no hay recursos disponibles, por lo que se envía el proceso a una cola de espera del semáforo.
+	- De lo contrario, se le permite al proceso entrar a la sección crítica.
+- Al hacer `signal`, se le suma 1 a la variable `valor` de forma local. Luego se chequea si, tras la suma, valor es menor o igual que 0.
+	- Si `valor<=0`, hay procesos esperando en la cola, por lo que `wakeup()` toma el *process id*  (`pid`) del primer proceso de la cola de espera y lo "despierta".
+
+##### 7.2.5.3 Usando la biblioteca `pthreads`:
+La biblioteca `pthreads`simplifica todo. No necesitamos definir todas estas funciones ni crear colas, si no que simplemente podemos usar:
+```C
+pthreads_spinlock_lock    //wait() con espera activa
+pthreads_spinlock_unlock  //signal() con espera activa
+
+pthreads_mutex_lock       //wait() sin espera activa
+pthreads_mutex_unlock     //signal() sin espera activa
+```
+##### 7.2.5.4 ¿Cual usamos?
+¿Cual conviene usar entonces? Debemos priorizar el buen uso de la CPU, por lo que la primera impresión sería descartar los `spinlock` por usar espera activa. Sin embargo, con los `spinlock`, el proceso continúa su ejecución mucho más rápido, ya que se ahorra el bloqueo/desbloqueo + cambios de contexto.
+- Usaremos entonces los `spinlock` si hay más de una CPU y/o si la sección crítica es pequeña.
+- En cualquier otra situación, usaremos `mutex`.
+##### 7.2.5.5 Tipos de semáforos:
+- **Mutex:** Permite solucionar el problema de la mutua exclusión, siempre se inicializa en 1.
+- **Contadores:** Permite controlar el acceso a una cantidad de recursos, por lo que se inicializa en $N =$ cantidad de instancias totales.
+- **Binarios:** Permite garantizar un orden de ejecución, representa dos estados, libre u ocupado.
+Y como reglas generales:
+- $SEM>0\implies SEM=$ cantidad de recursos disponibles en un contador.
+- $SEM<0\implies SEM=$ cantidad de procesos bloqueados en espera.
+- **Nunca se debe inicializar un semáforo en un valor negativo.**
+##### 7.2.5.6 Casos de uso:
+**Mutua exclusión**:
+```C
+mutexVar=1;
+```
+P1
+```C
+wait(mutexVar);
+var++;
+signal(mutexVar);
+```
+P2
+```C
+wait(mutexVar);
+var--;
+signal(mutexVar);
+```
+
+**Ordenar ejecución**:
+```C
+semP1=1; semP2=0;
+```
+P1
+```C
+while(1)
+{
+	wait(semP1);
+	printf("Sábados de ");
+	signal(semP2);
+}
+```
+P2
+```C
+while(1)
+{
+	wait(semP2);
+	printf("subsuelo.");
+	signal(semP1);
+}
+```
+
+**Limitar acceso a cantidad de instancias**:
+```C
+semContados=N; //Cantidad total de recursos
+```
+P1
+```C
+wait(semContador);
+usarRecurso();
+signal(semContador);
+```
+P2
+```C
+wait(semContador);
+usarRecurso();
+signal(semContador);
+```
+
+**Productor consumidor**:
+```C
+mutexLista=1; tareasPendientes=0; lugarEnLista=20;
+```
+P1 (Consumidor)
+```C
+while(1){
+	wait(tareasPendientes);
+	
+	wait(mutexLista);
+	tarea = obtenerTarea(listaTareas);
+	signal(mutexLista);
+	
+	signal(lugarEnLista);
+	ejecutarTarea(tarea);
+}
+
+```
+P2 (Productor)
+```C
+while(1){
+
+	nuevaTarea=crearTarea();
+
+	wait(lugarEnLista);
+	wait(mutexLista);
+	agregarTarea(nuevaTarea, listaTareas);
+	signal(mutexLista);
+	
+	signal(tareasPendientes);
+}
+```
+### 7.3 Monitores
+Un monitor es un mecanismo que provee mutua exclusión. Abstrae en una estructura el acceso a datos y expone operaciones específicas mediante las cuales se puede interactuar con la estructura de forma segura.
+### 7.4 Herencia de propiedades
+Sean los procesos:
+$$P1,\ P2,\ P3$$
+Con sus propiedades:
+$$P1<P2<P3$$
+0. P1 adquiere un recurso R -> WAIT(semR)
+1. P3 ingresa al sistema y necesita el recurso R, se bloquea en la espera.
+2. P2 ingresa, desaloja a P1 por ser de mayor prioridad.
+P3, a pesar de ser de la mayor prioridad, no puede ejecutarse porque espera a que P1 deje de retener el recurso, y P1 solo logrará eso cuando termine P2. Se perdió la prioridad.
+Esto se soluciona con herencia de prioridades.
+Como P3 depende de P1, se le da la prioridad de P3 a P1 para que pueda terminar de trabajar dentro de la sección crítica, Luego se le quita esa prioridad, y como no hay nadie reteniendo el recurso, P3 le gana en prioridad a P2 y actúa.
+# 8. Deadlock
+### 8.1 Introducción
+Un conjunto de procesos se encuentran en interbloqueado, también conocido como **deadlock,** cuando todos los procesos del conjunto estén esperando a que se produzca un suceso que solo puede producirse como resultado de la actividad de otro proceso del mismo conjunto.
+Si se llega a una situación de **deadlock**, los procesos nunca terminarán de ejecutarse y los recursos del sistema estarán ocupados, por lo que otros trabajos se inicien.
+### 8.2 Recursos del sistema
+- Los sistemas poseen recursos limitados, sean *consumibles* (interrupciones, señales, mensajes), o *reusables* (memoria, archivos, semáforos).
+- Estos recursos pueden tener más de una instancia en el sistema, y como todas las instancias son indistinguibles entre sí, a los procesos les sirven cualquiera de ellas.
+- Para poder utilizar y liberar estos recursos, los procesos deben **pedirlos** y luego **liberarlos**. Esto sucede mediante llamadas al sistema, como `malloc/free`, o `wait/signal`.
+
+### 8.3 Condiciones necesarias
+Para que se de un **deadlock** deben cumplirse las cuatro condiciones siguientes en simultaneo:
+- **Exclusión mutua**: Al menos uno de los recursos puede ser usado un solo proceso y ninguno más. Todos aquellos procesos que quieran acceder a él tendrán que esperar a que esté liberado.
+- **Retención y espera**; Un proceso debe estar reteniendo un recurso y, a la vez, estar esperando para adquirir otros recursos, los cuales están siendo retenidos por otros procesos.
+- **Sin desalojo**: Los recursos no pueden ser desalojados de los procesos, solo se liberan a voluntad de los procesos que los retienen una vez estos hayan finalizado sus objetivos.
+- **Espera circular**: Debe existir un conjunto de procesos en espera tal que cada uno espere un recurso retenido por el siguiente.
+
+### 8.4 Tratamiento de deadlocks
+Para tratar con los **deadlocks**, podemos usar distintos métodos.
+- **Prevención/evasión**: Utilizar protocolos para impedir o evitar que el sistema entre en **deadlock**.
+- **Detección y recuperación**: Se permite que el sistema entre en estado de **deadlock**, lo cual se detecta y en respuesta se realiza una recuperación.
+- Ignorar el problema y rezar que nunca pase.
+##### 8.4.1 Prevención
+En la **prevención** se utilizan métodos para asegurar que al menos una de las *condiciones necesarias* no pueda cumplirse. Son políticas del SO definidas previo a la ejecución que restringen el modo en que se puede solicitar recursos.
+Para cada *condición necesaria* existe una o más soluciones:
+- **Mutua exclusión**:
+	- Evitar la mutua exclusión sobre recursos compartidos. Ej: abrir archivos en modo lectura siempre que sea posible.
+- **Espera y retención**:
+	- Que los procesos pidan y reciban de antemano los recursos que utilizarán.
+	- Que para pedir un nuevo recurso, un proceso deba liberar los que está reteniendo.
+- **Sin desalojo**:
+	- Si un proceso pide un recurso retenido por otro proceso el cual se encuentra en espera/bloqueado, el recurso es desalojado y enviado al proceso en ejecución.
+	- Si un proceso pide un recurso que no está disponible, deberá liberar todos sus recursos y esperar.
+- **Espera circular**:
+	- Requerir que todos los recursos se pidan en orden, evitando ciclos.
+
+##### 8.4.2 Evasión
+Primero, el proceso debe indicarle de antemano al SO cuáles van a ser los **recursos máximos** que puede llegar a solicitar durante su tiempo de vida.
+Luego, durante la ejecución y ante cada solicitud, se analizará si conviene asignarle el recurso al proceso que lo solicita o si es mejor hacerlo esperar. Este análisis se hace mediante una simulación, la cual tiene en cuenta posibles futuras solicitudes y liberaciones de recursos por parte de todos los procesos del sistema.
+- Un ejemplo, el *algoritmo del banquero*, hace esta toma de decisiones ayudándose con matrices de peticiones máximas, matrices de recursos asignados y un vector de recursos totales.
+
+La **evasión** mantiene al sistema siempre en *estado seguro*, un estado alcanzado cuando el sistema puede asignar recursos a cada proceso (sin excederse) en determinado orden sin producir **deadlock**. A este orden se lo conoce como *secuencia segura*.
+Es por esto que solo se le asigna un recurso a un proceso si eso mantiene al sistema en estado seguro.
+**Simulación**: Un proceso pide un recurso:
+- ¿La petición es válida?
+	- ¿Es menor a los recursos totales?
+	- ¿Es menor a lo que le queda por pedir?
+	- *Si falla alguna de estas dos, se finaliza el proceso por no cumplir con sus peticiones máximas*
+- ¿Tengo esa cantidad disponible?
+- ¿Deja a mi sistema en estado seguro?
+	- La simulación indica que sí: Se le asigna el recurso pedido.
+	- La simulación indica que no: No asigno aún. Espero a que se liberen otros recursos.
+
+##### 8.4.3 Detección y recuperación
+**Detección:**
+- Al igual que en la **evasión**, se realiza una simulación de asignación de recursos para ver si puede satisfacer todas las peticiones actuales. Esto detecta si el sistema se encuentra en **deadlock**.
+- Se necesitan varias estructuras:
+	- Una matriz de peticiones actuales.
+	- Una matriz de recursos asignados.
+	- Un vector de recursos totales.
+- Hay un coste significativo asociado, ya que:
+	- Se debe mantener la información necesaria y ejecutar el algoritmo de detección.
+	- Existe la posibilidad de pérdidas durante el proceso de recuperación.
+- La frecuencia con la que se debe correr el algoritmo depende de que tan susceptible es el programa a caer en deadlock y a cuantos procesos afectaría. En base a eso se puede elegir, entre muchas otras:
+	- Cada vez que un proceso realiza una petición (alto *overhead*).
+	- Cada un intervalo de tiempo o un número fijo de eventos del sistema.
+	- Cuando la utilización de la CPU baja notablemente (si los procesos están bloqueados, no actúan y la CPU se libera).
+
+**Recuperación:**
+- Finalizar procesos:
+	- Todos los intervinientes en el deadlock (mayores perdidas, menor *overhead*).
+	- Finalizar de a uno hasta que se resuelve el deadlock (menores perdidas, mayor *overhead* ya que debe elegir a la victima y volver a correr la detección).
+- Desalojar recursos:
+	- Los recursos se desalojan retrocediendo el proceso que los retiene a un estado en el que ya no lo hace, desde el cual reanuda su ejecución.
+	- Puede resultar en *starvation* si un proceso es retrocedido constantemente.
+- Factores a tener en cuenta al elegir procesos a los que afectar:
+	- La prioridad y el tipo de proceso.
+	- Su tiempo actual de ejecución.
+	- Cuantos/que tipos de recursos ha utilizado/necesita.
+
+##### 8.4.4 Resumen
+![[Deadlock.png]]
+### 8.5 Livelock
+Una situación similar al **deadlock** en que hay un conjunto de procesos que no pueden progresar en su ejecución, con la diferencia de que estos siguen ejecutándose. No están bloqueados o desactivados, solo no progresan y usan la CPU.
+Al no estar bloqueados, usar la utilización de la CPU como detección es imposible, ya que los procesos la siguen usando.
+Suele darse cuando los recursos son solicitados de forma no bloqueante, usando semáforos con espera activa por ejemplo.

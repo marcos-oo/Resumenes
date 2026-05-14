@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ASI/Clase 6 - ASI.md",
+                "file": "SSOO/Resumen 1er Parcial.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Clase 6 - ASI"
+              "title": "Resumen 1er Parcial"
             }
           }
         ]
@@ -198,8 +198,9 @@
   },
   "active": "4edebbc99d5197b1",
   "lastOpenFiles": [
-    "Untitled 2.md",
+    "Deadlock.png",
     "ASI/Clase 6 - ASI.md",
+    "Untitled 2.md",
     "Untitled 1.md",
     "Untitled.md",
     "SSL/Clase [2026-05-12].md",
@@ -230,7 +231,6 @@
     "F-II/Transformaciones y Ciclos.md",
     "F-II/FORMULARIO.md",
     "F-II/Transmisión de Calor.md",
-    "F-II/Maquina de Carnot.md",
     "SSOO/Ciclo-Interrupciones.png",
     "Pasted image 20260505183143.png",
     "Untitled.base",
