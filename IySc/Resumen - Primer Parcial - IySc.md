@@ -114,6 +114,7 @@ En las *ciencias fácticas* las demostraciones son probadas empíricamente, veri
     </tr>
   </tbody>
 </table>
+<div style="page-break-after: always;"></div>
 
 #### EXTRA 1: Subdivisiones de las ciencias
 **Formales y fácticas**:
@@ -170,7 +171,7 @@ En 1609 construye un telescopio con un aumento $\times 30$ por motivos militares
 Estos descubrimientos se oponen al paradigma geocéntrico, llevando a uno nuevo, el heliocéntrico, y demostrando que el conocimiento científico es falible y provisional.
 ## 4. El geocentrismo y el heliocentrismo
 Ambos son paradigmas, modelos propuestos por la comunidad científica y compuestos por un conjunto o sistema de leyes que brindan temporalmente soluciones a los problemas que plantea la realidad.
-> La palabra Mundo proviene del latín *mundus*, la cual es una interpretación de la palabra *cosmos*, u orden.
+> El término Mundo proviene del latín *mundus*, el cual es una interpretación de la palabra griega *cosmos*, u orden.
 
 #### 4.1 El geocentrismo
 El geocentrismo sostiene que el planeta tierra es el centro inmóvil de un universo finito de planetas de forma perfectamente esférica que giran alrededor de él. En el medioevo cristiano se agrega, luego de todos los planetas, el Cielo Empíreo, el lugar de Dios y de todos los hombres elegidos y salvados por Él.
@@ -196,3 +197,66 @@ En sus inicios, el heliocentrismo sostiene que el sol es el centro inmóvil de u
 | **Planetas**   | Esferas perfectas.                           | Esferas imperfectas.                         |
 
 ## 5. La nueva ciencia y el diálogo experimental
+Al nuevo modo de concebir la ciencia se le llama comúnmente como el *diálogo experimental*. Además, la ciencia moderna tiene dos características principales: La matematización de la naturaleza y la experimentación continua.
+#### 5.1 La matematización de la naturaleza
+En la ciencia antigua se busca el **qué** es un fenómeno, se especula sobre su esencia para poder entenderlo correctamente sin verificación necesaria. Pretende definirlo esencialmente.
+Sin embargo, al llegar la Edad Moderna, se da un cambio en el pensamiento científico. Galileo Galilei propone que la naturaleza está escrita en caracteres matemáticos, por lo que se puede y se debe descifrarla. Para esta nueva ciencia todo fenómeno es mensurable y numerable, por lo que el espacio se cuantifica en la modernidad. Esta cuantificación requiere el uso de la matemática y de la geometría, ciencias auxiliares a la nueva ciencia. Mientras más acertada sea la medición, más objetivo es el conocimiento que se posee de un fenómeno u objeto.
+> El término Naturaleza refiere a todos los fenómenos físicos que constituyen el universo entero. 
+
+#### 5.2 La experimentación constante
+En la ciencia antigua, debido a que se busca el *porqué* y el *para qué* es y existe tal o cual fenómeno, se especula sobre el sentido o fin de los mismos para luego argumentar con lógica. Este sistema no da lugar a experimentación, y por lo tanto, tampoco al cambio de las conclusiones a las que se llega.
+En la ciencia nueva, esta concepción cambia radicalmente. En ella se requiere la experimentación continua, sea una observación de experiencias que se dan espontáneamente en la realidad o reproducidas en ambientes controlados con el fin de limitar las variables y analizarlas de forma más concreta. Las hipótesis verificadas por este método son reforzadas y las contradichas son descartadas.
+Esta experimentación es además constante, permanente y continua. Experimentaciones sucesivas corrigen, ajustan o refutan las conclusiones. Al querer objetivar más esas correcciones o ajustes, se requieren instrumentos más y más potentes.
+## 6. El método hipotético-deductivo (científico)
+Tanto las ciencias naturales como las sociales usan el método científico. Podría verse este método como dividido en dos grandes contextos, el de descubrimiento y el de justificación.
+Predomina la capacidad creativa del científico.
+#### 6.1 El contexto de descubrimiento
+Es un contexto dinámico, refiere a los factores que influyen en la producción de una teoría científica. Estos factores pueden ser científicos, pero también psicológicos, culturales, políticos y sobre todo filosóficos. Es acá donde se muestra la creatividad del investigador.
+
+*6.1.1 El problema.*
+El método científico comienza con la formación de un problema. El científico, buscando tener más conocimiento, descubre que hay una parte de la realidad que exige una explicación que no existe. Formula una pregunta y comienza la investigación para encontrar su respuesta.
+
+*6.1.2 La hipótesis.*
+La hipótesis es una suposición o conjetura que cumple el rol de respuesta o verdad provisoria a la pregunta planteada por el problema. Una hipótesis es una proposición general ($A\implies B$) y es sintética, ya que B es información sobre A no contenida dentro de A.
+
+*6.1.3 El marco/fondo teórico.*
+Tanto la pregunta como su respuesta provisoria se formulan desde una postura teórica determinada, ya que al formular cualquiera de las dos, el científico tiene presente los conceptos de una o más teorías, sea implícita o explícitamente. El contexto de descubrimiento está influenciado por y basado en los conocimientos previos de aquel que lo genera.
+
+#### 6.2 El contexto de justificación
+Es un contexto estático, en el que se evalúa y valida la hipótesis. Predominan en él los aspectos lógico-racionales y el uso riguroso de pruebas experimentales.
+Predomina la capacidad racional del investigador.
+
+*6.2.1 Las consecuencias contrastables.*
+La hipótesis es una proposición general y para poder verificarla empíricamente ha de poder deducirse de ella proposiciones singulares que permitan verificarla, llamadas consecuencias contrastables. SI las consecuencias no se cumplen, entonces la hipótesis tampoco.
+$$
+\begin{array}{c}
+A \supset B \\
+- \quad B \\
+\hline
+- \quad A
+\end{array}
+$$
+
+*6.2.2 La constrastación.*
+- *La justificación*
+	Que una consecuencia **sí** se cumpla no significa que la hipótesis sea necesariamente verdadera. Es ahí cuando cobra sentido la previamente mencionada *experimentación constante*: El que una consecuencia sea cierta no implica que su hipótesis lo sea.
+	$$
+	\begin{array}{c}
+	A\supset B\\
+	\qquad B\\
+	\hline
+	\qquad A
+	\end{array}
+	$$
+	Este razonamiento es **absolutamente incorrecto**. Puede que sea verdad, pero esa no es una conclusión a la que podemos llegar con la información que poseemos.
+- *La falsación*
+	Como mostramos hace unos párrafos, un razonamiento que sí es válido es el siguiente:
+	$$
+	\begin{array}{c}
+	A \supset B \\
+	- \quad B \\
+	\hline
+	- \quad A
+	\end{array}
+	$$
+	Al no cumplirse incluso una de sus consecuencias contrastables, la hipótesis se demuestra como refutada.
