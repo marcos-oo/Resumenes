@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SSOO/Checkpoint 2.md",
+                "file": "IySc/Resumen - Primer Parcial - IySc.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Checkpoint 2"
+              "title": "Resumen - Primer Parcial - IySc"
             }
           }
         ]
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 241.5
+    "width": 241.5,
+    "collapsed": true
   },
   "right": {
     "id": "f7f31304b84317c7",
@@ -89,83 +90,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "32e0dc56cbfe1b9c",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "file": "Clase 2 - SSOO.md",
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              },
-              "icon": "links-coming-in",
-              "title": "Backlinks for Clase 2 - SSOO"
-            }
-          },
-          {
-            "id": "cff0634245c4b5bb",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "file": "Clase 2 - SSOO.md",
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
-              },
-              "icon": "links-going-out",
-              "title": "Outgoing links from Clase 2 - SSOO"
-            }
-          },
-          {
-            "id": "e0b4382095239c4b",
-            "type": "leaf",
-            "state": {
-              "type": "tag",
-              "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-tags",
-              "title": "Tags"
-            }
-          },
-          {
-            "id": "c990c2b406c0a8b8",
-            "type": "leaf",
-            "state": {
-              "type": "all-properties",
-              "state": {
-                "sortOrder": "frequency",
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-archive",
-              "title": "All properties"
-            }
-          },
-          {
-            "id": "28c97fe8de0aeef3",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "PdP/Clase 4 - PdP.md",
-                "followCursor": true,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-list",
-              "title": "Outline of Clase 4 - PdP"
-            }
-          },
-          {
             "id": "2fcdc482e67037af",
             "type": "leaf",
             "state": {
@@ -175,8 +99,7 @@
               "title": "Source Control"
             }
           }
-        ],
-        "currentTab": 5
+        ]
       }
     ],
     "direction": "horizontal",
@@ -195,15 +118,20 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4edebbc99d5197b1",
+  "active": "2fcdc482e67037af",
   "lastOpenFiles": [
+    "SSL/Automatas.md",
+    "SSL/Unidad 5 - SSL.md",
+    "SSOO/Checkpoint 2.md",
     "SSOO/Ciclo-Interrupciones.png",
-    "SSOO/Clase 3 - SSOO.md",
     "SSOO/DiagramaDeEstados.png",
     "SSOO/Resumen Teórico - Primer Parcial - SSOO.md",
+    "PERSONAL/J2 a MP3 - Guía.md",
+    "IySc/Resumen - Primer Parcial - IySc.md",
+    "SSOO/Untitled.md",
+    "SSOO/Clase 3 - SSOO.md",
     "SSOO/Clase 2 - SSOO.md",
     "SSOO/Clase 4 - SSOO.md",
-    "SSOO/Checkpoint 2.md",
     "SSOO/Pasted image 20260425090316.png",
     "Deadlock.png",
     "ASI/Clase 6 - ASI.md",
@@ -215,7 +143,6 @@
     "SSL/Unidad 2 - SSL.md",
     "SSL/Unidad 3 - SSL.md",
     "SSL/Unidad 1 - SSL.md",
-    "SSL/Unidad 5 - SSL.md",
     "SSL/Unidad 4 - SSL.md",
     "^1^.md",
     "Pasted image 20260430171915.png",
@@ -223,14 +150,11 @@
     "Pasted image 20260506093707.png",
     "Pasted image 20260508091335.png",
     "Pasted image 20260508153856.png",
-    "IySc/Guía de estudio - Primer Parcial - IySc.md",
     "IySc/Clase 4 - IySc.md",
     "IySc/Clase 5 - IySc.md",
     "IySc/Clase 6.md",
     "PdP/Clase 4 - PdP.md",
     "F-II/Transformaciones y Ciclos.md",
-    "F-II/FORMULARIO.md",
-    "F-II/Transmisión de Calor.md",
     "Pasted image 20260505183143.png",
     "Untitled.base",
     "logseq/custom.css",

@@ -868,7 +868,7 @@ Para que se de un **deadlock** deben cumplirse las cuatro condiciones siguientes
 
 ### 8.4 Tratamiento de deadlocks
 Para tratar con los **deadlocks**, podemos usar distintos métodos.
-- **Prevención/evasión**: Utilizar protocolos para impedir o evitar que el sistema entre en **deadlock**.
+- **Prevención/evasión**: Utilizar protocolos para impedir o evitar que el sistema entre en **deadlock**. Restrictiva
 - **Detección y recuperación**: Se permite que el sistema entre en estado de **deadlock**, lo cual se detecta y en respuesta se realiza una recuperación.
 - Ignorar el problema y rezar que nunca pase.
 ##### 8.4.1 Prevención
