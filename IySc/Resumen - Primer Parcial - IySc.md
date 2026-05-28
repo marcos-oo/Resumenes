@@ -260,3 +260,33 @@ $$
 	\end{array}
 	$$
 	Al no cumplirse incluso una de sus consecuencias contrastables, la hipótesis se demuestra como refutada.
+## 7. Las distintas revoluciones industriales
+La persona que existía antes de la revolución industrial (1750) se parecía mas al soldado romano promedio que a un humano de hoy en día. El texto llega hasta aproximadamente 1960.
+#### 7.1 La primera revolución industrial ( 1770 - 1870 )
+- Nace con la invención / primera aplicación (ignora que antes existía en Turquía y se usaba para girar kebabs no es bait) de la maquina de vapor, en el sur de Inglaterra.
+- Al ser una zona minera, esta comienza a ser utilizada como bomba para extraer agua recolectada en las lluvias en las minas de carbon.
+- Su primera aplicación de relevancia fue en la industria textil con los telares mecanizados, permitiendo septuplicar la producción normal de productos. Hay exceso de oferta.
+- Inglaterra invade Buenos Aires para, entre muchas otras cosas, ubicar la superproducción de textiles.
+- Luego, Inglaterra ayuda a los libertadores dándoles ropa y telas, claramente no por bondad si no para apoyar la causa que se elevaba en contra de España, un imperio muy prominente y competencia directa de Inglaterra.
+- Transición del taller a la fábrica, del artesano al obrero.
+
+#### 7.2 La segunda revolución industrial ( 1870 - 1970 )
+- Nace con el descubrimiento y aplicación de la electricidad, no tangble.
+- Nace el Taylorismo, uno diseña otro fabrica.
+- Nace el Fordismo, con la cinta transportadora y un nuevo sistema de trabajo, más eficiente, en equipo.
+- El hombre se transforma en capital humano, sin aportar valor pero ahorrando tiempo, un engranaje más en el sistema.
+
+#### 7.3 La tercera revolución industrial ( 1970 - 2010 )
+- Nace en la crisis petrolera del 1973, el encarecimiento del crudo lleva al desarrollo de tecnologías de energía barata y disponible.
+- Se hace masiva la utilización del microchip, reemplazando válvulas y tarjetas perforadas.
+- Globalización, todo conectado en tiempo real, en cualquier parte del mundo.
+
+#### 7.4 Industria 4.0
+- Hiper digitalización que genera una revolución en el modo de vivir, estudiar, comerciar, de hacer finanzas, etc.
+- Tan grande que escapa la capacidad del hombre de entenderlo.
+- Necesita carreras que giran alrededor de los datos, gente que sea capaz de procesar volúmenes incomprensibles de datos de forma eficiente.
+###### 7.5 Industria 5.0
+- IA
+###### 7.6 Industria 6.0
+- Robotización.
+

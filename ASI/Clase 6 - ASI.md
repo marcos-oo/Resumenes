@@ -31,14 +31,18 @@ ___
 - **Plan**: Define que estrategia usar, establece que pasos del proceso se llevan a cabo y cuales no.
 ___
 - **Proyecto**: Lleva a la práctica un plan en el que alcanzar objetivos específicos para satisfacer necesidades mediante actividades reales. Es único, tiene un inicio y un fin claramente definidos, utiliza recursos y produce resultados.
-	- Todo calendarizado y con una duración establecida: El principio, las actividades que lo componen, baches de tiempo y el fin.
+	- Todo calendarizado y con una duración establecida: El principio, las actividades que lo componen, baches de tiempo y el final.
 		- Para evitar errores de *dependencia* entre los pasos.
 		- Las actividades, quien las realiza, su fecha y duración se describen en el **plan de proyecto** (Gant).
-	- Tiene un alcance definido, establecido en el *anteproyecto*.
-		- Si incluye la adquisición de los recursos,
+	- Tiene un alcance definido, todo lo que abarca y no abarca el proyecto. Es establecido en el *anteproyecto*.
+		- Si incluye la adquisición de los recursos.
 		- Si incluye la "entrega" del proyecto.
 		- A cuanta gente voy a necesitar en base a lo que haga.
 		- Cuanto tiempo voy a terminar necesitando.
+		- Que recursos se usaran *(triangulo de hierro)*:
+			- Dinero (incluye RRHH).
+			- Tiempo.
+			- Funcionalidad.
 	- Existe una **retroalimentación** desde el **proyecto** de vuelta al **plan**.
 	- **Gestión de proyecto**: Existe un líder de proyecto que se encarga de asegurar que las actividades se cumplan en tiempo y forma. Esta persona es la que realiza la gestión de proyecto.
 ```mermaid
@@ -52,6 +56,6 @@ flowchart LR
 - **Riesgo**: Evento a futuro que de ocurrir afecta al proyecto de alguna forma. Tiene una exposición al riesgo:
 $$Exposicion\ al\ riesgo=Probabilidad\ de\ Ocurrencia\ \cdot \ Impacto$$
 	- En respuesta al riesgo puedo actuar, no hacer nada o transferirlo a alguien afuera del equipo.
-- **Punto trigger**: El punto en el tiempo en el que un riesgo se hace realidad. Depende del problema si puede o no resolverse luego del *punto trigger*.
+- **Punto trigger**: El punto en el tiempo en el que un riesgo se hace 100% probable. Depende del problema si puede o no resolverse luego del *punto trigger*.
 - **Plan de mitigación**: Los planes que se ejecutan antes del punto trigger, buscan disminuir la *exposición* a un riesgo.
-- **Plan de contingencia**: Los planes que se ejecutan luego del punto trigger, buscan disminuir el *impacto* del problema.
+- **Plan de contingencia**: Los planes que se ejecutan luego del punto trigger, buscan disminuir el *impacto* del problema. Puede abrir nuevos riesgos,
