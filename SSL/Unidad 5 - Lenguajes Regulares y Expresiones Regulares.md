@@ -1,4 +1,3 @@
-# 5. Lenguajes Regulares y Expresiones Regulares
 ### 5.0 Introducción
 Un Lenguaje Formal es un conjunto de palabras que solo tienen una sintaxis, no tienen semántica. Los LF más simples son los Lenguajes Regulares (LR).
 - Los LRs tienen gran importancia en el diseño de los Lenguajes de Programación (LP), que sus componentes básicos (tokens) constituyen diferentes LRs.

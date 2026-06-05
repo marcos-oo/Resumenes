@@ -1,40 +1,41 @@
-## Gramáticas Formales y Jerarquía de Chomsky
-### Gramáticas Formales:
+## 2.1 Gramáticas Formales:
 > Conjunto de reglas (PRODUCCIONES) que se aplican para obtener las palabras del Lenguaje Formal que genera la Gramática Formal en cuestión.
-##### Composición:
+#### 2.1.1 Composición:
 <p align="center">G = ( V<sub>n</sub> ; V<sub>t</sub> ; P ; S )</p>
 
-###### Referencias:
+
+*Referencias:*
 - V<sub>n</sub> : Vocabulario o alfabeto de no terminales.
 - V<sub>t</sub> : Vocabulario o alfabeto de terminales.
 - P : Producciones.
 - S : Símbolo o variable inicial.
-###### Requisitos:
+
+*Requisitos:*
 - V<sub>n</sub> y V<sub>t</sub> son conjuntos finitos.
 - V<sub>n</sub> ∩ V<sub>t</sub> = ∅
 - P es finito, y P⊂( V<sup>+</sup> - V<sub>t</sub><sup>*</sup> ) X V<sup>*</sup> , siendo V = V<sub>n</sub> ∪ V<sub>t</sub> .
 - S pertenece a V<sub>n</sub> .
-##### Producciones:
+#### 2.1.2 Producciones:
 Se construyen haciendo uso de Productores (también conocidos como variables), los símbolos que componen al "Σ" del lenguaje y metasímbolos como -> o como | .
-Ejemplo:
+*Ejemplo:*
 
 <p align="center">G = ( { S, X, Y } ; { 0 , 1 } ; P ; S )</p>
 
-Siendo P:
+*Siendo P:*
 
 <p align="center">S ⟹ 0S | 10X<br>X ⟹ 1X | 0Y <br> Y ⟹ 0</p>
 
-Traducido: 
+*Traducido:* 
 - S se puede reemplazar por 0S o por 10X.
 - X se puede reemplazar por 1X o por 0y.
 - Y se puede reemplazar por 0.
-##### Como genera una gramática a un lenguaje?
+#### 2.1.3 De la gramática al lenguaje
 1. Se comienza en el símbolo o variable inicial.
 2. Se aplican producciones hasta obtener solamente elementos terminales, las letras del "Σ" del lenguaje.
 Este proceso se conoce como **DERIVACIÓN**.
-##### Ejercicio:
+*Ejercicio:*
 <p align="center">G = ( { S, T, Q } ; { a , b } ; P ; S )</p>
-Siendo P:
+*Siendo P:*
 <p align="center">S ⟹ aT | bQ<br>T ⟹ a | b <br> Q ⟹ a | ε</p>
 
 **a)** Puedo crear la cadena *bab*?
@@ -48,7 +49,7 @@ Siendo P:
 </details> 
 
 
-### La Jerarquía de Chomsky:
+## 2.2 La Jerarquía de Chomsky:
 > Esta Jerarquía de Chomsky establece una clasificación de cuatro tipos de Gramáticas Formales que, a su vez, generan cuatro tipos diferentes de Lenguajes Formales.
 
 ```mermaid
@@ -60,9 +61,9 @@ flowchart TD
     A --> |Tipo 0| E[Gramática Irrestricta] --> I[Lenguaje Irrestricto]
 ```
 Las gramáticas no son entidades separadas, si no que están contenidas dentro de las otras.
-<p align="center">Tipo 0 = ( Tipo 1 = ( Tipo 2 = ( Tipo 3 ) ) )</p>
+![[Jerarquia-De-Chomsky.png]]
 
-#### Gramática regular:
+#### 2.2.1 Gramática regular:
 ```mermaid
 flowchart TD
     A[Gramatica Regular]
@@ -85,7 +86,7 @@ flowchart TD
     
     
 ```
-#### Gramática Independiente de Contexto:
+#### 2.2.2 Gramática Independiente de Contexto:
 ```mermaid
 flowchart TD
     A[Gramatica Independiente de Contexto]
@@ -99,17 +100,12 @@ flowchart TD
     C-->|es|E
     
 ```
-#### Gramática Sensible al Contexto:
+#### 2.2.3 Gramática Sensible al Contexto:
 <p align="center"><b>a ⟹ b&emsp;⇔&emsp;|b| ≥ |a|</b></p>
-#### Gramática Irrestricta:
+#### 2.2.4 Gramática Irrestricta:
 Pueden existir secuencias de no-terminales y/o terminales, con α ≠ ε
 
-#### Ayuda-memoria:
-
-Derecha: Mayor o igual que la izquierda.
-Izquierda: Un solo no-terminal
-Derecha: aB / Ba / a / epsilon
-
+#### EXTRA 1: Ayuda-memoria:
 
 ```mermaid
 flowchart TD
@@ -120,8 +116,8 @@ flowchart TD
 	GSC(Es Gramatica Sensible al Contexto)
 	GIC(Es Gramatica Independiente del Contexto)
 	GI(Es Gramatica Irrestricta)
-	A-->|sí|B-->|sí|C-->|sí|GR
-	A-->|no|GI
-	B-->|no|GIC
-	C-->|no|GSC
+	A-->|SÍ|B-->|SÍ|C-->|SÍ|GR
+	A-->|NO|GI
+	B-->|NO|GIC
+	C-->|NO|GSC
 ```

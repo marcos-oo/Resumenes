@@ -18,6 +18,9 @@ Hacemos un análisis detenido de cada característica;
 Conocer es describir, explicar e interpretar fenómenos. Un fenómeno es un hecho singular que se manifiesta concretamente en la realidad. Un científico, busca explicar estos fenómenos, particularmente los que conciernen a su area de expertise.
 Estas explicaciones pueden ser meramente descriptivas o ir más allá, correspondiendo más con la idea de que explicar significa mostrar lo que hay entre los pliegues de algo, sacar a la vista lo que está oculto.
 Un científico busca descubrir lo que se encuentra entre estos pliegues, interpretándolos según su propio marco teórico.
+
+*1.1.1 El conocimiento natural.*
+
 #### 1.2 Racional
 Dícese de algo que tiene un proceder lógico y con sentido. Un hombre de ciencia usa la lógica para razonar correctamente y sin errores. Parte de axiomas o hipótesis y procede deductiva o inductivamente a obtener conclusiones.
 #### 1.3 Sistemático
@@ -290,3 +293,74 @@ La persona que existía antes de la revolución industrial (1750) se parecía ma
 ###### 7.6 Industria 6.0
 - Robotización.
 
+## 8. Tecnología vs. Técnica
+#### 8.1 Como NO veremos la tecnología moderna
+*No* nos referimos a la tecnología moderna, que posee caracteres específicos por sus relaciones con la ciencia, como una evolución **cuantitativa** de la tecnología antigua. No es simplemente lo mismo de siempre pero mejor, es otra cosa esencialmente.
+La tecnología moderna está estrechamente ligada con la organización de la industria moderna, caracterizada por una altísima división de trabajo y un gran nivel de integración de estas actividades divididas. Esta organización permite un cambio **cuantitativo** en la producción, pudiendo fabricar mucho más de lo mismo. Sin embargo y como aclaramos antes, esta forma de ver la tecnología no será la usada en esta materia.
+#### 8.2 Como SÍ veremos la tecnología moderna
+De acuerdo con Jean Ladriere, lo que diferencia esencialmente a la tecnología moderna de la antigua no es la dimensión de sus efectos, la practicidad de sus métodos o la belleza de sus medios, si no su modo de evolución.
+La tecnología antigua se desarrollaba muy lentamente y sobre una base práctica, existe una azarosidad en la creación y evolución de sus inventos, los cuales surgen espontáneamente al buscar resolver un problema. Podría decirse que la tecnología antigua es un conjunto de habilidades prácticas sin justificación teórica. Se sabía producir un efecto con ella, no **por qué** sucedía realmente.
+Por otro lado, la tecnología moderna tiene una evolución mucho más rápida, causada por su estructura sistemática y una búsqueda de comprensión exacta y absoluta de las causas de sus productos. Esta última existe principalmente gracias al uso de la ciencia, causando una relación estrecha entre esta y la tecnología moderna. Es claro que aún no se ha llegado ni se llegará a una comprensión integral de toda la actividad tecnológica, pero la búsqueda del **porqué lo hace** además del **qué hace** diferencia la tecnología antigua de la moderna.
+Antes, las teorías científicas surgían en respuesta a nueva tecnología, ahora nueva tecnología surge usando como base las teorías científicas.
+
+#### 8.3 Técnica y tecnología
+*8.3.1 La técnica.*
+De acuerdo con Manuel Liz, las **técnicas** son sistemas de acciones articulados según reglas de carácter social (no aisladas u ocasionales) e independientes del desarrollo de la industria y la ciencia. Son de carácter *constitutivo* al hombre, su origen se entrelaza con el origen del hombre mismo, y lo mismo se da con su evolución.
+
+*8.3.2 La tecnología.*
+Por otro lado, las **tecnologías** son también sistemas de acciones articulados según reglas de carácter social, pero esta vez sí integrados y estrechamente relacionados con la industria y sus procesos productivos, así como con la ciencia. Son de carácter *contingente* al hombre, surgen como producto de la evolución del hombre, de la creación de la ciencia moderna y la industrialización.
+
+*8.3.3 Consecuencias emergentes de esta teoría.*
+Esta distinción permite grados y aspectos, por ejemplo en las técnicas/tecnologías de fabricación de vinos. Sin embargo, de acuerdo con el autor, esto no hace más que reflejar la indeterminación que existe en la realidad y para casos más extremos las distinciones son más visibles.
+Esta distinción permite también una mutua incorporación entre técnica y tecnología, existiendo actividades técnicas dentro de actividades tecnológicas y viceversa, lo cual es muy común en la vida real. Esta relación es de "parte a todo", siendo que al modificarse una parte del sistema no se modifica la identidad del sistema entero, si no solo esa parte. La tecnología de producción de energía nuclear, por ejemplo, no cambiaría sustancialmente si sus ejecutores mejoraran en su habilidad para realizar las tareas que la componen.
+
+*8.3.4 Similitudes.*
+La técnica y la tecnología comparten un objetivo, el de actuar en la realidad para satisfacer intereses. Cumplir ese objetivo requiere el conocimiento de esos intereses, conocer la realidad sobre la que se pretende actuar, saber como actuar sobre ella, llevar a cabo esa acción, disponer de criterios para evaluar su satisfacción de los intereses y utilizar esos criterios para hacer la evaluación.
+
+*8.3.5 Diferencias*
+En la técnica, estos intereses previamente mencionados son usualmente individuales y fácilmente determinables, la realidad manipulada es fácilmente accesible, manifiesta y superficial. El saber como actuar se transmite personalmente y se apoya en destrezas particulares. La actuación es directa y con un mínimo de intermediarios, al igual que la evaluación de su satisfacción de los intereses planteados.
+En la tecnología, los intereses suelen ser colectivos y complejos de determinar, se actúa sobre partes de la realidad más difíciles de acceder y el como actuar se transmite institucionalmente y depende más del sacrificio del que lo aprende que de sus destrezas. La actuación y evaluación suele ser indirecta, compleja y altamente organizada.
+La tecnología, en vez de satisfacer nuestros intereses personales, suele desvincularse fácilmente de ellos.
+
+## 9. La relación ciencia - tecnología (crisis)
+#### 9.1 La hipótesis
+Se dice que mientras que la ciencia busca el conocimiento puro, la tecnología busca la acción.
+#### 9.2 Argumentos en contra
+Esta creencia entra en crisis al estudiar el estrecho vínculo entre la ciencia y la tecnología. 
+La primera parte de esta crisis es la **crisis institucional**, causada por el hecho de que se hace cada día más difícil diferenciar las instituciones que realizan actividades científicas de las que hacen actividades tecnológicas.
+La segunda parte es la **crisis conceptual**, un poco más compleja que la primera. El objetivo de la ciencia es conocer la parte de la realidad que se presenta como relevante para el científico, una relevancia determinada por intereses a fin de cuentas prácticos. Por otro lado, el objetivo de la tecnología es satisfacer intereses actuando sobre la realidad, una actuación orientada por el conocimiento científico. Al analizar más a fondo, podemos notar que la tecnología encuentra lo que busca en el conocimiento científico porque los intereses que mueven la búsqueda de conocimiento suelen solaparse con los que impulsan el desarrollo tecnológico. Esto muestra que los objetivos de la ciencia y de la tecnología no son tan distintos, de hecho, su intersección es bastante más grande de lo que podría pensarse a simple vista.
+Esta similitud también lleva a creer que mientras más avance el tiempo, más difícil va a ser diferenciar los intereses de la ciencia y de la tecnología.
+
+#### 9.3 Respuesta a los argumentos en contra
+Para la primera crisis, la **institucional**, no hay argumentos, es una realidad más que evidente.
+Sin embargo, la segunda crisis, la **conceptual**, no termina de convencer, ya que la ciencia y la tecnología actúan de formas muy distintas. Mientras que en la ciencia la acción se organiza a través de teorías, en la tecnología se organiza a través de modelos.
+Esto no significa que ahora haya un nuevo criterio mediante el cual diferenciar a la ciencia y la tecnología, solo significa que donde ya estén diferenciadas encontraremos de un lado modelos y del otro teorías y, donde no lo estén, encontraremos tanto modelos como teorías.
+## 10. La relación ciencia - tecnología
+#### 10.1 Las diferencias
+- **Propósito principal:** El objetivo de la ciencia es el progreso del conocimiento mediante la elaboración de sistemas explicativos y predictivos, es decir, teorías. La tecnología tiene como objetivo la transformación de la realidad y la intervención en el curso de las cosas para satisfacer intereses específicos.
+- **Estructura del conocimiento:** La ciencia organiza el conocimiento a través de teorías abstractas y conceptuales que poseen una gran potencia deductiva. La tecnología y la técnica se organizan mediante modelos concretos (planos, maquetas, prototipos) que incorporan un diseño o proyecto.
+- **Orientación de la acción:** Las teorías científicas nos dicen qué ocurre, qué ha ocurrido y qué ocurrirá. Los modelos tecnológicos orientan la acción de forma directa, ayudándonos a saber cómo actuar frente a situaciones específicas.
+
+#### 10.2 Las similitudes
+- **Conocimiento y acción:** Tanto en la ciencia como en la tecnología se busca el conocimiento y la acción de manera conjunta.
+- **Organización:** Ambas son actividades socialmente organizadas, sistemáticas y planificadas que persiguen objetivos elegidos conscientemente.
+- **Dependencia instrumental y teórica:** El progreso científico depende de mediaciones instrumentales e infraestructuras tecnológicas cada vez más sofisticadas, como radiotelescopios o aceleradores de partículas. A su vez, la tecnología moderna recurre a la comprensión exacta de las ciencias formales y fácticas para innovar.
+- **Método de trabajo:** La tecnología se apoya en el método científico tomándolo como modelo operativo, dividiendo sus procesos en contextos de descubrimiento, justificación y aplicación.
+
+#### 10.3 El enfoque sistémico
+- **Interacción multidimensional:** El Modelo de Interacción plantea que la tecnología, la política, la economía y la cultura se interrelacionan en una forma compleja y sistémica.
+- **Sociedad y tecnología inseparables:** La tecnología y la sociedad operan como espejos recíprocos; las sociedades son tecnológicas tanto como las tecnologías son sociales.
+- **Superestructura unificada:** La ciencia y la tecnología tienden a constituir una única superestructura conceptual y práctica, caracterizada por una integración y diversificación cada vez más estrecha.
+
+## 11. Las invenciones y las innovaciones tecnológicas
+
+#### 11.1 Las diferencias
+- **Invención:** Es el diseño o creación de un dispositivo, proceso o sistema verdaderamente nuevo. Representa un nuevo resultado práctico o conceptual, pero puede fracasar o no alcanzar difusión si las condiciones del mercado o la sociedad no son favorables.
+- **Innovación:** Es la introducción efectiva y la difusión de una tecnología (producto, proceso o servicio) en los procesos socioeconómicos. Una invención solo se transforma en innovación cuando logra ser requerida, aceptada por la sociedad y comercializada con éxito.
+
+#### 11.2 Tipos de innovaciones
+
+| **Tipo de Innovación** | **Definición y Características**                                                                                                                                                                                                      | **Ejemplos**                                                                    |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| **Incrementales**      | Son mejoras sucesivas y continuas sobre productos o procesos ya existentes. Buscan elevar la calidad, reducir el costo o ampliar las utilidades, generando una productividad mayor de forma acumulativa.                              | Nuevas funciones en un software. Reducción del tamaño de los microprocesadores. |
+| **Radicales**          | Consisten en la introducción de productos o procesos verdaderamente nuevos que se alejan de la trayectoria normal de una tecnología. Tienen el potencial de iniciar rumbos tecnológicos nuevos y dar nacimiento a industrias enteras. | La energía nuclear. La creación de la televisión.                               |

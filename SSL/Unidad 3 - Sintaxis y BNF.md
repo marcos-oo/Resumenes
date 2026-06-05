@@ -1,5 +1,4 @@
-# 3. Sintaxis y BNF
-### 3.0 Introducción
+## 3.0 Introducción
 > Un Lenguaje de Programación (LP) es una notación utilizada para describir algoritmos y estructuras de datos que resuelven problemas computacionales.
 
 Existe una relación muy importante entre los LPs y los Lenguajes Formales (LFs), ya que un LP está formado básicamente por un conjunto de Lenguajes Regulares (LRs) y un conjunto de Lenguajes Independientes de Contexto (LICs).
