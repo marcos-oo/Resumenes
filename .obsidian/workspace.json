@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PERSONAL/AI.md",
+                "file": "AM-II/EDO.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "AI"
+              "title": "EDO"
             }
           }
         ]
@@ -198,8 +198,11 @@
   },
   "active": "5b63c462e3cc3fcc",
   "lastOpenFiles": [
-    "ASI/Clase 3 - ASI.md",
+    "SSOO/Checkpoint 3.md",
+    "AM-II/EDO.md",
     "PERSONAL/AI.md",
+    "AM-II",
+    "ASI/Clase 3 - ASI.md",
     "IySc/Clase 10 - Desarrollo sustentable y globalización.md",
     "ASI/Clase 8 - Agilidad.md",
     "Untitled Kanban 1.md",
@@ -224,9 +227,7 @@
     "IySc/Clase 5 - IySc.md",
     "SSOO/Clase 8 - SSOO.md",
     "SSOO/DiagramaDeEstados.png",
-    "SSOO/Clase 3 - SSOO.md",
     "SSOO/Ciclo-Interrupciones.png",
-    "SSOO/Checkpoint 2.md",
     "SSOO/Pasted image 20260425090316.png",
     "Deadlock.png",
     "Pasted image 20260430171915.png",
@@ -243,7 +244,6 @@
     "FII/Untitled",
     "F-II",
     "Untitled.canvas",
-    "PERSONAL",
-    "IySc"
+    "PERSONAL"
   ]
 }
