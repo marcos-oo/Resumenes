@@ -172,5 +172,42 @@ $$y(x)=\gamma_H(x)+y_p(x)$$
 Todo esto es útil, pero ¿como encontramos una solución particular $y_p$ para la NO homogénea?
 
 Un método es tomar la solución general de la homogénea y variar la constante arbitraria hasta que cumpla con la EDO lineal.
-$$y_p(x)=Ke^{-\int \frac{q(x)}{p(x)} dx},\qquad \text{con K siendo el valor que haga cumplir a la SGH con la EDO}$$
+$$y_p(x)=K(x)\cdot e^{-\int \frac{q(x)}{p(x)} dx},\qquad \text{con K siendo el valor que haga cumplir a la SGH como SG la EDO}$$
 Este método se conoce como *método de variación de parámetros.*
+##### Ejemplo
+Consideremos el siguiente PVI
+$$
+\begin{cases}
+\dfrac{y'}x + 2y = x\ e^{-x^2} \\
+y(0) = 2
+\end{cases}
+$$
+No es de variables separables, es lineal NO homogénea, $p(x)=\dfrac1 x$, $q(x)=2$, $f(x)=x\ e^{-x^2}$. Como $p(x)$ es distinto de 0 para todo $x$, no hay puntos singulares.
+1. Buscar SGH
+$$\dfrac{y'}x + 2y = 0$$
+$$\dfrac{y'}y=-2x$$
+$$\int\dfrac{y'}y\ dx=\int-2x\ dx$$
+$$\int\dfrac1y\ dy=\int-2x\ dx$$
+$$ln\ y=-x^2+K$$
+$$\gamma_h(x)=C\cdot e^{-x^2}\qquad \text{con C}\in\mathbb{R}$$
+2. Buscar una SP de la NO homogénea mediante *método de variación de parámetros*.
+	$$\gamma_p(x)=C(x)\cdot e^{-x^2}\qquad\text{con C como función para permitir variación}$$
+$$\gamma_p'(x)=C'(x)\cdot e^{-x^2}-C(x)\cdot 2xe^{-x^2}$$
+$$\dfrac{\gamma_p'}x + 2\gamma_p = x\ e^{-x^2}$$
+$$\dfrac{C'(x)\cdot e^{-x^2}-C(x)\cdot 2xe^{-x^2}}{x}+2C(x)\cdot e^{-x^2}=x\ e^{-x^2}$$
+$$\dfrac{C'(x)\cdot e^{-x^2}}{x}+C(x)\cdot \left(2e^{-x^2}-\dfrac{2xe^{-x^2}}{x}\right)=x\ e^{-x^2}$$
+$$C'(x)\cdot\dfrac{e^{-x^2}}x=e^{-x^2}$$
+$$C'(x)=x^2\qquad \text{pero no nos importa C'(x), queremos C(x)}$$
+$$C(x)=\dfrac{x³}3+K$$
+3. Tomamos una solución particular
+$$C(x)=\dfrac{x³}3$$
+$$\gamma_p(x)=\dfrac{x³}3\cdot e^{-x²}$$
+4. Construimos la SG de la NO homogénea
+$$y(x) = \underbrace{C e^{-x^2}}_{\gamma_h(x)} + \underbrace{\frac{x^3}{3} e^{-x^2}}_{\gamma_p(x)}$$
+5. Esa parte está lista, pero el problema no está terminado aún. Este es un PVI, debemos ahora usando la SG obtenida encontrar la SP.
+$$y(0)=2$$
+$$2 = C\cdot e^{-0^2} + \frac{0^3}{3}\cdot e^{-0^2}$$
+$$C=2$$
+6. Respondemos
+$$\text{SP :}\qquad y(x)=e^{-x²}\cdot\left(C+\dfrac{x³}{3}\right)$$
+$$\text{SP :}\qquad y(x)=e^{-x²}\cdot\left(2+\dfrac{x³}{3}\right)$$
