@@ -1,0 +1,3 @@
+ - La consulta `not` es una consulta de orden superior.
+ - Si vamos a hacer `not`, la cual es una consulta individual, debemos usar un generador antes (una consulta existencial) así aplicamos la consulta individual a valores existentes.
+ -  

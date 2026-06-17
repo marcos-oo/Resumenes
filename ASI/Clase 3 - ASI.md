@@ -21,6 +21,9 @@ ___
 
 **Requerimientos externos**: Requerimientos derivados de factores externos al sistema, como regulaciones o requerimientos legislativos y éticos.
 ___
+**Requerimientos obligatorios**
+**Requerimientos deseables**
+___
 
 DIFÍCILES DE DISTINGUIR.
 

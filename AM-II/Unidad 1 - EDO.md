@@ -10,16 +10,16 @@ $$3y''+8y+\dfrac1 2 y'=0\qquad 2^{do}\ orden$$
 
 En esta unidad se verán algunos de los distintos tipos de **EDO**.
 
-Se le llama **orden** de la EDO es el orden de la mayor derivada que aparezca en la ecuación.
+> Se le llama **orden** de la EDO es el orden de la mayor derivada que aparezca en la ecuación.
 
-Se le llama **solución** de la EDO a toda función $\rho (x)$, derivable por lo menos hasta el orden de la EDO, que la satisfaga.
+> Se le llama **solución** de la EDO a toda función $\rho (x)$, derivable por lo menos hasta el orden de la EDO, que la satisfaga.
 
-Se le llama **solución general** (SG) de la EDO a toda solución que dependa de **n** constantes esenciales, siendo **n** el orden de la EDO. De la SG se forma la familia **n**-paramétrica.
+> Se le llama **solución general** (SG) de la EDO a toda solución que dependa de **n** constantes esenciales, siendo **n** el orden de la EDO. De la SG se forma la familia **n**-paramétrica.
 
-Se le llama **solución particular** (SP) de la EDO al valor representado por la SG al fijar **n** condiciones que otorguen valores a sus **n** constantes.
+> Se le llama **solución particular** (SP) de la EDO al valor representado por la SG al fijar **n** condiciones que otorguen valores a sus **n** constantes.
 
 ## EDO de variables separables
-Se le llama **ecuación diferencial de variables separables** a la que es de forma
+> Se le llama **ecuación diferencial de variables separables** a la que es de forma
 $$f(y)\cdot y'+g(x)=0$$
 con $f(x)$ y $g(x)$ continuas.
 De forma simplificada, es una ecuación diferencial en la que puedo separar las $x$ de un lado y las $y$ del otro.
@@ -50,9 +50,8 @@ $$\large y=e^x$$
 
 ¿pero que hago si no puedo separar las variables?
 ## EDO homogénea (no entra en la teoría, batenme)
-Se le llama **función homogénea** de grado **n** a toda función de dos variables $g(x,y)$ para la que se cumple
+> Se le llama **función homogénea** de grado **n** a toda función de dos variables $g(x,y)$ para la que se cumple
 $$g(tx,ty)=t^n\cdot g(x,y)$$
-
 con $t$ pudiendo estar restringido.
 ##### Ejemplo 2:
 $$g(x,y)=x^2+x\cdot y$$
@@ -62,12 +61,11 @@ $$g(tx,ty)=t^2\cdot \left(x^2+x\cdot y\right)=t^2\cdot g(x,y)$$
 
 Resulta entonces que $g(x,y)$ es homogénea de grado 2.
 
-Se le llama **ecuación diferencial homogénea** a la que puede escribirse
+> Se le llama **ecuación diferencial homogénea** a la que puede escribirse
 $$M(x,y)\ dx+N(x,y)\ dy=0$$
-
 con $M(x,y)$ y $N(x,y)$ siendo funciones homogéneas del mismo grado de homogeneidad.
 
-> Lo que sigue es una demostración un poco complicada de seguir, pero permitirá una herramienta muy necesaria a futuro.
+Lo que sigue es una demostración un poco complicada de seguir, pero permitirá una herramienta muy necesaria a futuro.
 
 Continuamos a partir de esa definición
 $$\dfrac{dy}{dx}=-\dfrac{M(x,y)}{N(x,y)}=f(x,y)\qquad ,$$
@@ -111,12 +109,14 @@ $$\dfrac1 {f(1,z)-z}dz=\dfrac1 x dx$$
 y ya podemos reemplazar $z$ por $\dfrac x y$.
 
 ## EDO lineal
-Se le llama **ecuación diferencial ordinaria lineal** de primer orden a la que es de la
+> Se le llama **ecuación diferencial ordinaria lineal** de primer orden a la que es de la
 forma
 $$p(x)\cdot y'+q(x)\cdot y=f(x)$$
 siendo $p(x)$, $q(x)$ y $f(x)$ continuas en cierto intervalo $I$.
-Además, se le llama **ecuación homogénea asociada** (a la EDO lineal) a la ecuación diferencial de forma
+
+> Se le llama **ecuación homogénea asociada** (a la EDO lineal) a la ecuación diferencial de forma
 $$p(x)\cdot y'+q(x)\cdot y=0$$
+
 Esta última tiene la solución idénticamente nula ($p(x)\cdot y'=q(x)\cdot y=0$), pero además, para los valores de x para los cuales $p(x)\neq 0$ (para evitar division por 0), resulta que
 $$p(x).y' = -q(x).y$$
 $$\frac{y'}{y} = - \frac{q(x)}{p(x)}$$
@@ -208,6 +208,45 @@ $$y(x) = \underbrace{C e^{-x^2}}_{\gamma_h(x)} + \underbrace{\frac{x^3}{3} e^{-x
 $$y(0)=2$$
 $$2 = C\cdot e^{-0^2} + \frac{0^3}{3}\cdot e^{-0^2}$$
 $$C=2$$
+
 6. Respondemos
 $$\text{SP :}\qquad y(x)=e^{-x²}\cdot\left(C+\dfrac{x³}{3}\right)$$
 $$\text{SP :}\qquad y(x)=e^{-x²}\cdot\left(2+\dfrac{x³}{3}\right)$$
+
+## De familia de curvas a EDO
+Al obtener la SG de una EDO lo que encontramos es una *familia de curvas*, cuyo número de parámetros es igual al orden de la EDO. Sin embargo, también se puede hacer el camino contrario, partir de una *familia de curvas* y terminar en una EDO cuya SG coincida con la familia de partida.
+Para lograr esto, derivaremos miembro a miembro la ecuación de la *familia de curvas* dada.
+##### Ejemplo
+$$y=k\left(x²-x\right),\quad k\in\mathbb{R}$$
+$$y'=k\left(2x-1\right)$$
+No queremos la constante arbitraria, no hay lugar para ellas en una EDO.
+$$y'=y\cdot\frac{2x-1}{x²-x}$$
+Esa es nuestra EDO.
+
+##### Ejemplo
+$$y=cos\left(kx+x\right),\quad k\in\mathbb{R},\quad c\in\mathbb{R}$$
+Como vemos, es de dos parámetros, constantes independientes esenciales. Eso significa que la EDO es de segundo orden.
+$$y=cos\left(kx+c\right)\qquad [1]$$
+$$y'=-k\cdot sen\left(kx+c\right)\qquad [2]$$
+$$y''=-k²\cdot cos(kx+c)\qquad [3]$$
+Sabemos que $sen²(x)+cos²(x)=1$. Usaremos esa igualdad para limpiar $y$ e $y'$.
+$$y²=cos²(kx+c)$$
+$$\left(\frac{y'}{-k}\right)^2=sen²(kx+c)$$
+$$sen²(kx+c)+cos²(kx+c)=1$$
+$$\left(\frac{y'}{-k}\right)^2+y^2=1$$
+$$\frac{y'^2}{k^2}+y^2=1$$
+Buscamos deshacernos de ese $k^2$ y lo vemos en $[3]$. Para poder usarlo, dividiremos $[3]$ sobre $[1]$.
+$$\frac{y''}{y}=\dfrac{-k²\cdot cos(kx+c)}{cos\left(kx+x\right)}$$
+$$\frac{y''}y=-k²$$
+Reemplazamos
+$$\frac{y'²}{\frac{y''}y}+y^2=1$$
+$$\left(1-y^2\right)\cdot y''+y\left(y'\right)^2=0$$
+Y obtenemos nuestra EDO.
+### Familias ortogonales
+> Se le llaman *familias ortogonales* a dos familias de curvas $F_1$ y $F_2$ si los miembros de cada una de ellas corta a los miembros de la otra de modo que, en los puntos de intersección, las respectivas tangentes son perpendiculares entre sí.
+
+Como encontramos una familia ortogonal a otra?
+Sean $F_1$ y $F_2$
+1. Derivamos miembro a miembro $F_1$ para obtener así su EDO.
+2. Reemplazamos $y'$ por $\large -\frac1{y'}$.
+3. Resolvemos la EDO por el método que se pueda.

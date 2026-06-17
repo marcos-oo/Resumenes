@@ -13,4 +13,3 @@ Un identificador es una cadena de uno o más caracteres que llaman a distintas e
 Las palabras reservadas habitualmente forman un LR finito, independiente de los identificadores.
 - Todo *no terminal* debe aparecer en el lado izquierdo de al menos una producción.
 - Un *terminal* jamás puede aparecer en el lado izquierdo de una producción.
-- 
