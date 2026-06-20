@@ -262,7 +262,7 @@ Bitocchi explica que con relación a la función social de la ciencia se suele d
 
 ### 4. Ciencia Colectivizada
 
-- **La superación del contraste**: Citando a John Ziman, el autor afirma que el contraste rígido entre ciencia pura y aplicada es **impropio e inadecuado** en el sistema actual. La ciencia contemporánea está viviendo una transición radical hacia una institución social fuertemente organizada, gestionada y unificada: la **ciencia colectivizada o posacadémica**.
+- **La superación del contraste**: Citando a John Ziman, el autor afirma que el contraste rígido entre ciencia pura y aplicada es **impropio e inadecuado** en el sistema actual. La ciencia contemporánea está viviendo una transición radical hacia una institución social fuertemente organizada, gestionada y unificada: la **ciencia colectivizada o posacadémica**
     
 - **Unificación de fines**: La ciencia colectivizada une el fin teórico de la ciencia pura con el fin práctico de la aplicada. No se puede prescindir de ninguno de los dos; ambos aspectos evolucionan y progresan juntos.
     
@@ -286,7 +286,6 @@ El autor hace un contraste muy importante para el examen entre la Ciencia Colect
 - **Coincide en la Originalidad y el Escepticismo**: Sigue exigiendo la creación de conocimientos nuevos (originalidad) y el examen riguroso y crítico de los resultados antes de su aplicación (escepticismo).
     
 - **El Sustento en el Ethos**: El autor concluye explicando que esta ciencia se rige por el _ethos_ (término griego que significa costumbre o conducta). El científico actual actúa bajo un modo de ser comprometido con normas y valores que surgen del consenso de la comunidad, lo que termina configurando la **conciencia científica** frente a los dilemas de la sociedad.
-
 
 # Clase 10
 ## 1. El Concepto de Desarrollo Sostenible y Humano
@@ -420,13 +419,10 @@ Nace formalmente en EE. UU. y Europa tras la Segunda Guerra Mundial, potenciada
     
 
 ## 2. Antecedentes y Evolución en Argentina (Los 5 Momentos)
-
-Haciendo caso al profesor, nos enfocamos en las **características esenciales** de cada etapa sin marearnos con números exactos:
-
 ### Momento 1: Antecedentes (1880 - 1930)
 
 - **Modelo Agroexportador y crecimiento espontáneo:** El país se integró al mercado mundial vendiendo materias primas (carne, trigo, maíz). La industria creció de forma espontánea por la bonanza económica, pero casi **sin decisiones políticas de desarrollo** por parte de los gobiernos.
-    
+
 - **Sustitución de importaciones por crisis externas:** El estallido de la Primera Guerra Mundial (1914) frenó el comercio exterior. Para abastecerse, Argentina tuvo que empezar a implementar sus primeras formas de sustitución de importaciones, expandiendo talleres y fábricas locales (textil, alimentaria, metalúrgica y química).
     
 
@@ -435,14 +431,14 @@ Haciendo caso al profesor, nos enfocamos en las **características esenciales**
 - **Presión de los científicos y militares por la autonomía:** Por un lado, nace la AAPC (liderada por el Nobel Bernardo Houssay) como el primer grupo de científicos que busca influir en el gobierno. Por el otro, surge un grupo de militares (como el General Savio) que ve a la industria integrada y pesada como la base clave para la **defensa y la autonomía económica** (creando Fabricaciones Militares).
     
 - **"Ciencia para el pueblo" y planificación estatal:** El Estado asume un rol interventor y protector de la industria nacional de base. Con el peronismo, la ciencia y la tecnología se integran al discurso político bajo la premisa de ser recursos estratégicos subordinados al **desarrollo técnico-industrial** y al **bienestar de los sectores populares**.
-    
+
 
 ### Momento 3: Institucionalización del sistema científico (1950 - 1966)
 
 - **Creación del entramado institucional central:** En este lapso (que abarcó gobiernos peronistas, de facto y democráticos) se fundaron los pilares científicos que hoy conocemos : la **CNEA** (energía atómica) , el **INTA** (agro) , el **INTI** (industria) y el **CONICET**.
     
 - **Impulso a la investigación académica universitaria:** Con la creación del CONICET en 1958, el objetivo principal fue robustecer la investigación científica dentro de las universidades nacionales, las cuales hasta ese momento estaban casi exclusivamente enfocadas en la docencia.
-    
+
 
 ### Momento 4: Interrupciones, violencia y dictadura (1966 - 1983)
 
@@ -502,4 +498,3 @@ A pesar de las fallas estructurales, el texto cierra listando empresas que demue
 - **Biotecnología y Salud:** _Insud_ (Chemo / Biogénesis Bagó en salud humana/animal) y _Bioceres_ (biotecnología agraria en semillas y agroquímicos).
     
 - **Tecnológicas/Unicornios:** _Mercado Libre_ (comercio electrónico y fintech) , _Despegar_ (turismo digital) y _Globant_(desarrollo de software de exportación a nivel mundial).
-    

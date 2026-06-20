@@ -90,7 +90,7 @@ Los modelos que sigan al Fordismo deben corregir los errores de su predecesor, e
 | **Organización Productiva**      | Estandarización y economías de escala (impulsada por la oferta). | Flexibilidad y organización en función de la demanda cambiante.                         |
 | **Fundamento de Competitividad** | Basada esencialmente en el precio bajo del producto.             | Basada en la innovación y las características propias de cada producto.                 |
 | **Relación Global / Individual** | Enfoque en la máquina y el trabajador de forma aislada.          | Vinculaciones sistémicas (redes de empresas, _Just-in-time_, Gestión de Calidad Total). |
-| **Papel del Trabajo**            | Visto como un costo a minimizar (mano de obra intercambiable).   | Visto como un recurso clave cuyo potencial se debe maximizar.                           |
+| **Papel del Trabajador**         | Visto como un costo a minimizar (mano de obra intercambiable).   | Visto como un recurso clave cuyo potencial se debe maximizar.                           |
 Estos modelos Posfordistas podrán presentarse de distintas formas, entre ellas:
 - **Neotaylorismo**: Una contratación muy flexible y a demanda, combinada con una división de tareas llevada al extremo de la simplicidad que descalifica la mano de obra, precariza el trabajo y sus condiciones y resulta en un gran nivel de polarización económica social.
 
@@ -224,4 +224,112 @@ Plantean desde garantizar condiciones de vida dignas hasta terminar con la pobre
 Los objetivos (2, 6-9, 11, 12, 14-17) hacen hincapié específicamente en la sostenibilidad en distintas areas de producción, desde la agricultura, la energía, la industrialización y el cuidado de ecosistemas hasta el agua potable y las alianzas mundiales.
 - **Conclusión fundamental del texto:** _"El centro de la tecnología es el hombre y los ODS su corazón"_.
 
+# Clase 11
+## 1. Ciencia y Política: Dos formas de articularse
 
+El texto arranca diferenciando cómo se relacionan el conocimiento científico y las decisiones del Estado:
+
+- **Ciencia para la política (Asesoramiento científico / Ciencia regulatoria):** Es cuando el Estado usa la evidencia científica para tomar decisiones y legislar.
+    
+    - _Ejemplo del texto:_ El uso de la toxicología para prohibir o regular compuestos químicos (como pasó con las idas y vueltas de la evidencia sobre el pesticida DDT).
+        
+    - **Principio de precaución (Declaración de Río, 1992):** Ante la sospecha de un peligro de daño grave o irreversible, la falta de certeza científica absoluta no debe usarse como excusa para postergar medidas que protejan el medio ambiente.
+        
+- **Política para la ciencia (Política científica):** Es cuando el Estado decide financiar, dar recursos y crear las condiciones para que la ciencia avance en el país.
+    
+
+### El origen de la política científica moderna
+
+Nace formalmente en EE. UU. y Europa tras la Segunda Guerra Mundial, potenciada por el impacto de las bombas atómicas y el informe de Vannevar Bush: _Ciencia: la frontera sin fin_ (1945). De allí surge el **"Modelo Lineal de I+D"**:
+
+1. Se invierte en **Investigación Básica** (por pura curiosidad, financiada por el Estado porque es riesgosa para los privados).
+    
+2. Esta lleva a la **Investigación Aplicada**.
+    
+3. Finalmente, decanta en el **Desarrollo Tecnológico** que genera beneficios sociales y económicos.
+    
+
+## 2. Antecedentes y Evolución en Argentina (Los 5 Momentos)
+
+Haciendo caso al profesor, nos enfocamos en las **características esenciales** de cada etapa sin marearnos con números exactos:
+
+### Momento 1: Antecedentes (1880 - 1930)
+
+- **Modelo Agroexportador y crecimiento espontáneo:** El país se integró al mercado mundial vendiendo materias primas (carne, trigo, maíz). La industria creció de forma espontánea por la bonanza económica, pero casi **sin decisiones políticas de desarrollo** por parte de los gobiernos.
+    
+- **Sustitución de importaciones por crisis externas:** El estallido de la Primera Guerra Mundial (1914) frenó el comercio exterior. Para abastecerse, Argentina tuvo que empezar a implementar sus primeras formas de sustitución de importaciones, expandiendo talleres y fábricas locales (textil, alimentaria, metalúrgica y química).
+    
+
+### Momento 2: Primeras organizaciones y sesgo militar (1930 - 1950)
+
+- **Presión de los científicos y militares por la autonomía:** Por un lado, nace la AAPC (liderada por el Nobel Bernardo Houssay) como el primer grupo de científicos que busca influir en el gobierno. Por el otro, surge un grupo de militares (como el General Savio) que ve a la industria integrada y pesada como la base clave para la **defensa y la autonomía económica** (creando Fabricaciones Militares).
+    
+- **"Ciencia para el pueblo" y planificación estatal:** El Estado asume un rol interventor y protector de la industria nacional de base. Con el peronismo, la ciencia y la tecnología se integran al discurso político bajo la premisa de ser recursos estratégicos subordinados al **desarrollo técnico-industrial** y al **bienestar de los sectores populares**.
+    
+
+### Momento 3: Institucionalización del sistema científico (1950 - 1966)
+
+- **Creación del entramado institucional central:** En este lapso (que abarcó gobiernos peronistas, de facto y democráticos) se fundaron los pilares científicos que hoy conocemos : la **CNEA** (energía atómica) , el **INTA** (agro) , el **INTI** (industria) y el **CONICET**.
+    
+- **Impulso a la investigación académica universitaria:** Con la creación del CONICET en 1958, el objetivo principal fue robustecer la investigación científica dentro de las universidades nacionales, las cuales hasta ese momento estaban casi exclusivamente enfocadas en la docencia.
+    
+
+### Momento 4: Interrupciones, violencia y dictadura (1966 - 1983)
+
+- **Fuga de cerebros y destrucción de la autonomía:** El golpe de 1966 eliminó la autonomía universitaria, desatando la intervención violenta conocida como _"La noche de los bastones largos"_. Esto provocó la renuncia masiva de miles de docentes e investigadores, quebrando la continuidad de los equipos. (Hubo un breve intento de reorientar la ciencia a temas aplicados en el regreso democrático de 1973 con los Programas Nacionales) .
+    
+- **Terrorismo de Estado y desmantelamiento:** La dictadura iniciada en 1976 fue devastadora. Bajo una estrategia de represión, censura y persecución ideológica, miles de científicos, profesores y alumnos fueron expulsados, encarcelados, empujados al exilio o pasaron a engrosar las listas de desaparecidos.
+    
+
+### Momento 5: Recuperación democrática, neoliberalismo y nuevo crecimiento (1983 - 2015)
+
+- **Reconstrucción alfonsinista y posterior achicamiento neoliberal (Años 80 y 90):** Alfonsín buscó normalizar las universidades, reincorporar exiliados y conectar la ciencia con la producción, pero las crisis presupuestarias lo frenaron. En los 90, con Menem, las políticas neoliberales y el ahorro fiscal achicaron las instituciones en personal y recursos , aunque se destaca la creación de la ANPCyT para centralizar el financiamiento.
+    
+- **Fuerte inversión pública y deudas estructurales (2003 - 2015):** Los gobiernos kirchneristas iniciaron un ciclo de fuerte expansión económica para el sector. Se masificaron los científicos y becarios (reincorporando investigadores del exterior), y se reactivaron áreas estratégicas como la nuclear y satelital (INVAP, ARSAT). Sin embargo, persistió el problema de la **baja inversión privada** en innovación y la desconexión histórica entre la oferta de conocimiento y lo que las empresas locales demandan.
+    
+
+## 3. Vinculación Universidad - Empresa
+
+Para cerrar, el texto analiza por qué cuesta tanto que la ciencia "llegue" a las fábricas usando dos herramientas teóricas fundamentales:
+
+### Las Cuatro Culturas Políticas (Elzinga y Jamison)
+
+Explica que las tensiones en el sistema ocurren porque los actores hablan idiomas diferentes según sus intereses:
+
+1. **Cultura Académica:** Propia de las universidades. Defiende la libertad de investigación, la ciencia básica y el conocimiento libre ("ciencia pública").
+    
+2. **Cultura Económica:** Propia de empresarios innovadores. Busca el rédito comercial, ve al conocimiento como un bien de mercado que debe protegerse mediante patentes.
+    
+3. **Cultura Burocrática:** Propia del gobierno. Enfocada en la planificación y el uso social regulado de la ciencia.
+    
+4. **Cultura Cívica:** Preocupada por los impactos ambientales, sociales y los riesgos de las nuevas tecnologías.
+    
+
+ **La gran tensión:** Se da entre la académica y la económica. Los académicos temen la "mercantilización" de la universidad, mientras que los empresarios chocan con los tiempos y la libre disponibilidad del mundo universitario.
+
+### El Triángulo de Sabato
+
+Es un modelo propuesto por el físico argentino Jorge Sabato para lograr que un país sea tecnológicamente independiente. Sostiene que el desarrollo requiere la interacción fluida entre **3 vértices**:
+
+1. **Gobierno:** Diseña las políticas y los incentivos.
+    
+2. **Infraestructura Científico-Tecnológica:** Universidades y centros de investigación que producen el conocimiento.
+    
+3. **Estructura Productiva:** Empresas públicas o privadas que aplican ese conocimiento.
+    
+
+- **El diagnóstico de Sabato en Argentina:** El triángulo está roto. Las relaciones son débiles tanto entre vértices (interrelaciones) como entre las instituciones de un mismo vértice (intrarrelaciones).
+    
+- **Problema de fondo:** Falta demanda de conocimiento por parte de los empresarios locales. El tejido industrial local tiene un porcentaje bajísimo de empresas innovadoras, prefiriendo comprar tecnología llave en mano al exterior antes que golpear las puertas de la universidad.
+    
+
+## 4. Casos Exitosos de Innovación en Argentina
+
+A pesar de las fallas estructurales, el texto cierra listando empresas que demuestran que el país tiene altísima capacidad científico-tecnológica:
+
+- **Históricas/Industriales:** _Techint/Tenaris_ (líder mundial en tubos de acero sin costura) , _Fate Electrónica_ (que en los 70 fabricó calculadoras y computadoras íntegramente nacionales absorbiendo a científicos echados de la universidad) , e _INVAP_ (empresa pública emblema que construye reactores nucleares y satélites a nivel global).
+    
+- **Biotecnología y Salud:** _Insud_ (Chemo / Biogénesis Bagó en salud humana/animal) y _Bioceres_ (biotecnología agraria en semillas y agroquímicos).
+    
+- **Tecnológicas/Unicornios:** _Mercado Libre_ (comercio electrónico y fintech) , _Despegar_ (turismo digital) y _Globant_(desarrollo de software de exportación a nivel mundial).
+    
