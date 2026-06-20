@@ -39,6 +39,10 @@ El escenario que se dibuja a partir de un conjunto de situaciones, objetos y con
 El grado de interacción que un sistema mantiene con el medio. A mayor permeabilidad, más abierto el sistema.
 > Del latín _per_ (a través de) y *meare* (ir, pasar).
 
+##### Administración
+*La ciencia*: Comprender, explicar y predecir el comportamiento de las organizaciones.
+*La acción*: Planificar, organizar, dirigir, controlar actividades dirigidas a un bien común.
+
 # Metodología de sistemas
 ##### Metodología
 Conjunto de pasos en un orden determinado que permiten lograr un objetivo.
@@ -162,9 +166,13 @@ El **proceso** por el cual el sistema deja de utilizarse implica:
 - _Descarte o sustitución_: Se da de baja y reemplaza el sistema de forma de no afectar la operatoria habitual de la organización.
 
 
+
+
+
+
+
+
 # \[1/4]
-organizacion: politicas, mision, vision, subsistemas corporativos (?) (planificacion, control)
-- administracion (planificar, organizar, dirigir, controlar actividades dirigidas a un bien comun), puede ser como ciencia (estudia a las orgs) o como acciones (verbos en inf que puse antes)
 - reconocimiento: entrada proceso salida de esta etapa. actores, tecnicas de recoleccion/documentacion de info, informe (siguiente item).
 - informe de reconocimiento: saber lo basico (que es, para que se usa, sus partes, etc)
 - ciclos de vida: "definicion" (en mi carpeta entre items 4 y 5), todos los tipos
