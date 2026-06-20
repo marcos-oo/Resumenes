@@ -54,7 +54,7 @@ Su **objetivo** es conocer los requerimientos y expectativas del usuario, establ
 
 Entre sus **herramientas de recolección de información** se encuentran *entrevistas*, *cuestionarios* y *observaciones* a través de las cuales se puede incluso obtener acceso a la *documentación* de la organización
 
-Como **herramienta de documentación** se utiliza el *informe de reconocimiento*.
+Como **herramientas de documentación** se utilizan el *informe de reconocimiento* y el *organigrama*.
 
 ##### 2. Relevamiento
 Etapa en la que se obtiene un conocimiento exhaustivo de la organización y sus procesos (usualmente con los niveles jerárquicos más bajos), el cual será la base para el desarrollo del producto-solución. Incluye también el análisis de la información obtenida.
@@ -165,12 +165,112 @@ El **proceso** por el cual el sistema deja de utilizarse implica:
 - _Planificación del retiro_: Se diseña el modo de transición a una nueva herramienta.
 - _Descarte o sustitución_: Se da de baja y reemplaza el sistema de forma de no afectar la operatoria habitual de la organización.
 
+# Reconocimiento
+### El reconocimiento como proceso
+##### Entrada
+Objetivos, contexto, procesos de negocio, reglas de negocio y necesidades de la organización.
+##### Proceso
+Se obtiene información como la estructura formal e informal de la organización, las funciones de sus areas involucradas, los responsables de aquellas areas y sus problemas y necesidades.
+##### Salida
+A partir de este proceso se obtiene lo que se conoce como un **Informe de Reconocimiento**.
+___
+##### Actores
+Entre los actores que participan de esta etapa podemos identificar*directores*, *gerentes*, el/los *sponsor/s del proyecto* y al *analista de sistemas*.
 
+### El informe
+Es un documento escrito que presenta datos con el objetivo de informar sobre un tema en particular.
+Describe la naturaleza de un problema, presenta datos y hechos obtenidos, realiza conclusiones y genera recomendaciones para el tratado de la situación.
 
+### El informe de reconocimiento
+Para el caso específico de los **informes de reconocimiento**, se utiliza en la etapa de **reconocimiento**. Su estructura se compone de:
+##### La introducción
+Es la sección en la que se detalla la presentación de la empresa sobre la que se realizará el informe.
+Tiene el formato de una carta dirigida al sponsor, indica que contiene el informe, solicita la validación contenida en el mismo y finaliza con un saludo.
+##### El índice
+Se detallan las páginas donde se encontrará cada sección del informe.
+##### El cuerpo
+es el contenido principal del informe. Incluye:
+- *Nombre de la organización*.
+- *Objetivo de la organización*: o a que se dedica.
+- *Objetivo del mandato*: el motivo por el que se nos llamó.
+- *Sponsor*: quien nos llama y promueve el proyecto.
+- *Estructura de la organización*: referir a un anexo, un organigrama con fecha.
+- *Áreas y funciones*: detallar las funciones de todas las areas de la organización, no las tareas.
+- *Problemas y/o necesidades*: los problemas o necesidades detectados.
+##### La conclusión
+Con la información obtenida, se analizan las áreas a relevar relacionadas con la problemática planteada.
+##### Anexos
+Información extra que aporta datos que sirven para ampliar lo que se ha descripto en el informe (el organigrama, por ejemplo).
+___
+##### Datos faltantes
+Si faltan datos no se desarrollan en el informe, se anotan aparte para preguntarlos en una futura entrevista. 
 
+# Ciclos de vida
+### Cascada pura
+El proyecto progresa en una secuencia ordenada de pasos, desde el diseño hasta las pruebas. Luego de cada fase se hace una revisión, en la que se determina si el proyecto está listo para pasar a la siguiente fase. Si no lo está, se queda en la fase actual hasta que lo esté.
+Las fases no se superponen entre sí y los productos que se llevan de una a la otra suelen ser en su mayoría documentos.
 
+El modelo de cascada funciona cuando:
+- La definición del producto es estable.
+- El producto es complejo pero bien comprendido por quienes lo piden y quienes lo desarrollan
+- Cuando los requerimientos de calidad se valoran por encima de los económicos o de tiempo.  
 
+Las **ventajas** del modelo cascada son: 
+- La estabilidad en el desarrollo.
+- La posibilidad de usar staff menos capacitado gracias a su estructura rígida y definida.
+- La falta de necesidad de planificación sobre la marcha, ya que se hace toda al principio.
 
+Las **desventajas** del modelo cascada son:
+- La falta (prácticamente ausencia) de flexibilidad.
+- La necesidad de especificar los requerimientos en su totalidad al principio del proyecto.
+- Volver atrás en el desarrollo es posible, pero complicado.
+- Algunas herramientas o métodos ocupan más de una etapa, algo que es difícil de planear con estas siendo tan independientes de las otras. 
+
+### Code-and-Fix
+El proyecto comienza con una idea general de lo que se busca construir e inmediatamente se salta al desarrollo, usando los métodos necesarios hasta que el producto alcance un estado en el que se pueda considerar completado.
+
+El modelo Code-and-Fix funciona muy raramente, principalmente en proyectos pequeños, de poca importancia y que serán descartados luego de su uso, como prototipos, demos o pruebas de concepto.
+
+Las **ventajas** del modelo Code-and-Fix son:
+- La ausencia de *overhead* o trabajo extra, ya que no se hace documentación, planificación ni verificación de calidad de ningún tipo.
+- La inmediatez con la que aparecen resultados.
+- La prácticamente nula necesidad de expertise por parte de sus desarrolladores, ya que lo que requiere es simplemente desarrollar.
+
+Las **desventajas** del modelo Code-and-Fix son:
+- No hay una forma concreta de juzgar el progreso.
+- No hay forma de analizar la calidad del producto ni identificar sus riesgos.
+- Si se descubre un error fundamental en el diseño del producto ya entrado el desarrollo, se debe empezar de cero.
+
+### Espiral
+El proyecto se divide en pequeños subproyectos, los cuales van abordando de a uno un problema o riesgo separado, creciendo la escala del proyecto cuando los problemas o riesgos son atendidos. Este ciclo finaliza cuando los problemas o riesgos mas grandes se resuelven, que es cuando se comienza una cascada la cual finaliza con un producto entregable.
+En resumen, el desarrollo proyecto se divide en capas y solo cuando los riesgos de una capa están totalmente resueltos y su "sub-ciclo" finaliza se pasa a la siguiente capa. 
+Se consideran problemas o riesgos a requerimientos no del todo comprendidos, arquitectura vaga en la teoría, potenciales problemas de desempeño del producto, posibles problemas en la tecnología, etc.
+Cada "sub-ciclo" (conocido formalmente como iteración) se compone de los siguientes 6 pasos:
+1. Se determinan los objetivos, alternativas y restricciones.
+2. Se identifican y resuelven los riesgos.
+3. Se evalúan alternativas.
+4. Se desarrollan los entregables de la iteración actual y se verifica su funcionamiento correcto.
+5. Se planifica la siguiente iteración.
+6. Se hace el compromiso a un acercamiento a la siguiente iteración.
+
+El modelo espiral sirve para proyectos inestables, con requerimientos ambiguos o infraestructura débil, usualmente con clientes inexpertos pero con desarrolladores expertos.
+
+Las **ventajas** del modelo espiral son:
+- La reducción de riesgos es directamente proporcional con el tiempo y dinero invertidos en el proyecto.
+- En caso de ser necesario comenzar de cero, el precio es relativamente bajo ya que el problema crítico es encontrado usualmente en los comienzos del proyecto.
+- Alta flexibilidad, ya que el desarrollo es progresivo.
+
+La **desventaja** principal del modelo espiral es la dificultad. Requiere un alto grado de atención de parte de los desarrolladores y de inversión de tiempo y capital de parte del cliente. Es necesario el compromiso absoluto de ambas partes.
+
+### Cascadas modificadas
+El modelo de cascada está compuesto de las partes necesarias para completar cualquier proyecto. El problema es su estructura, como cada paso es necesariamente secuencial y completamente independiente del resto. Existen variaciones que buscan usar las ideas principales del método cascada pero corrigiendo sus falencias.
+
+##### Sashimi
+El proyecto se divide en fases separadas, pero estas fases pueden superponerse en tiempo y espacio.
+
+Las ventaja principal de la variante sashimi es que de una fase a otra necesitan transferirse menos documentos, ya que al hacerse en paralelo se tiene la información necesaria al alcance de la mano.
+
+La principal desventaja
 
 # \[1/4]
 - reconocimiento: entrada proceso salida de esta etapa. actores, tecnicas de recoleccion/documentacion de info, informe (siguiente item).
