@@ -323,7 +323,18 @@ Es un intermedio entre **prototipado evolutivo** y **entrega por etapas**. Se de
 Se diferencia de los anteriores porque no prioriza las partes visibles del producto si no su núcleo.
 
 ### Design-to-tools
+Las capacidades del proyecto se limitan estrictamente a la funcionalidad que las herramientas de software, bibliotecas y generadores de código existentes pueden soportar directamente.
 
+La principal **ventaja** del modelo Design-to-Tools es un aumento notable de velocidad de desarrollo al evitar por completo la implementación manual de características complejas de desarrollar.
+
+La principal **desventaja** del modelo Design-to-Tools es la perdida parcial de control de parte del equipo por sobre la funcionalidad del producto, a su vez que asume riesgos de dependencia relacionados con las herramientas escogidas.
+
+### Software Comercial Listo Para Usar (COTS)
+La organización compra software comercial en lugar de construir una solución personalizada.
+
+La principal **ventaja** es la inmediatez en la que está disponible el software y la ganancia de valor mientras los usuarios aprenden a sortear sus limitaciones.
+
+La principal **desventaja** es que el producto comprado rara vez coincidirá con la visión idealizada de un software creado a medida.
 
 # \[1/4]
 - reconocimiento: entrada proceso salida de esta etapa. actores, tecnicas de recoleccion/documentacion de info, informe (siguiente item).
