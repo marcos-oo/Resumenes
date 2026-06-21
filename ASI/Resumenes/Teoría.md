@@ -208,6 +208,7 @@ Si faltan datos no se desarrollan en el informe, se anotan aparte para preguntar
 # Ciclos de vida
 El desarrollo de cualquier sistema atraviesa un **ciclo de vida**, que consiste de todas las actividades que suceden entre la concepción de la idea del sistema hasta su entrega.
 Establece el orden en que un proyecto especifica, prototipa, diseña, implementa revisa, prueba y realiza sus actividades.
+Existen varios modelos de ciclo de vida, entre los que se encuentran:
 ### Cascada pura
 El proyecto progresa en una secuencia ordenada de pasos, desde el diseño hasta las pruebas. Luego de cada fase se hace una revisión, en la que se determina si el proyecto está listo para pasar a la siguiente fase. Si no lo está, se queda en la fase actual hasta que lo esté.
 Las fases no se superponen entre sí y los productos que se llevan de una a la otra suelen ser en su mayoría documentos.
