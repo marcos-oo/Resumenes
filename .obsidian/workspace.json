@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 241.5,
-    "collapsed": true
+    "width": 241.5
   },
   "right": {
     "id": "f7f31304b84317c7",
@@ -198,9 +197,9 @@
   },
   "active": "d18014b4e364ba5d",
   "lastOpenFiles": [
+    "ASI/Resumenes/Cronograma.md",
     "ASI/Ciclos de vida.md",
     "ASI/Resumenes/Teoría.md",
-    "ASI/Resumenes/Cronograma.md",
     "ASI/Clase 6 - Procesos, Planes y Proyectos.md",
     "ASI/Clase 7 - Gestiones.md",
     "ASI/Clase 5 - ASI.md",
