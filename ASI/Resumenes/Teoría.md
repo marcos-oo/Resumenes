@@ -268,9 +268,62 @@ El modelo de cascada está compuesto de las partes necesarias para completar cua
 ##### Sashimi
 El proyecto se divide en fases separadas, pero estas fases pueden superponerse en tiempo y espacio.
 
-Las ventaja principal de la variante sashimi es que de una fase a otra necesitan transferirse menos documentos, ya que al hacerse en paralelo se tiene la información necesaria al alcance de la mano.
+Las principales ventajas de la variante sashimi son:
+- La reducción de documentos que necesitan pasarse de una fase a otra, ya que al hacerse en paralelo se tiene la información necesaria al alcance de la mano.
+- La reducción de tiempo invertido, ya que la superposición permite utilizarlo más eficientemente.
 
-La principal desventaja
+Las principales desventajas de la variante sashimi son:
+- El aumento en dificultad para definir cuando se alcanzan metas.
+- La posibilidad de errores de comunicación e ineficiencia por trabajo doble.
+
+##### Cascada con subproyectos
+El proyecto divide el sistema en subsistemas lógicamente independientes a nivel de arquitectura, lo que permite derivar proyectos separados que avanzan en paralelo a su propio ritmo.
+
+Las principales **ventajas** de la variante cascada con subproyectos son:
+- La capacidad de realizar algunas de las tareas tradicionales de la cascada en paralelo, evitando retrasar la implementación de áreas sencillas de diseñar solo por esperar el diseño de un área difícil.
+- El aprovechamiento de componentes o áreas que se han implementado múltiples veces antes y que no presentan sorpresas de diseño.
+
+Las principales **desventajas** de la variante cascada con subproyectos son:
+- El riesgo principal de encontrarse con interdependencias imprevistas entre los componentes del sistema.
+- La necesidad de una planificación cuidadosa a nivel arquitectónico o de diseño detallado para eliminar o gestionar correctamente dichas dependencias antes de fragmentar el proyecto.
+
+##### Cascada con reducción de riesgos
+El proyecto incluye al principio un pequeño espiral de reducción de riesgos, en el que se crea un prototipo básico del producto para obtener más información sobre los requerimientos definidos e incluso descubrir nuevos llegado al caso.
+
+La principal **ventaja** de la cascada con reducción de riesgos es la mayor flexibilidad, ya que por ejemplo, no se requiere que todos los requerimientos del producto sean conocidos y comprendidos a la perfección antes de comenzar el proceso. El espiral sirve de red para cazar posibles problemas, sean de requerimiento o no.
+
+No se detallan **desventajas** de este modelo.
+
+### Prototipado evolutivo
+Comienza con un concepto inicial, y luego el sistema se desarrolla iterativamente construyendo primero los aspectos visibles y refinando el prototipo en función de los comentarios continuos del cliente, los cuales son dados al finalizar cada iteración.
+
+La principal **ventaja** del modelo de prototipado evolutivo es la gran efectividad en situaciones en las que los requisitos cambian rápidamente o en las que el cliente no está seguro de lo que quiere.
+
+La principal **desventaja** del modelo de prototipado evolutivo es la imposibilidad de predecir el cronograma final del proyecto o el número total de iteraciones de desarrollo requeridas.
+
+Este modelo no debe ser una excusa para hacer **Code-and-Fix**, debe realizarse un análisis de requerimientos exhaustivo y un diseño real y se debe escribir código sostenible, orientado al futuro (todo esto en menor escala que en otros modelos).
+
+### Entrega por Etapas
+El concepto completo del software y la arquitectura se planifican por adelantado, pero el diseño detallado y la codificación se entregan en etapas sucesivas, las cuales el cliente puede ir probando e incluso implementando si el progreso hasta el momento lo permite. Lo que lo distingue del prototipado evolutivo es que se sabe desde el principio que se hará y el cliente es consciente de que las entregas son parciales.
+
+Las principales **ventajas** del modelo de entrega por etapas son:
+- La capacidad del desarrollador de proporcionar a los clientes software funcional antes de su compleción.
+	- Si se planea con cuidado, es incluso posible entregar las partes cruciales al cliente al comienzo, permitiendo que este comience a implementar la solución antes de que esté completada.
+- La tangibilidad del progreso llegando más temprano que en el resto de los modelos.
+
+### Design-to-Schedule
+El proyecto se divide en estadíos de prioridad variable detallados en profundidad y luego su desarrollo se organiza en base a esa prioridad, ordenando el desarrollo de las etapas comenzando con las más importantes y dejando para el final las de menor relevancia.
+
+La principal **ventaja** del modelo Design-to-Schedule es que permite de entregar un MVP si llegada la fecha de entrega pautada el desarrollo del producto no ha finalizado.
+
+La principal **desventaja** es que llegado al caso de que el producto se entrega incompleto pero funcional, se habrá perdido tiempo y recursos en diseñar y caracterizar estadíos que no llegaron a ser implementados.
+
+### Entrega evolutiva
+Es un intermedio entre **prototipado evolutivo** y **entrega por etapas**. Se desarrolla una version del producto, se muestra al cliente y en base a cuanto control se busca dejarle al cliente cuanto se parecerá más a prototipado evolutivo (más control) o a entrega por etapas (menos control).
+Se diferencia de los anteriores porque no prioriza las partes visibles del producto si no su núcleo.
+
+### Design-to-tools
+
 
 # \[1/4]
 - reconocimiento: entrada proceso salida de esta etapa. actores, tecnicas de recoleccion/documentacion de info, informe (siguiente item).
