@@ -394,9 +394,9 @@ No se detallan **desventajas** de este modelo.
 ### Prototipado evolutivo
 Comienza con un concepto inicial, y luego el sistema se desarrolla iterativamente construyendo primero los aspectos visibles y refinando el prototipo en función de los comentarios continuos del cliente, los cuales son dados al finalizar cada iteración.
 
-La principal **ventaja** del modelo de prototipado evolutivo es la gran efectividad en situaciones en las que los requisitos cambian rápidamente o en las que el cliente no está seguro de lo que quiere.
+La principal **ventaja** del modelo de prototipado evolutivo es la gran efectividad en situaciones en las que los requisitos cambian rápidamente o no son conocidos en profundidad por el cliente.
 
-La principal **desventaja** del modelo de prototipado evolutivo es la imposibilidad de predecir el cronograma final del proyecto o el número total de iteraciones de desarrollo requeridas.
+Las principal **desventaja** del modelo de prototipado evolutivo es la imposibilidad de predecir el cronograma final del proyecto o el número total de iteraciones de desarrollo requeridas.
 
 Este modelo no debe ser una excusa para hacer **Code-and-Fix**, debe realizarse un análisis de requerimientos exhaustivo y un diseño real y se debe escribir código sostenible, orientado al futuro (todo esto en menor escala que en otros modelos).
 
@@ -408,12 +408,16 @@ Las principales **ventajas** del modelo de entrega por etapas son:
 	- Si se planea con cuidado, es incluso posible entregar las partes cruciales al cliente al comienzo, permitiendo que este comience a implementar la solución antes de que esté completada.
 - La tangibilidad del progreso llegando más temprano que en el resto de los modelos.
 
-### Design-to-Schedule
+Las principales **desventajas** del modelo de entrega por etapas son:
+- La necesidad de un equipo de desarrollo experto que sea capaz de planear de forma que las distintas entregas sean funcionales y aporten valor al cliente.
+- La necesidad de un cliente que sepa lo que quiere desde el principio, ya que una vez comenzado el proyecto se tendrá en cuenta poco y nada de su feedback. 
+
+### Design-to-Schedule (Entrega Calendarizada)
 El proyecto se divide en estadíos de prioridad variable detallados en profundidad y luego su desarrollo se organiza en base a esa prioridad, ordenando el desarrollo de las etapas comenzando con las más importantes y dejando para el final las de menor relevancia.
 
 La principal **ventaja** del modelo Design-to-Schedule es que permite de entregar un MVP si llegada la fecha de entrega pautada el desarrollo del producto no ha finalizado.
 
-La principal **desventaja** es que llegado al caso de que el producto se entrega incompleto pero funcional, se habrá perdido tiempo y recursos en diseñar y caracterizar estadíos que no llegaron a ser implementados.
+La principal **desventaja** es que llegado al caso de que el producto se entrega incompleto pero funcional, se habrá perdido tiempo y recursos en diseñar y caracterizar estadíos que no llegaron a ser implementados (si es que se decide no continuar con el proyecto tras la primera fecha de entrega).
 
 ### Entrega evolutiva
 Es un intermedio entre **prototipado evolutivo** y **entrega por etapas**. Se desarrolla una version del producto, se muestra al cliente y en base a cuanto control se busca dejarle al cliente cuanto se parecerá más a prototipado evolutivo (más control) o a entrega por etapas (menos control).
@@ -432,6 +436,24 @@ La organización compra software comercial en lugar de construir una solución p
 La principal **ventaja** es la inmediatez en la que está disponible el software y la ganancia de valor mientras los usuarios aprenden a sortear sus limitaciones.
 
 La principal **desventaja** es que el producto comprado rara vez coincidirá con la visión idealizada de un software creado a medida.
+
+### Incremental ágil
+El proyecto inicia con una idea general, pero los detalles se relevan y desarrollan en períodos cortos (por ejemplo, 15 días). Cada entrega busca ser funcional para que el usuario pueda interactuar, probar y dar feedback, lo que minimiza el riesgo de errores en la solución final.
+
+El equipo trabaja de forma colaborativa y en paralelo; mientras se desarrolla y prueba una entrega, ya se analiza y diseña la siguiente.
+
+El ciclo de vida incremental ágil se basa en 2 principios:
+- *Principio 1*: Nuestra mayor prioridad es satisfacer al cliente mediante la entrega temprana continua de software con valor.
+- *Principio 2*: Aceptamos que los requisitos cambien, incluso en etapas tardías del desarrollo. Los procesos ágiles aprovechan el cambio para proporcionar ventaja competitiva al cliente.
+
+El ciclo de vida incremental ágil funciona mejor cuando el proyecto es divisible en entregables de valor, tiene alta incertidumbre o requisitos cambiantes, y permite al cliente pueda involucrarse constantemente.
+
+Entre las **ventajas** del ciclo de vida incremental ágil podemos identificar:
+- Proporciona software funcional de forma temprana y continua, aprovechando el feedback del usuario para corregir errores rápido y minimizar el riesgo de la solución final.
+    
+- Su adaptabilidad al cambio, ya que acepta modificaciones en los requerimientos, incluso en etapas avanzadas, tomándolas como oportunidades de aprendizaje que generan ventaja competitiva.
+    
+- Su fomento de la eficiencia y la colaboración, ya que se incita el trabajo de equipos multidisciplinarios bajo un objetivo común y optimiza el tiempo paralelizando tareas (desarrollando la entrega actual mientras se analiza la siguiente).
 
 # Requerimientos
 ### Requerimiento vs. Requisito
