@@ -208,8 +208,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -225,7 +224,7 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "2b019697f124606a",
+  "active": "2fcdc482e67037af",
   "lastOpenFiles": [
     "ASI/Resumenes/Teoría.md",
     "ASI/Práctica/Ciclos de vida - Metodología.md",
