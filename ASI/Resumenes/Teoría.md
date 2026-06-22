@@ -485,10 +485,80 @@ Aquellos que representan funcionalidades que no son estrictamente necesarias par
 "El sistema *debería* ser".
 
 # Casos de uso
+### ¿Qué son los casos de uso?
+Son una descripción de un conjunto de secuencias de acciones o pasos que realiza un sistema para obtener un resultado desde el punto de vista de la interacción con el usuario.
+Lo comienza un elemento externo al sistema
 
+### ¿Para qué se usan?
+Tienen varios usos, entre ellos:
+- Documentar qué hace un sistema.
+- Mostrar las interacciones entre el sistema y el contexto.
+- Marcar el límite del sistema.
+- Lograr un acuerdo entre partes (contrato).
+- Generar documentación para los usuarios y para las pruebas funcionales del sistema.
 
-# \[22/4]
-casos de uso: definicion, cuestiones, diagrama, relaciones, actores
+### Componentes
+##### Precondición
+Estado que debe tener el sistema antes de que pueda iniciarse el caso
+de uso. Funcionalidad que debe ejecutarse antes de que pueda iniciarse el caso de
+uso.
+##### Flujo normal
+Enumera, de manera secuencial, las actividades principales que se ejecutan durante el caso de uso.
+##### Flujos alternativos
+Muestra las interacciones que no son las definidas como típicas en el flujo normal. Pueden
+ser errores o excepciones del flujo normal o curso principal. 
+##### Postcondición
+Resultado o estado esperado del sistema una vez finalizado el caso de uso.
+___
+##### Casos de uso
+Representan funcionalidades o servicios específicos que el sistema proporciona a los actores.
+##### Actores
+Entidades externas que interactúan con el sistema. Pueden ser personas, dispositivos u otros sistemas.
+##### Relaciones actor - caso de uso
+Conexiones entre actores y casos de uso que indican cómo los actores utilizan las funcionalidades del sistema.
+##### Relaciones entre casos de uso
+- $\text{<include>}$: El caso de uso incluye al que apunta, el segundo es parte del primero.
+```mermaid
+flowchart LR
+A[Caso 1]
+B[Caso 2]
+A-->|&lt;include&gt;|B
+```
+
+- $\text{<extend>}$: El caso de uso puede extenderse al que le apunta, el segundo es un paso opcional del primero.
+```mermaid
+flowchart RL
+B[Caso 1]
+A[Caso 2]
+A-->|&lt;extend&gt;|B
+```
+
+# Proceso, plan, proyecto
+### Proceso
+Secuencias de pasos generalizados que reciben una entrada y se siguen para alcanzar un objetivo, resultando en una salida. Se generan a partir de la necesidad y se modifican iterativamente en base a resultados previos, todo con el objetivo de maximizar la eficiencia. No todos los pasos son obligatorios.
+##### Proceso de negocio
+Procesos que describen la serie actividades necesarias para cumplir uno o más objetivos de negocio.
+
+### Plan
+Definición de que estrategia se usará para llevar a cabo un proceso, estableciendo incluso que pasos se llevarán a cabo y que pasos no.
+
+### Proyecto
+La implementación en la práctica de un plan en el que alcanzar objetivos específicos para satisfacer necesidades mediante actividades reales. Es único, tiene un inicio y un fin claramente definidos, utiliza recursos y produce resultados.
+Todo, desde el inicio del proyecto, las actividades que lo componen, los baches de tiempo y el final están calendarizados y tienen una duración establecida.
+Tienen un alcance definido, establecido en el *anteproyecto* y describiendo todo lo que abarca y no abarca el proyecto.
+Existe una retroalimentación una vez finalizado el proyecto hacia el plan.
+##### Riesgo
+Evento a futuro que de ocurrir afecta al proyecto de alguna forma. Se mide principalmente a través de la exposición al mismo:
+$$Exposicion\ al\ riesgo=Probabilidad\ de\ Ocurrencia\ \cdot \ Impacto$$
+
+En respuesta al riesgo puedo actuar, no hacer nada, o transferirlo a alguien afuera del equipo.
+##### Punto trigger
+El punto en el tiempo en el que un riesgo se hace 100% probable. Depende del problema si puede o no resolverse luego del *punto trigger*.
+##### Plan de mitigación
+Los planes que se ejecutan antes del punto trigger, buscan disminuir la *exposición* a un riesgo.
+##### Plan de contingencia
+Los planes que se ejecutan luego del punto trigger, buscan disminuir el *impacto* del problema. Puede abrir nuevos riesgos,
+
 # \[13/5]
 proceso, plan, proyecto, procedimiento, proceso de negocio, gestiones
 - proyecto: alcance, recursos, anteproyecto, retroalimentacion. riesgo, gestion de riesgo, plan de mitigacion, plan de contingencia, punto trigger
