@@ -35,7 +35,8 @@
               "title": "Teoría"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -224,10 +225,10 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "2fcdc482e67037af",
+  "active": "0aa8df7f60b76e8d",
   "lastOpenFiles": [
-    "ASI/Resumenes/Teoría.md",
     "ASI/Práctica/Ciclos de vida - Metodología.md",
+    "ASI/Resumenes/Teoría.md",
     "ASI/Práctica",
     "ASI/Untitled.md",
     "ASI/Clase 7 - Gestiones.md",

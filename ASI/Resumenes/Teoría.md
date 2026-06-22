@@ -569,6 +569,10 @@ La implementación en la práctica de un plan en el que alcanzar objetivos espec
 Todo, desde el inicio del proyecto, las actividades que lo componen, los baches de tiempo y el final están calendarizados y tienen una duración establecida.
 Tienen un alcance definido, establecido en el *anteproyecto* y describiendo todo lo que abarca y no abarca el proyecto.
 Existe una retroalimentación una vez finalizado el proyecto hacia el plan.
+
+# Gestiones
+### Gestión de proyecto y gestión de riesgo
+Un líder del proyecto se encarga de asegurar que las actividades se cumplan en tiempo y forma. 
 ##### Riesgo
 Evento a futuro que de ocurrir afecta al proyecto de alguna forma. Se mide principalmente a través de la exposición al mismo:
 $$Exposicion\ al\ riesgo=Probabilidad\ de\ Ocurrencia\ \cdot \ Impacto$$
@@ -581,10 +585,6 @@ Los planes que se ejecutan antes del punto trigger, buscan disminuir la *exposic
 ##### Plan de contingencia
 Los planes que se ejecutan luego del punto trigger, buscan disminuir el *impacto* del problema. Puede abrir nuevos riesgos.
 
-# Gestiones
-### Gestión de proyecto y gestión de riesgo
-Un líder del proyecto se encarga de asegurar que las actividades se cumplan en tiempo y forma. 
-El camino mínimo de un CPM es el que atraviesa todo el grafo con la menor cantidad de cambios de estado posible sin resultar en problemas de dependencia.
 ### Gestión de configuración
 Identificación y seguimiento del estado de los activos (usualmente documentos) de cada proceso de un proyecto a lo largo del ciclo de vida, comparando los cambios con el *Baseline*. No se aplica solo al software.
 > Un proceso debe ser independiente de la tecnología del momento.
