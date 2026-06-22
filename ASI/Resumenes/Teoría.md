@@ -571,8 +571,33 @@ Tienen un alcance definido, establecido en el *anteproyecto* y describiendo todo
 Existe una retroalimentación una vez finalizado el proyecto hacia el plan.
 
 # Gestiones
-### Gestión de proyecto y gestión de riesgo
-Un líder del proyecto se encarga de asegurar que las actividades se cumplan en tiempo y forma. 
+### Gestión de proyecto
+Un líder del proyecto se encarga de asegurar que las actividades se cumplan en tiempo y forma, gestiona los recursos y incita su uso eficiente.
+##### Triángulo de hierro
+El *triángulo de hierro* o *triángulo de la gestión de proyectos* representa el problema de la “triple restricción”: la necesidad de equilibrar el alcance/funcionalidad, el costo y el tiempo para mantener un producto final de alta calidad.
+
+*Alcance / Funcionalidad*: El “tamaño” del proyecto en términos de la calidad, el detalle y la magnitud de los entregables del proyecto, implica todo el trabajo que hay que desarrollar, tareas y funcionalidades a completar. Entre otras cosas define:
+- La *complejidad del proyecto*. 
+- La *calidad del resultado*.
+- La *potencia* (por ejemplo, la cantidad de usuarios que una aplicación puede admitir en simultáneo).
+- El *nivel de detalle*. 
+- La *cantidad y complejidad de las funciones*.
+
+*Costo*: Describe no solo los montos literales en euros o dólares, si no que también incluye todas las herramientas, equipos y asistencia necesarios para finalizar el proyecto, lo que a menudo se denomina “recursos”. Entre otras cosas define:
+- El *presupuesto financiero*.
+- La *cantidad de miembros del equipo*.
+- El *equipamiento e instalaciones*.
+- Las *oportunidades clave*.
+
+*Tiempo*: El inicio, duración y fin de cada una de las etapas y actividades del proyecto.
+
+Para mantener los tres elementos del triángulo de hierro bajo control, el gerente de proyectos debe tener un conocimiento profundo sobre cada variable individual, sus relaciones con otras variables y sobre dónde puede ser flexible para adaptarse a los cambios que se den en el proyecto.
+
+ La *primera relación* es la que se da entre el alcance y las otras dos variables del proyecto. El alcance es directamente proporcional tanto al tiempo como al costo, lo que significa que se mueve en la misma dirección que esos factores. Cuando el alcance del proyecto aumenta, el tiempo y el dinero necesarios también deben aumentar para abordar un proyecto más grande.
+
+La *segunda relación* es la que se da entre el tiempo y el costo, la cual es una relación inversamente proporcional. Estos dos factores se mueven en direcciones opuestas. Si es necesario reducir los costos, habrá que extender los plazos; pero si repentinamente te hallas en una situación en la que tienes poco tiempo, necesitarás un presupuesto adicional para adaptarte a un cronograma más acotado
+
+### Gestión de riesgo
 ##### Riesgo
 Evento a futuro que de ocurrir afecta al proyecto de alguna forma. Se mide principalmente a través de la exposición al mismo:
 $$Exposicion\ al\ riesgo=Probabilidad\ de\ Ocurrencia\ \cdot \ Impacto$$
