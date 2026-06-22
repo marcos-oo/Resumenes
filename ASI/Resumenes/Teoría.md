@@ -557,18 +557,91 @@ El punto en el tiempo en el que un riesgo se hace 100% probable. Depende del pro
 ##### Plan de mitigación
 Los planes que se ejecutan antes del punto trigger, buscan disminuir la *exposición* a un riesgo.
 ##### Plan de contingencia
-Los planes que se ejecutan luego del punto trigger, buscan disminuir el *impacto* del problema. Puede abrir nuevos riesgos,
+Los planes que se ejecutan luego del punto trigger, buscan disminuir el *impacto* del problema. Puede abrir nuevos riesgos.
 
-# \[13/5]
-proceso, plan, proyecto, procedimiento, proceso de negocio, gestiones
-- proyecto: alcance, recursos, anteproyecto, retroalimentacion. riesgo, gestion de riesgo, plan de mitigacion, plan de contingencia, punto trigger
+# Gestiones
+
+
+# Agilidad
+### Definiciones
+- La capacidad de crear o responder al cambio. Es una forma de lidiar / **adaptarse** y en ultima instancia tener éxito en un entorno **incierto** y turbulento. 
+- La capacidad de equilibrar flexibilidad y estabilidad.
+- Capacidad de trabajar de forma inteligente, generando mas valor (resolver **necesidades**) con menos trabajo.
+
+- Una **mentalidad** descrita por **4 valores**, definida por **12 principios** y manifestada en **cientas de buenas prácticas**.
+
+### Los 4 valores
+1. **Individuos e interacciones** *sobre* procesos y herramientas.
+2. **SW funcionando** *sobre* documentación extensiva.
+3. **Colaboración con el cliente** *sobre* negociación contractual.
+4. **Respuesta ante el cambio** *sobre* seguir el plan.
+
+> No se descarta lo de la derecha, solo se prioriza lo de la izquierda. 
+
+### Los 12 principios
+- Satisfacción al cliente.
+- Adaptación al cambio.
+- Entregas frecuentes.
+- Trabajo en equipo.
+- Personas motivadas.
+- Comunicación directa.
+- Software funcionando.
+- Continuidad.
+- Excelencia técnica.
+- Simplicidad.
+- Equipos auto-organizados.
+- Mejora continua.
+
+### Scrum
+Marco ágil en el que el trabajo se divide en periodos de tiempo breves (2/3 semanas) llamados *Sprint*. Todo sucede en un *Sprint* y luego se vuelve a empezar en un proyecto / tarea, usualmente distinto del anterior
+##### Actores
+- *Product Owner* (PO): Maximizar el valor del trabajo del equipo. Representa al usuario / dueño del proyecto, da prioridad a los requerimientos. != manager.
+- *Scrum Master*: Se encarga de que el proceso y las buenas practicas sea comprendidos y utilizados correctamente. Elimina impedimentos y trabaja constantemente para asegurar que el equipo pueda cumplir el **Sprint**. Acompañan la metodología, no necesariamente las acciones del proyecto en sí, podría ni conocer el producto, 
+- *Team*: Se aconseja entre 3 y 8 personas, es autogestionado y responde por sus resultados.
+##### Ceremonias y eventos
+- *Planning*: Antes del *Sprint*, priorizar planificar y asignar el trabajo a realizar en base a los criterios que sean pertinentes y el esfuerzo para realizar el trabajo.
+- *Daily*: Reunión diaria para que cada uno del equipo cuente si hubo algún bloqueo o similar. Rápida, incomoda, 15 minutos max. generalmente. 
+- *Review*: Mostrarle al usuario el trabajo del *Sprint* una vez este finaliza para obtener *feedback*.
+- *Retrospectiva*: Hacer reflexiones finales sobre el *Sprint*, que problemas surgieron para que no vuelvan a suceder, como se sintió, etc. Busca la mejora continua.
+##### Artefactos
+- *Product backlog* (To-Do): Contiene las necesidades de mejora o cambio del producto, busca lograr el objetivo del producto.
+- *Sprint backlog* (Doing): Contiene el plan del *Sprint*, a lo que se comprometieron todos a hacer durante el mismo. Busca lograr el objetivo del *Sprint*.
+- *Incremento* (Done): Hace de checkpoint, contiene el progreso entre *Sprints*. Busca sumar valor al producto.
+
+### Kanban
+Sistema de gestión de tareas que hace las veces de marco ágil en el que las actividades a realizar se dividen entre las que se deben hacer, las que están en proceso y las finalizadas, todo distribuido visualmente en un tablero de tres columnas.
+
+| To-Do  | Doing  | Done   |
+| ------ | ------ | ------ |
+| Task 1 | Task 2 | Task 5 |
+| Task 3 | Task 4 |        |
+| Task 6 |        |        |
+##### Beneficios
+El Kanban permite:
+- Distinguir e identificar las tareas en curso.
+- Visualizar el flujo de trabajo.
+- Gestionar los procesos de manera continua e ininterrumpida.
+- Fomentar la visibilidad y la transparencia de las actividades al llevar a cabo.
+- Generar circuitos de retroalimentación.
+- Mejorar la colaboración.
+
+### Extreme programming
+Es un marco ágil de desarrollo de SW, el cual busca producir con la mayor calidad posible, a la par de mejorar la calidad de vida del equipo de desarrollo.
+##### Valores
+- Comunicación
+- Sencillez
+- Retroalimentación
+- Coraje
+- Respeto
+
+### Ciclo de Vida Iterativo Incremental Ágil
+Además de ser un ciclo de vida, es también un marco ágil, con todo lo que eso implica.
+Se trabajan las etapas en paralelo y en iteraciones, buscando decrecer el riesgo del proyecto dividiéndolo entre las etapas:
+##### Principios en los que se basa
+- *Principio 1*: Nuestra mayor prioridad es satisfacer al cliente mediante la entrega temprana continua de software con valor.
+- *Principio 2*: Aceptamos que los requisitos cambien, incluso en etapas tardías del desarrollo. Los procesos ágiles aprovechan el cambio para proporcionar ventaja competitiva al cliente.
 # \[27/5]
 recursos: triangulo de hierro
 - reaparecen conceptos de clase pasada. se incorporan gestiones de configuracion y de calidad
 - gestion de calidad: proceso y producto (no se bien esta diferencia q era), adherencia
 - grafico/dinamica entre gestion de requerimientos, gestion de configuracion, gestion de calidad y gestion de proyecto (en base a una obligacion/requerimiento que aparece o con el producto)
-# \[3/6]
-desarrollo agil, agilidad
-- marcos agiles: caracteristicas, valores, principios
-- scrum: que es, como se trabaja, caracteristicas, actores, accesorios, artefactos
-- kanban, extreme programming (no se cuanto habra q profundizar en estos)
