@@ -560,8 +560,17 @@ Los planes que se ejecutan antes del punto trigger, buscan disminuir la *exposic
 Los planes que se ejecutan luego del punto trigger, buscan disminuir el *impacto* del problema. Puede abrir nuevos riesgos.
 
 # Gestiones
+### Gestión de proyecto y gestión de riesgo
+Un líder del proyecto se encarga de asegurar que las actividades se cumplan en tiempo y forma. 
+El camino mínimo de un CPM es el que atraviesa todo el grafo con la menor cantidad de cambios de estado posible sin resultar en problemas de dependencia.
+### Gestión de configuración
+Identificación y seguimiento del estado de los activos (usualmente documentos) de cada proceso de un proyecto a lo largo del ciclo de vida, comparando los cambios con el *Baseline*. No se aplica solo al software.
+> Un proceso debe ser independiente de la tecnología del momento.
 
-
+### Gestión de calidad
+Seguimiento y control de un proceso y su producto para asegurar que cumplan las expectativas y para poder mantener, modificar y mejorarlos continuamente.
+Estas expectativas pueden ser el cumplimiento de estándares preexistentes (normas ISO, IEEE, etc.) y de los requerimientos predefinidos.
+Esta calidad genera adherencia del usuario a los pasos del proceso, que en la practica se respete el proceso delineado.
 # Agilidad
 ### Definiciones
 - La capacidad de crear o responder al cambio. Es una forma de lidiar / **adaptarse** y en ultima instancia tener éxito en un entorno **incierto** y turbulento. 
