@@ -205,6 +205,100 @@ ___
 ##### Datos faltantes
 Si faltan datos no se desarrollan en el informe, se anotan aparte para preguntarlos en una futura entrevista. 
 
+# Procesos de negocio
+### Definiciones
+##### ISO 9000
+Serie de actividades interrelacionadas o que interractúan entre sí, las cuales transforman elementos de entrada en elementos de salida.
+##### Laudon & Laudon
+Conjunto de tareas y comportamientos organizados para producir resultados específicos. 
+##### Hammer & Champy
+Conjunto de actividades que reciben insumos y generan un producto de valor.
+##### Definición de la cátedra
+Conjunto de actividades interrelacionadas, que se realizan en una secuencia específica y que entregan un valor a un cliente con el objetivo de satisfacer sus necesidades.
+
+### Proceso vs. Procedimiento
+##### Proceso
+El **qué** hacer, indica el orden secuencial de las actividades/tareas a realizar.
+##### Procedimiento
+El **como** hacer, indica la forma concreta de realizar una tarea/actividad *dentro de un proceso*.
+
+### Procesos según su estructura
+##### Proceso estructurado
+Procesos con un flujo definido, preestablecido y predecible. Un ejemplo de un proceso estructurado es el pago de una factura.
+
+El **estándar visual** para procesos estructurados es el BPMN (Business Process Model and Notation), en el que se representan procesos secuenciales y predecibles siguiendo un flujo de trabajo de forma sistemática y repetitiva.
+
+##### Proceso AD-HOC
+Proceso con un flujo flexible, dependiente de las circunstancias y por lo tanto impredecible. Un ejemplo de un proceso AD-HOC es el tratamiento médico de un paciente complejo.
+
+El **estándar visual** para procesos AD-HOC es el CMMN (Case Management Model and Notation), en el que se representan procesos adaptativos y flexible sin un orden en particular pero siguiendo el criterio humano, la disponibilidad de información y como va evolucionando la situación sobre la marcha.
+
+### Los procesos de negocio
+Se caracterizan por:
+- Tener entradas y salidas claramente definidas.
+- Ser flexibles al cambio, con la capacidad de adaptarse constantemente a la realidad.
+- Ser medibles para poder evaluar si cumplen con lo previsto.
+- Estar distribuidos transversalmente a través de la organización.
+- Usualmente depender de otros procesos.
+- Ser comprendidos en detalle por los integrantes de la organización.
+
+### Procesos de negocio según su tipo
+##### Procesos estratégicos
+Son los que se llevan a cabo para planificar la estrategia corporativa de la organización o de una de sus areas.
+Están orientados a la misión de la organización, marcan su rumbo formando los cimientos sobre los cuales el resto de los procesos y decisiones se apoyaran.
+Generan valor para otros procesos, no para el cliente directamente.
+
+##### Procesos operativos/claves
+Son los procesos esenciales mediante los cuales la organización diseña, produce, comercializa y entrega productos y servicios. Son los encargados de cumplir los objetivos de la organización.
+Suelen asociarse con la experiencia de consumo del cliente con el producto o servicio.
+Generan valor directamente al cliente.
+
+##### Procesos de apoyo
+Son los que se encargan de proveer a la organización con todos los recursos necesarios para realizar los otros procesos.
+Sirven de base a los procesos operativos y no le aportan valor directamente al cliente.
+
+### Rediseño de procesos en la era digital
+##### Digitalización
+El paso del formato analógico al digital (por ejemplo, documento físico a PDF). Tiene un alcance limitado, enfocado en objetos y documentos.
+##### Digitalización de procesos
+La conversión de procesos manuales a procesos digitales (por ejemplo, turnos médicos en ventanilla a turnos online). Tiene un alcance medio, impacta en tareas y flujos específicos.
+##### Transformación digital
+El rediseño organizacional parcial o total basado en nuevas tecnologías, cultura de datos y experiencia del cliente (por ejemplo, los bancos 100% digitales y sin sucursales). Su alcance es amplio, afectando hasta el modelo de negocio y la estrategia.
+
+### Enfoques de gestión
+##### Enfoque funcional
+Vision vertical de la organización, la cual se divide en departamentos o "silos" identificados por encargarse de su propia tarea y objetivos.
+El problema con el enfoque funcional es que genera una visión fragmentada de la realidad. Cuando un problema cruza de un departamento a otro, la responsabilidad se diluye y pueden aparecer cuellos de botella al no supervisarse el flujo completo.
+##### Enfoque por procesos
+Visión horizontal transversal de la organización, la cual se entiende como un conjunto interconectado e interalimentado de procesos que atraviesan varios departamentos, comenzando por el surgimiento de una necesidad y finalizando con la entrega de un producto solución.
+La ventaja de este enfoque es que todos los departamentos involucrados colaboran bajo un objetivo común y el responsable del proceso supervisa todo el ciclo.
+
+### ¿Qué es la gestión de procesos de negocio?
+La disciplina de gestión que integra las estrategias y objetivos de una organización con las expectativas y necesidades de sus clientes a través de un enfoque en los procesos de principio a fin. Es independiente de la arquitectura de software en que se implemente.
+
+Incluye métodos y técnicas que soportan el diseño, administración, configuración, representación y análisis de los procesos de negocio.
+
+Su objetivo es mejorar los procesos de negocio y asegurar que se realicen, de la manera más eficiente y eficaz.
+
+### Estructura de modelo de gestión de procesos de negocio
+##### Declaraciones
+Son compromisos de carácter universal que asume la organización respecto de algún aspecto en particular.
+Representan las definiciones generales de la organización, su misión, su visión, su alcance y toda la información asociada a los actores con los que se vincula y los sectores en los que opera.
+##### Macroprocesos
+Son agrupaciones compuestas exclusivamente de procesos enteros que tienen en común un objetivo claro, definido y vinculado a los objetivos organizacionales.
+##### Procesos
+Asociados a un macroproceso, tienen un nombre, un tipo y un area responsable de su realización. 
+
+### Fases de la gestión de procesos de negocio
+Al hacer un estudio de los procesos de negocio de una organización, el trabajo se divide en 4 fases:
+1. Identificar las declaraciones de la organización.
+2. Identificar los macroprocesos.
+3. Identificar los procesos.
+4. Detallar los procesos
+##### Relación con la metodología de sistemas de información
+Durante el paso de **Reconocimiento** se realizan los pasos de identificación de declaraciones, macroprocesos y procesos.
+Durante el paso de **Relevamiento** se realiza el detalle de cada proceso, ya que representa con los pasos seguidos en la realidad.
+
 # Ciclos de vida
 El desarrollo de cualquier sistema atraviesa un **ciclo de vida**, que consiste de todas las actividades que suceden entre la concepción de la idea del sistema hasta su entrega.
 Establece el orden en que un proyecto especifica, prototipa, diseña, implementa revisa, prueba y realiza sus actividades.
@@ -339,19 +433,59 @@ La principal **ventaja** es la inmediatez en la que está disponible el software
 
 La principal **desventaja** es que el producto comprado rara vez coincidirá con la visión idealizada de un software creado a medida.
 
-# \[1/4]
-- reconocimiento: entrada proceso salida de esta etapa. actores, tecnicas de recoleccion/documentacion de info, informe (siguiente item).
-- informe de reconocimiento: saber lo basico (que es, para que se usa, sus partes, etc)
-- ciclos de vida: "definicion" (en mi carpeta entre items 4 y 5), todos los tipos
+# Requerimientos
+### Requerimiento vs. Requisito
+##### Requerimiento
+Necesidad o solicitud que tiene un usuario cuyo objetivo es resolver un problema.
+La necesidad del usuario.
+##### Requisito
+Condición o capacidad que debe poseer un sistema para resolver un problema o satisfacer un acuerdo, un estándar, una especificación u otro documento formalmente impuesto.
+La capacidad del sistema.
 
-# \[8/4]
-modelos de gestion (?), enfoques (funcional, por procesos)
-- procesos de negocio: definicion, definicion procesos, tipos de procesos, tipos de procesos de negocio, gestion por procesos (?). problemas de comunicacion de informacion y cultura organizacional
-- transformacion digital, digitalizacion, digitalizacion de procesos. proceso vs procedimiento
-- gestion por proceso (antes marcado con "?"): lo de identificar declaraciones, macroprocesos, procesos y detallar procesos
+### Características de un requerimiento
+##### Completo
+En su definición debe contener toda la información necesaria, sin necesidad de ser expandido ni dividido en otros.
+##### No ambiguo
+Debe tener una sola interpretación posible, la que su escritor tenía en mente.
+##### Verificable
+Su progreso y compleción debe poder ser verificables.
+##### Consistente
+No debe contradecir a otro/s requerimiento/s definidos previamente o a futuro.
 
-# \[15/4]
-requerimientos (ahora si): definicion, caracteristicas, tipos, clasificaciones
+### Tipos de requerimientos
+##### Funcionales
+Describen la funcionalidad del sistema, el qué debe hacer.
+##### No funcionales
+Definen cómo el sistema llevará a cabo sus funciones, el cómo debe hacerlo.
+Se subdividen también en:
+- *De producto/calidad*: Restricciones sobre el comportamiento del sistema.
+- *Organizacionales*: Derivan de políticas y procedimientos de la organización.
+- *Externos*: Derivan de leyes y reglamentos que establecen que debe hacer y no hacer un sistema.
+
+### Clasificaciones de requerimientos
+Los requerimientos pueden clasificarse dependiendo de más de un aspecto que los identifique. Entre las clasificaciones más comunes tenemos las siguientes:
+___
+##### Requerimientos del usuario:
+Enunciados en lenguaje natural, usualmente acompañados de diagramas, acerca de los servicios que los usuarios esperan de parte del sistema y bajo que restricciones esperan que este actúe.
+##### Requerimientos del sistema:
+Descripciones detalladas en lenguaje formal de las funciones, los servicios y restricciones operacionales del sistema.
+
+___
+##### Requerimientos duraderos
+Asociados a las actividades centrales y fundamentales de la organización, las cuales cambian muy lentamente o simplemente no lo hacen.
+##### Requerimientos volátiles
+Asociados usualmente a actividades de apoyo o a formas específicas de llevar a cabo acciones, tienen más chances de cambiar.
+
+___
+##### Requerimientos obligatorios
+Aquellos que el sistema debe soportar sin ninguna excepción, usualmente redactados:
+"El sistema *debe* ser".
+##### Requerimientos deseables
+Aquellos que representan funcionalidades que no son estrictamente necesarias para las operaciones básicas del sistema, usualmente redactados:
+"El sistema *debería* ser".
+
+# Casos de uso
+
 
 # \[22/4]
 casos de uso: definicion, cuestiones, diagrama, relaciones, actores

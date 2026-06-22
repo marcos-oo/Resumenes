@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 241.5
+    "width": 241.5,
+    "collapsed": true
   },
   "right": {
     "id": "f7f31304b84317c7",
@@ -179,7 +180,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -197,6 +199,7 @@
   },
   "active": "d18014b4e364ba5d",
   "lastOpenFiles": [
+    "Pasted image 20260621204230.png",
     "ASI/Resumenes/Cronograma.md",
     "ASI/Ciclos de vida.md",
     "ASI/Resumenes/Teoría.md",
