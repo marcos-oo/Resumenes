@@ -94,6 +94,25 @@ Utilizaría el modelo de *Entrega Calendarizada*.
 Se hace énfasis en fechas claves fijas, para las cuales el sistema va a tener que cumplir características específicas, las primeras más centrales y prioritarias que las segundas.
 Esta división del proyecto en etapas con prioridad organizadas en tiempo de mayor a menor prioridad es característica del modelo *Entrega Calendarizada*.
 
+# Ejercicio 132
+DigiDoct es uno de los sistemas de turnos e historias clínicas para médicos más reconocidos a nivel nacional. A partir de este año, ellos desean ampliar sus funcionalidades contratándonos para crear un innovador generador de recetas. En reuniones previas, se acordó que el sistema informático debe registrar los correos electrónicos de los pacientes para permitir el envío de recetas por ese medio, así como ser compatible con los navegadores web Chrome y Safari. De la misma manera, se requiere que cada vez que se emita una receta, se envíe una copia al Repositorio Nacional de Recetas y que se generen estadísticas sobre los medicamentos prescriptos.
+A pesar de contar con un equipo de desarrolladores altamente experimentados y familiarizados con las normativas de generación de recetas del Gobierno Argentino, el proceso de generación de recetas no se encuentra bien definido debido a nuevas normativas impuestas por el Estado que han modificado los flujos de trabajo existentes. Por este motivo, ==en la reunión de hoy, se presentan alternativas para llevar a cabo el proyecto, formalizando y consensuando el problema identificado por el equipo de trabajo==. Cabe aclarar que, el cliente requiere documentación detallada durante el proyecto.
+##### A) Indicar a qué etapa de la metodología corresponde. Justificar. 
+Corresponde a la etapa de *Diagnóstico* ya que en la reunión del día de hoy se informó al cliente del problema identificado y sus posibles soluciones, características del *Diagnóstico*.
+
+##### B) Indicar qué CV utilizaría. Justificar.
+Considerando que el equipo de desarrolladores es altamente experimentado y que los requisitos del proyecto no están correctamente definidos, el ciclo de vida más indicado para la situación es *Espiral*. 
+/ / /
+Considerando que los riesgos en el desarrollo están limitados a una pequeña parte inicial del proyecto, se puede utilizar el ciclo de vida de *Cascada con reducción de riesgos*, más simple y menos costoso que el ciclo de vida *Espiral*.
+
+##### C) Identifique un requerimiento funcional y un requerimiento no funcional
+
+| Requerimiento funcional                                                      | Requerimiento no funcional                                              |
+| ---------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| El sistema debe registrar y almacenar los correos electrónicos de pacientes. | El sistema debe ser compatible con los navegadores web Chrome y Safari. |
+| Obligatorio                                                                  | Obligatorio                                                             |
+| Del usuario                                                                  | Del usuario                                                             |
+
 # Ejercicio 133
 EduNet es una empresa de tecnología educativa que se encuentra enfocada en el desarrollo de una plataforma diseñada para mejorar la experiencia de enseñanza tanto para estudiantes como para profesores. La plataforma desea ofrecer funcionalidades como gestión de cursos, foros de discusión, evaluaciones en línea y seguimiento del progreso de los estudiantes. También, se desea permitir la descarga de las notas de cada curso en formato PDF y persistir los datos en una base de datos no relacional. Durante la fase inicial del proyecto, se comenzaron a desarrollar las funcionalidades más visibles y de mayor impacto para obtener retroalimentación directa de los clientes. Se realizan reuniones periódicas con ellos para demostrar el avance de la plataforma y discutir posibles ajustes o mejoras basados en sus comentarios.
 
@@ -106,3 +125,12 @@ Eso nos deja con la etapa de *pruebas*.
 Utilizaría el modelo de *Entrega Calendarizada*.
 Se hace énfasis en fechas claves fijas, para las cuales el sistema va a tener que cumplir características específicas, las primeras más centrales y prioritarias que las segundas.
 Esta división del proyecto en etapas con prioridad organizadas en tiempo de mayor a menor prioridad es característica del modelo *Entrega Calendarizada*.
+
+# Ejercicio 134
+En el mundo de la Fórmula 1, el piloto Jack Doohan no logra buenos resultados debido a constantes accidentes, por lo que la escudería ha decidido que el argentino Franco Colapinto tome su lugar para intentar recuperar puntos valiosos para el campeonato. Actualmente, el equipo se encuentra recopilando toda la información necesaria sobre el desempeño de los pilotos, las condiciones de los autos y las necesidades estratégicas para mejorar el rendimiento en pista.
+Para apoyar esta transición, se utiliza una plataforma que muestra todas las estadísticas de las últimas carreras, con el objetivo de analizar el rendimiento y planificar estrategias futuras. Debido a la cercanía de la segunda mitad del campeonato, la estrategia debe estar completamente definida y validada sin excepción antes del 15 de septiembre, fecha límite impuesta por la organización del equipo para poder implementar los cambios necesarios a tiempo.
+Por este motivo, cada reunión entre los responsables técnicos, ingenieros y el área de estrategia se lleva a cabo con el foco puesto en cumplir con este plazo, estableciendo prioridades y ajustando las decisiones al tiempo que las enfrenta el equipo.
+##### A) Indicar a qué etapa de la metodología corresponde. Justificar. 
+Considerando que actualmente el equipo está recopilando información operativa y no estratégica sobre los autos y sus comportamientos en la pista, considero que corresponde a la etapa de *Relevamiento*.
+##### B) Indicar qué CV utilizaría. Justificar.
+Considerando que la fecha de entrega es absolutamente inamovible y central y se precisa tener un producto funcional llegado ese punto, considero que el modelo de ciclo de vida indicado es la *Entrega Calendarizada*.

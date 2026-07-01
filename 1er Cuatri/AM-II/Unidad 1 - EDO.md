@@ -250,3 +250,9 @@ Sean $F_1$ y $F_2$
 1. Derivamos miembro a miembro $F_1$ para obtener así su EDO.
 2. Reemplazamos $y'$ por $\large -\frac1{y'}$.
 3. Resolvemos la EDO por el método que se pueda.
+
+
+
+
+
+$$y_G=sen(x)\cdot cos(x)+k\cdot e^{-sen(x)}$$
