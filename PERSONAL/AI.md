@@ -74,3 +74,49 @@ alias game-mode="ollama stop qwen2.5-vl:3b"
 
 
 * **CachyOS Deployment Advantage:** When automating this setup on CachyOS, skip general `apt` dependencies. Build execution binaries using optimized compiler states available in the Arch User Repository (AUR) to extract maximum execution speed from the Ryzen 5 architecture.
+
+
+
+
+
+
+
+Since CachyOS uses a specific generator for Limine, the global parameters are stored in a different directory.
+
+  
+
+**1.Edit Limine Defaults:**
+
+Open your terminal and run the following command to edit the correct source file:
+
+  
+
+Bash
+
+```
+sudo nano /etc/default/limine
+```
+
+**2.Update the Command Line:**
+
+Find the line defining `KERNEL_CMDLINE[default]` or `KERNEL_CMDLINE["linux-cachyos"]`. Add a space and `amdgpu.sg_display=0` inside the quotation marks at the end of the existing parameters. Save the file and exit (`Ctrl+O`, `Enter`, `Ctrl+X`).
+
+  
+
+**3.Regenerate Boot Entries:**
+
+You must trigger the `limine-mkinitcpio-hook` to overwrite the generated entries in your `limine.conf` file. Run:
+
+  
+
+Bash
+
+```
+sudo mkinitcpio -P
+```
+
+This rebuilds your kernel images and compiles the new parameter into your permanent boot configuration.
+
+  
+
+To verify, you can view your `/boot/limine.conf` file again. The generated `cmdline:` entries will now permanently include the fix.
