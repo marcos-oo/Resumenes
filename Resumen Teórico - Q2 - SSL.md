@@ -13,7 +13,7 @@ Todo estado final del AFD será NO final del AFD complemento y viceversa. El AFD
 Una intersección entre dos AFDs es también un AFD, el cual reconoce solo las palabras que **ambos** AFDs originales reconocerían.
 - Los estados del nuevo AFD son pares ordenados de estados de los originales.
 - Un par solo es final si ambos estados son finales.
-- Construcción:
+- Construcción: 
 	1. Se arranca desde el par inicial.
 	2. Se calculan sus transiciones.
 	3. Se agregan los pares nuevos que aparezcan.
