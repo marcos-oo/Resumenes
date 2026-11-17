@@ -34,7 +34,7 @@ $$\text{Pre(abcd) = }\large\varepsilon\normalsize\text{, a, ab, abc, abcd.}\qqua
 - *Subcadena*: Cadena que se obtiene eliminando cero o más caracteres iniciales o finales de una cadena. Pueden eliminarse finales e iniciales simultáneamente.
 
 - *Palabra*: Cadena que pertenece a un LF.
-##### Descripción
+##### Características de un LF
 - Se definen como un conjunto de cadenas formadas con caracteres de un alfabeto.
 
 - Son abstractos, por lo que importa es la forma de una cadena (su sintaxis) y no su significado (su semántica). No tienen ambigüedad
@@ -200,7 +200,7 @@ La GR tiene unas reglas fijas que restringen como se compone:
 - El lado izquierdo debe tener un solo no-terminal y nada más.
 - El lado derecho debe estar formado por:
 	- Un solo terminal o un terminal seguido de un no-terminal.
-		o (exclusivo)
+	o (exclusivo)
 	- Un solo terminal o un no-terminal seguido de un terminal.
 		Una GR solo puede usar uno de los dos formatos de lado derecho para todas sus producciones.
 	- Además, el lado derecho puede ser $\large\varepsilon$ (creando producciones-épsilon).
@@ -328,7 +328,7 @@ $$\text{aa+ab+ba+bb = a(a+b)+b(a+b)}$$
 $$\text{a(a+b)+b(a+b) = (a+b)(a+b)}$$
 $$\text{aa+ab+ba+bb = (a+b)(a+b)}$$
 ##### Operadores para LR infinitos
-- *Clausura de Kleene $(*)$*: Genera una cadena formada por un número $\geq$ 0 a elección de repeticiones de su operando. Entonces $\text{a* = aaaa}$ o $\text{a* = }\varepsilon$ o $\text{a* = aaaa}$.
+- *Clausura de Kleene $(*)$*: Genera una cadena formada por un número $\geq$ 0 a elección de repeticiones de su operando. Entonces $\text{a* = aaaa}$ o $\text{a* = }\varepsilon$ o $\text{a* = a}$.
 - *Clausura positiva $(^+)$*: Genera una cadena formada por un número $\geq$ 1 a elección de repeticiones de su operando. Entonces $\text a^+ = aaaa$ o $\text a^+ = a$ pero $\text a^+ \neq\large\varepsilon$.
 
 ##### Expresión Regular Universal

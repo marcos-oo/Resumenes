@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "6ed31ebbc6833131",
+        "id": "461b476273ae4230",
         "type": "tabs",
         "children": [
           {
-            "id": "a03c2b6daa06d4f7",
+            "id": "f6696d957d021eee",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1er Cuatri/F-II/FORMULARIO.md",
+                "file": "Resumen Teórico - Q2 - SSL.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "FORMULARIO"
+              "title": "Resumen Teórico - Q2 - SSL"
             }
           }
         ]
@@ -94,8 +94,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 241.5,
-    "collapsed": true
+    "width": 241.5
   },
   "right": {
     "id": "f7f31304b84317c7",
@@ -121,7 +120,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ASI/Clase 7 - ASI.md",
+                "file": "Resumen Teórico - Q2 - SSL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,7 +130,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Clase 7 - ASI"
+              "title": "Backlinks"
             }
           },
           {
@@ -212,11 +211,27 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "a03c2b6daa06d4f7",
+  "active": "2fcdc482e67037af",
   "lastOpenFiles": [
+    "Resumen DER - Q2 - AdS.md",
+    "Resumen Práctico - Q2 - AdS.md",
+    "Resumen Teórico - Q2 - SSL.md",
+    "Pasted image 20261116163634.png",
+    "Pasted image 20261116162122.png",
+    "Pasted image 20261115204348.png",
+    "1er Cuatri/SSL/SSL - Resumen Teórico - Primer Parcial.md",
+    "Pasted image 20261115200217.png",
+    "Pasted image 20261115195451.png",
+    "Pasted image 20261115195442.png",
+    "AM2-R11.md",
+    "Pasted image 20261006155727.png",
+    "Pasted image 20261109170025.png",
+    "Pasted image 20261006155009.png",
+    "Untitled",
     "1er Cuatri/F-II/FORMULARIO.md",
-    "1er Cuatri/F-II/Transmisión de Calor.md",
+    "2do Cuatri/F-II/Formulario física.md",
     "1er Cuatri/F-II/Transformaciones y Ciclos.md",
+    "1er Cuatri/F-II/Transmisión de Calor.md",
     "1er Cuatri/F-II/Maquina de Carnot.md",
     "PERSONAL/Ejercicio.md",
     "PERSONAL/Fitting.md",
@@ -227,8 +242,6 @@
     "PERSONAL/Mediapipe.md",
     "PERSONAL/ProjPerspective.png",
     "2do Cuatri/SSL/Notas presentacion.md",
-    "Pasted image 20261006155727.png",
-    "Pasted image 20261006155009.png",
     "2do Cuatri/Ingles/Tutoría 2.md",
     "2do Cuatri/SSL",
     "2do Cuatri/Ingles",
@@ -239,27 +252,13 @@
     "2do Cuatri/ASI/08-26.md",
     "2do Cuatri/ASI/07-01.md",
     "2do Cuatri/ASI/Practica.md",
-    "2do Cuatri/F-II/Formulario física.md",
     "2do Cuatri/F-II",
-    "2do Cuatri/F-II.md",
-    "2do Cuatri/Potencial Eléctrico.md",
-    "Final - Arq. de Comp. poop.md",
-    "2do Cuatri/Material/Pasted image 20260706190947.png",
     "2do Cuatri/Material",
-    "2do Cuatri/Material/Pasted image 20260826101502.png",
-    "2do Cuatri/Material/Pasted image 20260826092403.png",
-    "2do Cuatri/Material/Pasted image 20260707005754.png",
-    "1er Cuatri/Material/Aumento en producción.png",
-    "1er Cuatri/Consignas.md",
-    "1er Cuatri/Material/Pasted image 20260430171915.png",
     "1er Cuatri/Material",
-    "2do Cuatri/PdeP/Objetos - Introduccion.md",
-    "2do Cuatri/Material/Pasted image 20260706203606.png",
     "2do Cuatri/ASI",
     "1er Cuatri/SSL/Notas de clase",
     "2do Cuatri/AM2",
     "2do Cuatri/ASi",
-    "2do Cuatri/PdeP",
     "Untitled.canvas"
   ]
 }
